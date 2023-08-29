@@ -1,0 +1,5 @@
+[32m[08-29 10:59:39 MainThread @sim_test.py:106][0m ESSteps: 1 Reward: 0.6086107815668128 step: 2200.0  sigma:0.02
+[32m[08-29 10:59:56 MainThread @sim_test.py:106][0m ESSteps: 2 Reward: 0.4037363530759232 step: 2000.0  sigma:0.0198
+[32m[08-29 11:00:15 MainThread @sim_test.py:106][0m ESSteps: 3 Reward: 0.5329908525773932 step: 2300.0  sigma:0.019602
+[32m[08-29 11:00:37 MainThread @sim_test.py:106][0m ESSteps: 4 Reward: 0.5441986851356959 step: 2500.0  sigma:0.01940598
+[32m[08-29 11:00:52 MainThread @sim_test.py:106][0m ESSteps: 5 Reward: 0.20529342227536856 step: 1800.0  sigma:0.0192119202
