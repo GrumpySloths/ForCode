@@ -1,0 +1,27 @@
+Thu May 18 15:24:26 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:28:47 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:36:06 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:38:16 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:38:36 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:39:44 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:40:13 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Thu May 18 15:46:24 2023
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun  2 15:01:06 2023
+ERROR: m->nu changed
+
