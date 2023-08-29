@@ -1,0 +1,643 @@
+<mujoco model="MuJoCo Model">
+  <compiler angle="radian" autolimits="true"/>
+  <option impratio="3" noslip_tolerance="1e-08" o_solref="0.008 2" o_solimp="0.9 0.95 0.001 0.1 2" cone="elliptic" noslip_iterations="5">
+    <flag override="enable"/>
+  </option>
+  <default class="main">
+    <geom type="box" rgba="0.95 0.95 0.95 1"/>
+  </default>
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2="0.6 0.8 1" width="256" height="1536"/>
+    <texture type="2d" name="texplane" builtin="checker" mark="cross" rgb1="0.2 0.3 0.4" rgb2="0.1 0.15 0.2" markrgb="0.8 0.8 0.8" width="512" height="512"/>
+    <material name="matplane" texture="texplane" texuniform="true" texrepeat="2 2"/>
+    <mesh name="hip_l" file="meshes_new_leg/hip.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_link_l" file="meshes_new_leg/servo_horn.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="thigh_up_l" file="meshes_new_leg/thigh_up.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="thigh_down_l" file="meshes_new_leg/thigh_down.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="foot_l" file="meshes_new_leg/foot.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="hip_r" file="meshes_new_leg/hip.stl" scale="-0.001 0.001 0.001"/>
+    <mesh name="servo_link_r" file="meshes_new_leg/servo_horn.stl" scale="-0.001 0.001 0.001"/>
+    <mesh name="thigh_up_r" file="meshes_new_leg/thigh_up.stl" scale="-0.001 0.001 0.001"/>
+    <mesh name="thigh_down_r" file="meshes_new_leg/thigh_down.stl" scale="-0.001 0.001 0.001"/>
+    <mesh name="foot_r" file="meshes_new_leg/foot.stl" scale="-0.001 0.001 0.001"/>
+    <mesh name="main_tail" file="stl-meshes/tail/tail_main.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t1_tail" file="stl-meshes/tail/t1.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t2_tail" file="stl-meshes/tail/t2.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t3_tail" file="stl-meshes/tail/t3.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t4_tail" file="stl-meshes/tail/t4.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t5_tail" file="stl-meshes/tail/t5.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t6_tail" file="stl-meshes/tail/t6.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t7_tail" file="stl-meshes/tail/t7.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t8_tail" file="stl-meshes/tail/t8.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t9_tail" file="stl-meshes/tail/t9.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t10_tail" file="stl-meshes/tail/t10.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t11_tail" file="stl-meshes/tail/t11.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t12_tail" file="stl-meshes/tail/t12.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t13_tail" file="stl-meshes/tail/t13.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t14_tail" file="stl-meshes/tail/t14.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t15_tail" file="stl-meshes/tail/t15.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t16_tail" file="stl-meshes/tail/t16.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t17_tail" file="stl-meshes/tail/t17.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t18_tail" file="stl-meshes/tail/t18.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="t19_tail" file="stl-meshes/tail/t19.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="servo_tail" file="stl-meshes/tail/servo_horn_tail.stl" refquat="1 0 1 0" scale="0.001 0.001 0.001"/>
+    <mesh name="head" file="stl-meshes/head_main.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="head_mounting" file="stl-meshes/head_bracket.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="main_body" file="stl-meshes/main_chest.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="spine_t1" file="stl-meshes/spine_t1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="spine_t2" file="stl-meshes/spine_t2_zeroed.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="spine_t3" file="stl-meshes/spine_t3_zeroed.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="spine_t4" file="stl-meshes/spine_t4_zeroed.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="hip" file="stl-meshes/hip_zeroed.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="reel_sm" file="stl-meshes/reel_small.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="tail" file="stl-meshes/Tail_Unit.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+  <worldbody>
+    <geom size="0 0 0.03" type="plane" material="matplane" rgba="1 1 1 1"/>
+    <camera name="body_cam" pos="20 0.1 0.05" quat="0.5 0.5 0.5 0.5" fovy="1"/>
+    <camera name="top camera" pos="0 -1 30" quat="0 0 0 1" fovy="6"/>
+    <light pos="0 -1 3" dir="0 0 -1" diffuse="0.5 0.5 0.5"/>
+    <body name="mouse" pos="0 0 0.1">
+      <joint name="rail" type="free"/>
+      <geom name="mouse_body" size="0.0115 0.048 0.025" pos="0 0.04 0" mass="0.15" rgba="0.8 0.8 0.8 0"/>
+      <site name="imu" pos="0 0.045 0.01" size="0.004" rgba="0.5 0.5 0.99 1"/>
+      <camera name="tail view camera" pos="0 0.35 0.15" quat="0 0 0.573576 0.819152" fovy="60" mode="track"/>
+      <body name="visual_mouse_body">
+        <geom name="spine_mouse" type="mesh" contype="0" conaffinity="0" mass="0" mesh="main_body"/>
+      </body>
+      <body name="mouse_bracket" pos="0 -0.016 0.013">
+        <joint name="neck" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+        <geom name="visual_mouse_bracket" type="mesh" contype="0" conaffinity="0" mass="0.005" mesh="head_mounting"/>
+        <body name="mouse_head" pos="0 -0.0106 0.0144">
+          <joint name="head" pos="0 0 0" axis="1 0 0" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+          <geom name="visual_mouse_head" type="mesh" contype="0" conaffinity="0" mass="0.01" mesh="head"/>
+          <camera name="head camera" pos="0 -0.04 0" quat="0 0 0.707107 0.707107"/>
+        </body>
+      </body>
+      <body name="fl" pos="0.0115 0 0">
+        <body pos="0.011 0.008 -0.1">
+          <body name="servo_horn_fl" pos="0.0136 -0.0055 0.1">
+            <joint name="thigh_joint_fl" pos="0 0 0.0064" axis="1 0 0" armature="0.0065" damping="0.75"/>
+            <geom name="servo_horn_fl" pos="-0.0112 0.0015 0.0043" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="servo_link_l"/>
+            <geom name="servo_check_fl" size="0.0039 0.0005" pos="0.0025 0 0.0064" quat="0.707107 0 -0.707107 0" type="cylinder" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+            <site name="thigh_link_fl" pos="0 0 0.0064" size="0.003" rgba="0.8 0.1 0.8 1"/>
+            <body name="thigh_up_link_1_fl" pos="0 0 0.0182">
+              <geom name="thigh_up_link_1_fl" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+              <site name="thigh_up_point_1_fl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+            </body>
+          </body>
+          <body name="main_leg_fl" pos="0 0 0.1">
+            <geom name="hip_box_fl" pos="0 0.0004 0.0071" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="hip_l"/>
+            <body name="thigh_down_fl" pos="0.0136 -0.0055 -0.0064">
+              <joint name="leg_joint_fl" pos="0 0 0" axis="1 0 0" armature="0.0065" damping="0.75"/>
+              <geom name="thigh_down_fl" pos="-0.0044 0.05 0" quat="0 1 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_down_l"/>
+              <site name="leg_link_fl" pos="0 0 0" size="0.003" rgba="0.5 0.5 0.8 1"/>
+              <body name="foot_fl" pos="0 0.031 0" quat="0.96778 -0.251799 0 0">
+                <joint name="knee_down_fl" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                <geom name="foot_fl" pos="0.0036 0 -0.035" quat="0 0 0.707107 0.707107" type="mesh" mass="0.001" mesh="foot_l"/>
+                <site name="knee_down_fl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                <site name="ankle_fl" pos="0 0 -0.035" size="0.003" rgba="0.8 0.1 0.8 1"/>
+                <body name="thigh_up_fl" pos="0 0 0.015" quat="0.994097 0.10849 0 0">
+                  <joint name="knee_up_fl" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                  <geom name="thigh_up_fl" pos="-0.0064 0.01 0" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_up_l"/>
+                  <site name="knee_up_fl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                  <body name="thigh_up_link_2_fl" pos="0 -0.04 0">
+                    <geom name="thigh_up_link_2_fl" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.9 0.1 0"/>
+                    <site name="thigh_up_point_2_fl" pos="0 0 0" size="0.001" rgba="0.8 0.8 0.1 1"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="fr" pos="-0.0115 0 0">
+        <body pos="-0.011 0.008 -0.1">
+          <body name="servo_horn_fr" pos="-0.0136 -0.0055 0.1">
+            <joint name="thigh_joint_fr" pos="0 0 0.0064" axis="1 0 0" armature="0.0065" damping="0.75"/>
+            <geom name="servo_horn_fr" pos="0.0112 0.0015 0.0043" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="servo_link_r"/>
+            <geom name="servo_check_fr" size="0.0039 0.0005" pos="-0.0025 0 0.0064" quat="0.707107 0 0.707107 0" type="cylinder" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+            <site name="thigh_link_fr" pos="0 0 0.0064" size="0.002" rgba="0.8 0.1 0.8 1"/>
+            <body name="thigh_up_link_1_fr" pos="0 0 0.0182">
+              <geom name="thigh_up_link_1_fr" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+              <site name="thigh_up_point_1_fr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+            </body>
+          </body>
+          <body name="main_leg_fr" pos="0 0 0.1">
+            <geom name="hip_box_fr" pos="0 0.0004 0.0071" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="hip_r"/>
+            <body name="thigh_down_fr" pos="-0.0136 -0.0055 -0.0064">
+              <joint name="leg_joint_fr" pos="0 0 0" axis="1 0 0" armature="0.0065" damping="0.75"/>
+              <geom name="thigh_down_fr" pos="0.0044 0.05 0" quat="0 1 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_down_r"/>
+              <site name="leg_link_fr" pos="0 0 0" size="0.003" rgba="0.5 0.5 0.8 1"/>
+              <body name="foot_fr" pos="0 0.031 0" quat="0.96778 -0.251799 0 0">
+                <joint name="knee_down_fr" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                <geom name="foot_fr" pos="-0.0036 0 -0.035" quat="0 0 0.707107 0.707107" type="mesh" mass="0.001" mesh="foot_r"/>
+                <site name="knee_down_fr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                <site name="ankle_fr" pos="0 0 -0.035" size="0.003" rgba="0.8 0.1 0.8 1"/>
+                <body name="thigh_up_fr" pos="0 0 0.015" quat="0.994097 0.10849 0 0">
+                  <joint name="knee_up_fr" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                  <geom name="thigh_up_fr" pos="0.0064 0.01 0" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_up_r"/>
+                  <site name="knee_up_fr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                  <body name="thigh_up_link_2_fr" pos="0 -0.04 0">
+                    <geom name="thigh_up_link_2_fr" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.9 0.1 0"/>
+                    <site name="thigh_up_point_2_fr" pos="0 0 0" size="0.001" rgba="0.8 0.8 0.1 1"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="t1" pos="0 0.064 0.026">
+        <geom name="visual_t1" type="mesh" contype="0" conaffinity="0" mass="0.002" mesh="spine_t1"/>
+        <site name="body_ss" pos="0 0 0" size="0.002" rgba="0.9 0.9 0 1"/>
+        <site name="s2_ss" pos="0.0065 0 0" size="0.002" rgba="1 0.4 0.4 0.3"/>
+        <site name="s3_ss" pos="-0.0065 0 0" size="0.002" rgba="1 0.4 0.4 0.3"/>
+        <site name="s4_ss" pos="0.0065 0.005 -0.0008" size="0.002" rgba="1 0.4 0.4 0.3"/>
+        <site name="s5_ss" pos="-0.0065 0.005 -0.0008" size="0.002" rgba="1 0.4 0.4 0.3"/>
+        <body name="t2" pos="0 0.0084 -0.001" quat="0.995056 -0.0993197 0 0">
+          <joint name="t2" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+          <geom name="visual_t2" type="mesh" contype="0" conaffinity="0" mass="0.002" mesh="spine_t2"/>
+          <site name="s6_ss" pos="0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+          <site name="s7_ss" pos="-0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+          <site name="s8_ss" pos="0.0065 0.011 -0.0012" size="0.002" rgba="1 0.4 0.4 0.3"/>
+          <site name="s9_ss" pos="-0.0065 0.011 -0.0012" size="0.002" rgba="1 0.4 0.4 0.3"/>
+          <body name="t3" pos="0 0.014 -0.00075" quat="0.998188 -0.0601775 0 0">
+            <joint name="t3" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+            <geom name="visual_t3" type="mesh" contype="0" conaffinity="0" mass="0.002" mesh="spine_t3"/>
+            <site name="s10_ss" pos="0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+            <site name="s11_ss" pos="-0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+            <site name="s12_ss" pos="0.0065 0.011 -0.0012" size="0.002" rgba="1 0.4 0.4 0.3"/>
+            <site name="s13_ss" pos="-0.0065 0.011 -0.0012" size="0.002" rgba="1 0.4 0.4 0.3"/>
+            <body name="t4" pos="0 0.014 -0.00075" quat="0.99889 -0.0471065 0 0">
+              <joint name="t4" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+              <geom name="visual_t4" type="mesh" contype="0" conaffinity="0" mass="0.002" mesh="spine_t4"/>
+              <site name="s14_ss" pos="0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+              <site name="s15_ss" pos="-0.0065 0.0035 -0.0006" size="0.002" rgba="1 0.4 0.4 0.3"/>
+              <site name="s16_ss" pos="0.0065 0.014 -0.0014" size="0.002" rgba="1 0.4 0.4 0.3"/>
+              <site name="s17_ss" pos="-0.0065 0.014 -0.0014" size="0.002" rgba="1 0.4 0.4 0.3"/>
+              <body name="hip" pos="0 0.0165 -0.0009" quat="0.997053 0.076719 0 0">
+                <joint name="hip" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                <geom name="visual_hip" type="mesh" contype="0" conaffinity="0" mass="0.06" rgba="0.95 0.95 0.95 0.4" mesh="hip"/>
+                <site name="s18_ss" pos="0.0065 0.002 -0.0005" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                <site name="s19_ss" pos="-0.0065 0.002 -0.0005" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                <site name="sx1_ss" pos="0.01 0.0107 -0.0005" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                <site name="sx2_ss" pos="-0.01 0.0107 -0.0005" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                <body name="servo_spine" pos="0 0.0107 0" quat="0.999657 0.0261769 0 0">
+                  <joint name="m_ss" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" armature="0.00065" damping="0.01"/>
+                  <geom name="m_ss" size="0.0065 0.00165" quat="0 1 0 0" type="cylinder" conaffinity="0" mass="0.002" rgba="0.8 0.1 0.1 1"/>
+                  <site name="s1_ss" pos="0 0.007 0" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                  <body name="visual_m_ss" pos="0 0 -0.0015" quat="0.707107 0.707107 0 0">
+                    <geom name="visual_m_ss" type="mesh" contype="0" conaffinity="0" mass="0" rgba="0.8 0.1 0.1 1" mesh="reel_sm"/>
+                  </body>
+                </body>
+                <body name="rl" pos="0.0175 0.0085 0" quat="0.994613 0.103661 0 0">
+                  <body pos="0.011 0.008 -0.1">
+                    <body name="servo_horn_rl" pos="0.0136 -0.0055 0.1">
+                      <joint name="thigh_joint_rl" pos="0 0 0.0064" axis="1 0 0" armature="0.0065" damping="0.75"/>
+                      <geom name="servo_horn_rl" pos="-0.0112 0.0015 0.0043" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="servo_link_l"/>
+                      <geom name="servo_check_rl" size="0.0039 0.0005" pos="0.0025 0 0.0064" quat="0.707107 0 -0.707107 0" type="cylinder" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+                      <site name="thigh_link_rl" pos="0 0 0.0064" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                      <body name="thigh_up_link_1_rl" pos="0 0 0.0182">
+                        <geom name="thigh_up_link_1_rl" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+                        <site name="thigh_up_point_1_rl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                      </body>
+                    </body>
+                    <body name="main_leg_rl" pos="0 0 0.1">
+                      <geom name="hip_box_rl" pos="0 0.0004 0.0071" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="hip_l"/>
+                      <body name="thigh_down_rl" pos="0.0136 -0.0055 -0.0064">
+                        <joint name="leg_joint_rl" pos="0 0 0" axis="1 0 0" armature="0.0065" damping="0.75"/>
+                        <geom name="thigh_down_rl" pos="-0.0044 0.05 0" quat="0 1 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_down_l"/>
+                        <site name="leg_link_rl" pos="0 0 0" size="0.003" rgba="0.5 0.5 0.8 1"/>
+                        <body name="foot_rl" pos="0 0.031 0" quat="0.96778 -0.251799 0 0">
+                          <joint name="knee_down_rl" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                          <geom name="foot_rl" pos="0.0036 0 -0.035" quat="0 0 0.707107 0.707107" type="mesh" mass="0.001" mesh="foot_l"/>
+                          <site name="knee_down_rl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                          <site name="ankle_rl" pos="0 0 -0.035" size="0.003" rgba="0.8 0.1 0.8 1"/>
+                          <body name="thigh_up_rl" pos="0 0 0.015" quat="0.994097 0.10849 0 0">
+                            <joint name="knee_up_rl" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                            <geom name="thigh_up_rl" pos="-0.0064 0.01 0" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_up_l"/>
+                            <site name="knee_up_rl" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                            <body name="thigh_up_link_2_rl" pos="0 -0.04 0">
+                              <geom name="thigh_up_link_2_rl" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.9 0.1 0"/>
+                              <site name="thigh_up_point_2_rl" pos="0 0 0" size="0.001" rgba="0.8 0.8 0.1 1"/>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+                <body name="rr" pos="-0.0175 0.0085 0" quat="0.994613 0.103661 0 0">
+                  <body pos="-0.011 0.008 -0.1">
+                    <body name="servo_horn_rr" pos="-0.0136 -0.0055 0.1">
+                      <joint name="thigh_joint_rr" pos="0 0 0.0064" axis="1 0 0" armature="0.0065" damping="0.75"/>
+                      <geom name="servo_horn_rr" pos="0.0112 0.0015 0.0043" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="servo_link_r"/>
+                      <geom name="servo_check_rr" size="0.0039 0.0005" pos="-0.0025 0 0.0064" quat="0.707107 0 0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+                      <site name="thigh_link_rr" pos="0 0 0.0064" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                      <body name="thigh_up_link_1_rr" pos="0 0 0.0182">
+                        <geom name="thigh_up_link_1_rr" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.1 0.1 0"/>
+                        <site name="thigh_up_point_1_rr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                      </body>
+                    </body>
+                    <body name="main_leg_rr" pos="0 0 0.1">
+                      <geom name="hip_box_rr" pos="0 0.0004 0.0071" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="hip_r"/>
+                      <body name="thigh_down_rr" pos="-0.0136 -0.0055 -0.0064">
+                        <joint name="leg_joint_rr" pos="0 0 0" axis="1 0 0" armature="0.0065" damping="0.75"/>
+                        <geom name="thigh_down_rr" pos="0.0044 0.05 0" quat="0 1 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_down_r"/>
+                        <site name="leg_link_rr" pos="0 0 0" size="0.003" rgba="0.5 0.5 0.8 1"/>
+                        <body name="foot_rr" pos="0 0.031 0" quat="0.96778 -0.251799 0 0">
+                          <joint name="knee_down_rr" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                          <geom name="foot_rr" pos="-0.0036 0 -0.035" quat="0 0 0.707107 0.707107" type="mesh" conaffinity="0" mass="0.001" mesh="foot_r"/>
+                          <site name="knee_down_rr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                          <site name="ankle_rr" pos="0 0 -0.035" size="0.003" rgba="0.8 0.1 0.8 1"/>
+                          <body name="thigh_up_rr" pos="0 0 0.015" quat="0.994097 0.10849 0 0">
+                            <joint name="knee_up_rr" pos="0 0 0" axis="1 0 0" stiffness="0.1" armature="0.0065" damping="0.005"/>
+                            <geom name="thigh_up_rr" pos="0.0064 0.01 0" quat="0.707107 0.707107 0 0" type="mesh" conaffinity="0" mass="0.001" mesh="thigh_up_r"/>
+                            <site name="knee_up_rr" pos="0 0 0" size="0.001" rgba="0.8 0.1 0.8 1"/>
+                            <body name="thigh_up_link_2_rr" pos="0 -0.04 0">
+                              <geom name="thigh_up_link_2_rr" size="0.0025 0.002" quat="0.707107 0 -0.707107 0" type="cylinder" conaffinity="0" mass="0.001" rgba="0.9 0.9 0.1 0"/>
+                              <site name="thigh_up_point_2_rr" pos="0 0 0" size="0.001" rgba="0.8 0.8 0.1 1"/>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+                <body name="visual_mouse_tail" pos="0 0.0217 0.0028" quat="0.991445 0.130526 0 0">
+                  <body name="tail">
+                    <geom name="tail_main" size="0.007 0.0175 0.01" pos="0 0.0175 -0.013" quat="0.986286 -0.165048 0 0" mass="0.009" rgba="0.1 0.8 0.1 0"/>
+                    <geom name="visual_tail_main" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="main_tail"/>
+                    <site name="st_1" pos="0.007 0.022 -0.01" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                    <site name="st_2" pos="-0.007 0.022 -0.01" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                    <site name="st_3" pos="0.0055 0.0332 -0.0168" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                    <site name="st_4" pos="-0.0055 0.0332 -0.0168" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                    <body name="tail_t1" pos="0 0.03525 -0.0174">
+                      <joint name="tail_t1" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                      <geom name="tail_t1" size="0.0055 0.00422973" pos="0 0.004 -0.000375" quat="0.813966 0.580913 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                      <geom name="tail_visual_t1" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t1_tail"/>
+                      <site name="st_5" pos="0.0055 0.00175 -0.0006" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                      <site name="st_6" pos="-0.0055 0.00175 -0.0006" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                      <site name="st_7" pos="0.0055 0.00625 -0.0021" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                      <site name="st_8" pos="-0.0055 0.00625 -0.0021" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                      <body name="tail_t2" pos="0 0.008 -0.00275">
+                        <joint name="tail_t2" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                        <geom name="tail_t2" size="0.0054 0.00419829" pos="0 0.004 -0.000275" quat="0.807371 0.590044 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                        <geom name="tail_visual_t2" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t2_tail"/>
+                        <site name="st_9" pos="0.00545 0.00175 -0.00055" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                        <site name="st_10" pos="-0.00545 0.00175 -0.00055" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                        <site name="st_11" pos="0.00545 0.00625 -0.00199" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                        <site name="st_12" pos="-0.00545 0.00625 -0.00199" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                        <body name="tail_t3" pos="0 0.008 -0.00255">
+                          <joint name="tail_t3" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                          <geom name="tail_t3" size="0.0053 0.00418337" pos="0 0.004 -0.000225" quat="0.803998 0.594632 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                          <geom name="tail_visual_t3" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t3_tail"/>
+                          <site name="st_13" pos="0.0052 0.00175 -0.00053" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                          <site name="st_14" pos="-0.0052 0.00175 -0.00053" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                          <site name="st_15" pos="0.0052 0.00625 -0.00191" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                          <site name="st_16" pos="-0.0052 0.00625 -0.00191" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                          <body name="tail_t4" pos="0 0.008 -0.00245">
+                            <joint name="tail_t4" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                            <geom name="tail_t4" size="0.0052 0.00415519" pos="0 0.004 -0.000125" quat="0.797103 0.603844 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                            <geom name="tail_visual_t4" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t4_tail"/>
+                            <site name="st_17" pos="0.00505 0.00175 -0.00049" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                            <site name="st_18" pos="-0.00505 0.00175 -0.00049" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                            <site name="st_19" pos="0.00505 0.00625 -0.00175" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                            <site name="st_20" pos="-0.00505 0.00625 -0.00175" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                            <body name="tail_t5" pos="0 0.008 -0.00225">
+                              <joint name="tail_t5" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                              <geom name="tail_t5" size="0.0051 0.00413552" pos="0 0.004 -5e-05" quat="0.791801 0.610779 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                              <geom name="tail_visual_t5" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t5_tail"/>
+                              <site name="st_21" pos="0.00495 0.00175 -0.00046" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                              <site name="st_22" pos="-0.00495 0.00175 -0.00046" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                              <site name="st_23" pos="0.00495 0.00625 -0.00164" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                              <site name="st_24" pos="-0.00495 0.00625 -0.00164" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                              <body name="tail_t6" pos="0 0.008 -0.0021">
+                                <joint name="tail_t6" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                <geom name="tail_t6" size="0.005 0.00411711" pos="0 0.004 2.5e-05" quat="0.786389 0.617731 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                <geom name="tail_visual_t6" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t6_tail"/>
+                                <site name="st_25" pos="0.0049 0.00175 -0.00043" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                <site name="st_26" pos="-0.0049 0.00175 -0.00043" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                <site name="st_27" pos="0.0049 0.00625 -0.00152" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                <site name="st_28" pos="-0.0049 0.00625 -0.00152" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                <body name="tail_t7" pos="0 0.008 -0.00195">
+                                  <joint name="tail_t7" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                  <geom name="tail_t7" size="0.0049 0.0041" pos="0 0.004 0.0001" quat="0.780869 0.624695 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                  <geom name="tail_visual_t7" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t7_tail"/>
+                                  <site name="st_29" pos="0.0048 0.00175 -0.00039" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                  <site name="st_30" pos="-0.0048 0.00175 -0.00039" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                  <site name="st_31" pos="0.0048 0.00625 -0.00141" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                  <site name="st_32" pos="-0.0048 0.00625 -0.00141" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                  <body name="tail_t8" pos="0 0.008 -0.0018">
+                                    <joint name="tail_t8" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                    <geom name="tail_t8" size="0.0048 0.00408419" pos="0 0.004 0.000175" quat="0.775241 0.631665 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                    <geom name="tail_visual_t8" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t8_tail"/>
+                                    <site name="st_33" pos="0.0046 0.00175 -0.00036" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                    <site name="st_34" pos="-0.0046 0.00175 -0.00036" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                    <site name="st_35" pos="0.0046 0.00625 -0.00129" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                    <site name="st_36" pos="-0.0046 0.00625 -0.00129" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                    <body name="tail_t9" pos="0 0.008 -0.00165">
+                                      <joint name="tail_t9" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                      <geom name="tail_t9" size="0.0047 0.00406971" pos="0 0.004 0.00025" quat="0.769509 0.638636 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                      <geom name="tail_visual_t9" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t9_tail"/>
+                                      <site name="st_37" pos="0.0044 0.00175 -0.00033" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                      <site name="st_38" pos="-0.0044 0.00175 -0.00033" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                      <site name="st_39" pos="0.0044 0.00625 -0.00117" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                      <site name="st_40" pos="-0.0044 0.00625 -0.00117" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                      <body name="tail_t10" pos="0 0.008 -0.0015">
+                                        <joint name="tail_t10" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                        <geom name="tail_t10" size="0.0046 0.00405655" pos="0 0.004 0.000325" quat="0.763674 0.645601 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                        <geom name="tail_visual_t10" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t10_tail"/>
+                                        <site name="st_41" pos="0.0042 0.00175 -0.000295" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                        <site name="st_42" pos="-0.0042 0.00175 -0.000295" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                        <site name="st_43" pos="0.0042 0.00625 -0.00105" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                        <site name="st_44" pos="-0.0042 0.00625 -0.00105" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                        <body name="tail_t11" pos="0 0.008 -0.00135">
+                                          <joint name="tail_t11" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                          <geom name="tail_t11" size="0.0045 0.00404475" pos="0 0.004 0.0004" quat="0.75774 0.652556 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                          <geom name="tail_visual_t11" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t11_tail"/>
+                                          <site name="st_45" pos="0.00405 0.00175 -0.00026" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                          <site name="st_46" pos="-0.00405 0.00175 -0.00026" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                          <site name="st_47" pos="0.00405 0.00625 -0.00094" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                          <site name="st_48" pos="-0.00405 0.00625 -0.00094" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                          <body name="tail_t12" pos="0 0.008 -0.0012">
+                                            <joint name="tail_t12" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                            <geom name="tail_t12" size="0.0044 0.00403431" pos="0 0.004 0.000475" quat="0.751709 0.659495 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                            <geom name="tail_visual_t12" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t12_tail"/>
+                                            <site name="st_49" pos="0.004 0.00175 -0.00023" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                            <site name="st_50" pos="-0.004 0.00175 -0.00023" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                            <site name="st_51" pos="0.004 0.00625 -0.00082" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                            <site name="st_52" pos="-0.004 0.00625 -0.00082" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                            <body name="tail_t13" pos="0 0.008 -0.00105">
+                                              <joint name="tail_t13" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                              <geom name="tail_t13" size="0.0043 0.00402523" pos="0 0.004 0.00055" quat="0.745585 0.66641 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                              <geom name="tail_visual_t13" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t13_tail"/>
+                                              <site name="st_53" pos="0.0039 0.00175 -0.000196" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                              <site name="st_54" pos="-0.0039 0.00175 -0.000196" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                              <site name="st_55" pos="0.0039 0.00625 -0.0007" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                              <site name="st_56" pos="-0.0039 0.00625 -0.0007" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                              <body name="tail_t14" pos="0 0.008 -0.0009">
+                                                <joint name="tail_t14" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                <geom name="tail_t14" size="0.0042 0.00401754" pos="0 0.004 0.000625" quat="0.739372 0.673298 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                <geom name="tail_visual_t14" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t14_tail"/>
+                                                <site name="st_57" pos="0.00375 0.00175 -0.000164" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                <site name="st_58" pos="-0.00375 0.00175 -0.000164" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                <site name="st_59" pos="0.00375 0.00625 -0.000585" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                <site name="st_60" pos="-0.00375 0.00625 -0.000585" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                <body name="tail_t15" pos="0 0.008 -0.00075">
+                                                  <joint name="tail_t15" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                  <geom name="tail_t15" size="0.0041 0.00401123" pos="0 0.004 0.0007" quat="0.733072 0.680151 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                  <geom name="tail_visual_t15" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t15_tail"/>
+                                                  <site name="st_61" pos="0.0036 0.00175 -0.00013" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                  <site name="st_62" pos="-0.0036 0.00175 -0.00013" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                  <site name="st_63" pos="0.0036 0.00625 -0.00047" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                  <site name="st_64" pos="-0.0036 0.00625 -0.00047" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                  <body name="tail_t16" pos="0 0.008 -0.0006">
+                                                    <joint name="tail_t16" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                    <geom name="tail_t16" size="0.004 0.00400632" pos="0 0.004 0.000775" quat="0.726692 0.686964 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                    <geom name="tail_visual_t16" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t16_tail"/>
+                                                    <site name="st_65" pos="0.0035 0.00175 -0.0001" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                    <site name="st_66" pos="-0.0035 0.00175 -0.0001" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                    <site name="st_67" pos="0.0035 0.00625 -0.00035" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                    <site name="st_68" pos="-0.0035 0.00625 -0.00035" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                    <body name="tail_t17" pos="0 0.008 -0.00045">
+                                                      <joint name="tail_t17" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                      <geom name="tail_t17" size="0.0039 0.00400281" pos="0 0.004 0.00085" quat="0.720234 0.693731 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                      <geom name="tail_visual_t17" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t17_tail"/>
+                                                      <site name="st_69" pos="0.00335 0.00175 -6.5e-05" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                      <site name="st_70" pos="-0.00335 0.00175 -6.5e-05" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                      <site name="st_71" pos="0.00335 0.00625 -0.00023" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                      <site name="st_72" pos="-0.00335 0.00625 -0.00023" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                      <body name="tail_t18" pos="0 0.008 -0.0003">
+                                                        <joint name="tail_t18" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                        <geom name="tail_t18" size="0.0038 0.0040007" pos="0 0.004 0.000925" quat="0.713704 0.700447 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                        <geom name="tail_visual_t18" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t18_tail"/>
+                                                        <site name="st_73" pos="0.0031 0.00175 -3.2e-05" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                        <site name="st_74" pos="-0.0031 0.00175 -3.2e-05" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                        <site name="st_75" pos="0.0031 0.00625 -0.00012" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                        <site name="st_76" pos="-0.0031 0.00625 -0.00012" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                        <body name="tail_t19" pos="0 0.008 -0.0003">
+                                                          <joint name="tail_t19" pos="0 0 0" axis="0 0 1" stiffness="1.2" range="-1.5708 1.5708" armature="0.00065" damping="0.01"/>
+                                                          <geom name="tail_t19" size="0.0037 0.002625" pos="0 0.002625 0.001" quat="0.707107 0.707107 0 0" type="capsule" mass="0.0005" rgba="0.8 0.1 0.1 0"/>
+                                                          <geom name="tail_visual_t19" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" mesh="t19_tail"/>
+                                                          <site name="st_77" pos="0.003 0.00175 0" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                          <site name="st_78" pos="-0.003 0.00175 0" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                          <site name="st_79" pos="0.003 0.00825 0" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                          <site name="st_80" pos="-0.003 0.00825 0" size="0.001" rgba="1 0.4 0.4 0.3"/>
+                                                        </body>
+                                                      </body>
+                                                    </body>
+                                                  </body>
+                                                </body>
+                                              </body>
+                                            </body>
+                                          </body>
+                                        </body>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                    <body name="servo_tail" pos="0 0.0152 0.001" quat="0.986286 -0.165048 0 0">
+                      <joint name="m1_tail" pos="0 0 0" axis="0 0 1" range="-3.14159 3.14159" armature="0.00065" damping="0.01"/>
+                      <geom name="m1_tail" size="0.0025 0.0015" pos="0 0 0.0035" quat="0 1 0 0" type="cylinder" mass="0.001" rgba="0.8 0.1 0.1 0"/>
+                      <geom name="m1_tail1" size="0.0015 0.012" pos="0 0 0.0035" quat="0.707107 0 0.707107 0" type="capsule" mass="0.001" rgba="0.8 0.1 0.1 0"/>
+                      <geom name="visual_servo_tail" pos="0 0 0.001" quat="0.5 0.5 0.5 0.5" type="mesh" contype="0" conaffinity="0" mass="0" rgba="1 0.4 0.4 1" mesh="servo_tail"/>
+                      <site name="servo_tail_1" pos="0.008 0 0.0035" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                      <site name="servo_tail_2" pos="-0.008 0 0.0035" size="0.002" rgba="1 0.4 0.4 0.3"/>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    <body name="straight_line">
+      <geom name="pilon1" size="0.02 0.2" pos="0.5 -2 0" type="cylinder" mass="0.001" rgba="0.3 0.3 0.8 1"/>
+      <geom name="pilon2" size="0.02 0.2" pos="-0.5 -2 0" type="cylinder" mass="0.001" rgba="0.3 0.3 0.8 1"/>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="servo_horn_fl" body2="main_leg_fl"/>
+    <exclude body1="servo_horn_fr" body2="main_leg_fr"/>
+    <exclude body1="servo_horn_rl" body2="main_leg_rl"/>
+    <exclude body1="servo_horn_rr" body2="main_leg_rr"/>
+  </contact>
+  <equality>
+    <connect body1="thigh_up_link_1_fl" body2="thigh_up_link_2_fl" anchor="0 0 0" solimp="1 1 0.001 0.5 2"/>
+    <connect body1="thigh_up_link_1_fr" body2="thigh_up_link_2_fr" anchor="0 0 0" solimp="1 1 0.001 0.5 2"/>
+    <connect body1="thigh_up_link_1_rl" body2="thigh_up_link_2_rl" anchor="0 0 0" solimp="1 1 0.001 0.5 2"/>
+    <connect body1="thigh_up_link_1_rr" body2="thigh_up_link_2_rr" anchor="0 0 0" solimp="1 1 0.001 0.5 2"/>
+  </equality>
+  <tendon>
+    <spatial name="m2_tendon_fl" range="0 0.001" width="0.001" rgba="1 0.4 0.4 0.5">
+      <site site="thigh_up_point_2_fl"/>
+      <site site="thigh_up_point_1_fl"/>
+    </spatial>
+    <spatial name="m2_tendon_fr" range="0 0.001" width="0.001" rgba="1 0.4 0.4 0.5">
+      <site site="thigh_up_point_2_fr"/>
+      <site site="thigh_up_point_1_fr"/>
+    </spatial>
+    <spatial name="m2_tendon_rl" range="0 0.001" width="0.001" rgba="1 0.4 0.4 0.5">
+      <site site="thigh_up_point_2_rl"/>
+      <site site="thigh_up_point_1_rl"/>
+    </spatial>
+    <spatial name="m2_tendon_rr" range="0 0.001" width="0.001" rgba="1 0.4 0.4 0.5">
+      <site site="thigh_up_point_2_rr"/>
+      <site site="thigh_up_point_1_rr"/>
+    </spatial>
+    <spatial name="m1_tail_tendon1" range="0 0.1863" width="0.0005" rgba="1 0.4 0.4 0.5">
+      <site site="servo_tail_1"/>
+      <site site="st_1"/>
+      <site site="st_3"/>
+      <site site="st_5"/>
+      <site site="st_7"/>
+      <site site="st_9"/>
+      <site site="st_11"/>
+      <site site="st_13"/>
+      <site site="st_15"/>
+      <site site="st_17"/>
+      <site site="st_19"/>
+      <site site="st_21"/>
+      <site site="st_23"/>
+      <site site="st_25"/>
+      <site site="st_27"/>
+      <site site="st_29"/>
+      <site site="st_31"/>
+      <site site="st_33"/>
+      <site site="st_35"/>
+      <site site="st_37"/>
+      <site site="st_39"/>
+      <site site="st_41"/>
+      <site site="st_43"/>
+      <site site="st_45"/>
+      <site site="st_47"/>
+      <site site="st_49"/>
+      <site site="st_51"/>
+      <site site="st_53"/>
+      <site site="st_55"/>
+      <site site="st_57"/>
+      <site site="st_59"/>
+      <site site="st_61"/>
+      <site site="st_63"/>
+      <site site="st_65"/>
+      <site site="st_67"/>
+      <site site="st_69"/>
+      <site site="st_71"/>
+      <site site="st_73"/>
+      <site site="st_75"/>
+      <site site="st_77"/>
+      <site site="st_79"/>
+    </spatial>
+    <spatial name="m1_tail_tendon2" range="0 0.1863" width="0.0005" rgba="1 0.4 0.4 0.5">
+      <site site="servo_tail_2"/>
+      <site site="st_2"/>
+      <site site="st_4"/>
+      <site site="st_6"/>
+      <site site="st_8"/>
+      <site site="st_10"/>
+      <site site="st_12"/>
+      <site site="st_14"/>
+      <site site="st_16"/>
+      <site site="st_18"/>
+      <site site="st_20"/>
+      <site site="st_22"/>
+      <site site="st_24"/>
+      <site site="st_26"/>
+      <site site="st_28"/>
+      <site site="st_30"/>
+      <site site="st_32"/>
+      <site site="st_34"/>
+      <site site="st_36"/>
+      <site site="st_38"/>
+      <site site="st_40"/>
+      <site site="st_42"/>
+      <site site="st_44"/>
+      <site site="st_46"/>
+      <site site="st_48"/>
+      <site site="st_50"/>
+      <site site="st_52"/>
+      <site site="st_54"/>
+      <site site="st_56"/>
+      <site site="st_58"/>
+      <site site="st_60"/>
+      <site site="st_62"/>
+      <site site="st_64"/>
+      <site site="st_66"/>
+      <site site="st_68"/>
+      <site site="st_70"/>
+      <site site="st_72"/>
+      <site site="st_74"/>
+      <site site="st_76"/>
+      <site site="st_78"/>
+      <site site="st_80"/>
+    </spatial>
+    <spatial name="m1_tendon_ss" range="0 0.07405" width="0.0005" rgba="1 0.4 0.4 0.3">
+      <site site="s1_ss"/>
+      <geom geom="m_ss" sidesite="sx1_ss"/>
+      <site site="s18_ss"/>
+      <site site="s16_ss"/>
+      <site site="s14_ss"/>
+      <site site="s12_ss"/>
+      <site site="s10_ss"/>
+      <site site="s8_ss"/>
+      <site site="s6_ss"/>
+      <site site="s4_ss"/>
+      <site site="s2_ss"/>
+    </spatial>
+    <spatial name="m2_tendon_ss" range="0 0.07405" width="0.0005" rgba="1 0.4 0.4 0.3">
+      <site site="s1_ss"/>
+      <geom geom="m_ss" sidesite="sx2_ss"/>
+      <site site="s19_ss"/>
+      <site site="s17_ss"/>
+      <site site="s15_ss"/>
+      <site site="s13_ss"/>
+      <site site="s11_ss"/>
+      <site site="s9_ss"/>
+      <site site="s7_ss"/>
+      <site site="s5_ss"/>
+      <site site="s3_ss"/>
+    </spatial>
+  </tendon>
+  <actuator>
+    <general name="leg_joint_fl" joint="leg_joint_fl" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="thigh_joint_fl" joint="thigh_joint_fl" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="leg_joint_fr" joint="leg_joint_fr" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="thigh_joint_fr" joint="thigh_joint_fr" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="leg_joint_rl" joint="leg_joint_rl" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="thigh_joint_rl" joint="thigh_joint_rl" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="leg_joint_rr" joint="leg_joint_rr" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="thigh_joint_rr" joint="thigh_joint_rr" ctrlrange="-3 3" forcerange="-8 8" biastype="affine" gainprm="500 0 0 0 0 0 0 0 0 0" biasprm="0 -500 0 0 0 0 0 0 0 0"/>
+    <general name="m1_tail" joint="m1_tail" ctrlrange="-1.57 1.57" forcerange="-0.6 0.6" biastype="affine" gainprm="300 0 0 0 0 0 0 0 0 0" biasprm="0 -300 0 0 0 0 0 0 0 0"/>
+    <general name="neck" joint="neck" ctrlrange="-1.57 1.57" forcerange="-0.157 0.157" biastype="affine" gainprm="100 0 0 0 0 0 0 0 0 0" biasprm="0 -100 0 0 0 0 0 0 0 0"/>
+    <general name="head" joint="head" ctrlrange="-1.57 1.57" forcerange="-0.157 0.157" biastype="affine" gainprm="100 0 0 0 0 0 0 0 0 0" biasprm="0 -100 0 0 0 0 0 0 0 0"/>
+    <general name="spine" joint="m_ss" ctrlrange="-1.57 1.57" forcerange="-0.157 0.157" biastype="affine" gainprm="300 0 0 0 0 0 0 0 0 0" biasprm="0 -300 0 0 0 0 0 0 0 0"/>
+  </actuator>
+  <sensor>
+    <jointpos joint="thigh_joint_fl" name="thigh_joint_fl"/>
+    <jointpos joint="leg_joint_fl" name="leg_joint_fl"/>
+    <jointpos joint="thigh_joint_fr" name="thigh_joint_fr"/>
+    <jointpos joint="leg_joint_fr" name="leg_joint_fr"/>
+    <jointpos joint="thigh_joint_rl" name="thigh_joint_rl"/>
+    <jointpos joint="leg_joint_rl" name="leg_joint_rl"/>
+    <jointpos joint="thigh_joint_rr" name="thigh_joint_rr"/>
+    <jointpos joint="leg_joint_rr" name="leg_joint_rr"/>
+    <jointpos joint="m1_tail" name="m1_tail"/>
+    <jointpos joint="neck" name="neck"/>
+    <jointpos joint="head" name="head"/>
+    <jointpos joint="m_ss" name="spine"/>
+    <framepos objtype="site" objname="imu" name="com_pos"/>
+    <framequat objtype="site" objname="imu" name="com_quat"/>
+    <framelinvel objtype="site" objname="imu" name="com_vel"/>
+    <accelerometer site="imu" name="imu_acc"/>
+    <gyro site="imu" name="imu_gyro"/>
+  </sensor>
+</mujoco>
