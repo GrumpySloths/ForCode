@@ -159,7 +159,7 @@ class SimModel(object):
             # 应该是用于设置actuator的相位信息
             ctrlData = [0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0]
             self.runStep(ctrlData)
-        print("first stage")
+        # print("first stage")
         curFoot = self.getFootWorldPosition()
         self.initializing()
         info = {}

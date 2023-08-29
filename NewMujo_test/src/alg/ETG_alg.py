@@ -1,6 +1,9 @@
 import numpy as np
 import copy
 
+def compute_weight_decay(weight_decay, model_param_list):
+    model_param_grid = np.array(model_param_list)
+    return -weight_decay * np.mean(model_param_grid * model_param_grid, axis=1)
 
 class SimpleGA:
     '''Simple Genetic Algorithm.'''
@@ -35,6 +38,7 @@ class SimpleGA:
         else:
             self.best_param = param
         self.curr_best_param = self.best_param
+        self.curr_best_reward=0
         self.best_reward = 0
         self.first_iteration = True
         self.forget_best = forget_best

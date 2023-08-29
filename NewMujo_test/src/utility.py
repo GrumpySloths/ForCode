@@ -3,6 +3,9 @@ import numpy as np
 
 ETG_T = 2
 
+def saveETGinfo(path,w,b,param):
+    np.savez(path,w=w,b=b,param=param)
+
 
 def infoRecord(theMouse, theController):
     # plt.plot(theMouse.angle_AEF_record)
