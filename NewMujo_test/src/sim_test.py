@@ -22,7 +22,7 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL=True
+EVAL=False
 
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
