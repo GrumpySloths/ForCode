@@ -1,11 +1,26 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 ETG_T = 2
 
 def saveETGinfo(path,w,b,param):
     np.savez(path,w=w,b=b,param=param)
 
+def ETG_trj_plot(w,b,ETG_agent,idx):
+    outdir = "./train_log/exp2/plot_log"
+    if not os.path.exists(outdir):
+        os.makedirs(outdir)
+    outpath=os.path.join(outdir,"ETG_trj_{}.png".format(idx))
+    ts_new=np.linspace(0,ETG_T,100)
+    obs1=[]
+    for t in ts_new:
+        v=ETG_agent.update(t)
+        obs1.append(v)
+    obs1=np.asarray(obs1).reshape(-1,20)
+    points_new=obs1.dot(w)+b
+    plt.plot(points_new[:,0],points_new[:,1])
+    plt.savefig(outpath)
 
 def infoRecord(theMouse, theController):
     # plt.plot(theMouse.angle_AEF_record)

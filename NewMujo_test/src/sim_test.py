@@ -54,7 +54,7 @@ def run_EStrain_episode(theMouse, theController, env):
 
 if __name__ == '__main__':
     #输出配置
-    outdir = "./train_log/exp1"
+    outdir = "./train_log/exp2"
     if not os.path.exists(outdir):
         os.makedirs(outdir)
     logger.set_dir(outdir)
@@ -112,13 +112,21 @@ if __name__ == '__main__':
             summary.add_scalar('ES/episode_restd', np.std(fitness_list), ei + 1)
             summary.add_scalar('ES/episode_length', np.mean(steps), ei + 1)
             summary.add_scalar('ES/sigma', sig, ei + 1)
+            if ei%20==0:
+                best_param=ES_solver.get_best_param()
+                points_add = best_param.reshape(-1, 2)
+                new_points = prior_points + points_add
+                w_best, b_best = theController.getETGinfo(new_points)
+                path="./data/ETG_models/slopeBest_{}.npz".format(ei)
+                theController.update(w_best, b_best)
+                episode_reward, step = run_EStrain_episode(theMouse, theController,
+                                                                env)
+                logger.info('Evaluation Reward: {} step: {} '.format(
+                        episode_reward, step))
+                summary.add_scalar('EVAL/episode_reward', episode_reward, ei + 1)
+                utility.saveETGinfo(path,w_best,b_best,new_points)
+                utility.ETG_trj_plot(w_best,b_best,theController.ETG_agent,ei)
 
-        best_param=ES_solver.get_best_param()
-        points_add = best_param.reshape(-1, 2)
-        new_points = prior_points + points_add
-        w_best, b_best = theController.getETGinfo(new_points)
-        path="./data/ETG_models/slopeBest.npz"
-        utility.saveETGinfo(path,w_best,b_best,new_points)
     elif EVAL==True:
         print("start eval")
         info=np.load("./data/ETG_models/slopeBest.npz")
@@ -128,7 +136,7 @@ if __name__ == '__main__':
         theController.update(w, b)
         episode_reward, step = run_EStrain_episode(theMouse, theController,
                                                         env)
-        logger.info('Evaluation Reward: {} step: {}  sigma:{}'.format(
+        logger.info('Evaluation Reward: {} step: {} '.format(
                 episode_reward, step))
 
 
