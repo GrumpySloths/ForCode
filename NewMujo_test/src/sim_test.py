@@ -22,7 +22,8 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL=False
+EVAL = True
+
 
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
@@ -53,11 +54,7 @@ def run_EStrain_episode(theMouse, theController, env):
 
 
 if __name__ == '__main__':
-    #输出配置
-    outdir = "./train_log/exp2"
-    if not os.path.exists(outdir):
-        os.makedirs(outdir)
-    logger.set_dir(outdir)
+
     # logger.info('args:{}'.format(args))
     #_______
     render = False  #控制是否进行画面渲染
@@ -85,6 +82,11 @@ if __name__ == '__main__':
     )
     # ES_solver.reset()
     if not EVAL:
+        #输出配置
+        outdir = "./train_log/exp2"
+        if not os.path.exists(outdir):
+            os.makedirs(outdir)
+        logger.set_dir(outdir)
         for ei in range(ES_TRAIN_STEPS):
             solutions = ES_solver.ask()
             fitness_list = []
@@ -94,8 +96,8 @@ if __name__ == '__main__':
                 new_points = prior_points + points_add
                 w, b = theController.getETGinfo(new_points)
                 theController.update(w, b)
-                episode_reward, step = run_EStrain_episode(theMouse, theController,
-                                                        env)
+                episode_reward, step = run_EStrain_episode(
+                    theMouse, theController, env)
                 steps.append(step)
                 # logger.info("%d th ES_train,%d solution :episode reward:%f" %
                 #             (ei, id, episode_reward))
@@ -106,39 +108,44 @@ if __name__ == '__main__':
             ES_solver.tell(fitness_list)
             logger.info('ESSteps: {} Reward: {} step: {}  sigma:{}'.format(
                 ei + 1, np.max(fitness_list), np.mean(steps), sig))
-            summary.add_scalar('ES/episode_reward', np.mean(fitness_list), ei + 1)
-            summary.add_scalar('ES/episode_minre', np.min(fitness_list), ei + 1)
-            summary.add_scalar('ES/episode_maxre', np.max(fitness_list), ei + 1)
-            summary.add_scalar('ES/episode_restd', np.std(fitness_list), ei + 1)
+            summary.add_scalar('ES/episode_reward', np.mean(fitness_list),
+                               ei + 1)
+            summary.add_scalar('ES/episode_minre', np.min(fitness_list),
+                               ei + 1)
+            summary.add_scalar('ES/episode_maxre', np.max(fitness_list),
+                               ei + 1)
+            summary.add_scalar('ES/episode_restd', np.std(fitness_list),
+                               ei + 1)
             summary.add_scalar('ES/episode_length', np.mean(steps), ei + 1)
             summary.add_scalar('ES/sigma', sig, ei + 1)
-            if ei%20==0:
-                best_param=ES_solver.get_best_param()
+            if ei % 20 == 0:
+                best_param = ES_solver.get_best_param()
                 points_add = best_param.reshape(-1, 2)
                 new_points = prior_points + points_add
                 w_best, b_best = theController.getETGinfo(new_points)
-                path="./data/ETG_models/slopeBest_{}.npz".format(ei)
+                path = "./data/ETG_models/slopeBest_{}.npz".format(ei)
                 theController.update(w_best, b_best)
-                episode_reward, step = run_EStrain_episode(theMouse, theController,
-                                                                env)
+                episode_reward, step = run_EStrain_episode(
+                    theMouse, theController, env)
                 logger.info('Evaluation Reward: {} step: {} '.format(
-                        episode_reward, step))
-                summary.add_scalar('EVAL/episode_reward', episode_reward, ei + 1)
-                utility.saveETGinfo(path,w_best,b_best,new_points)
-                utility.ETG_trj_plot(w_best,b_best,theController.ETG_agent,ei)
+                    episode_reward, step))
+                summary.add_scalar('EVAL/episode_reward', episode_reward,
+                                   ei + 1)
+                utility.saveETGinfo(path, w_best, b_best, new_points)
+                utility.ETG_trj_plot(w_best, b_best, theController.ETG_agent,
+                                     ei)
 
-    elif EVAL==True:
+    elif EVAL == True:
         print("start eval")
-        info=np.load("./data/ETG_models/slopeBest.npz")
-        w=info["w"]
-        b=info["b"]
-        points=info["param"]
+        info = np.load("./data/ETG_models/slopeBest_180.npz")
+        w = info["w"]
+        b = info["b"]
+        points = info["param"]
         theController.update(w, b)
         episode_reward, step = run_EStrain_episode(theMouse, theController,
-                                                        env)
+                                                   env)
         logger.info('Evaluation Reward: {} step: {} '.format(
-                episode_reward, step))
-
+            episode_reward, step))
 
     # 安全关闭模拟器
     if theMouse.render:
