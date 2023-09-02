@@ -40,6 +40,7 @@ def run_EStrain_episode(theMouse, theController, env):
         obs, reward, terminated, _, info = env.step(ctrlData)
         if step % 1000 == 0:
             endFoot = info["curFoot"]
+            # print("endFoot=", endFoot)
             dist = endFoot - curFoot
             angle_z = info["euler_z"]
             # print("the move distance of 1000 step:", dist)
@@ -57,7 +58,7 @@ if __name__ == '__main__':
 
     # logger.info('args:{}'.format(args))
     #_______
-    render = False  #控制是否进行画面渲染
+    render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.002
@@ -133,15 +134,19 @@ if __name__ == '__main__':
                                    ei + 1)
                 utility.saveETGinfo(path, w_best, b_best, new_points)
                 utility.ETG_trj_plot(w_best, b_best, theController.ETG_agent,
-                                     ei)
+                                     ei, outdir)
 
     elif EVAL == True:
         print("start eval")
-        info = np.load("./data/ETG_models/slopeBest_180.npz")
+        idx = 800
+        info = np.load("./data/ETG_models/slopeBest_{}.npz".format(idx))
         w = info["w"]
         b = info["b"]
-        points = info["param"]
+        print("w.shape:", w.shape)
+        print("b.shape:", b.shape)
+        # points = info["param"]
         theController.update(w, b)
+        utility.ETG_trj_plot(w, b, theController.ETG_agent, idx)
         episode_reward, step = run_EStrain_episode(theMouse, theController,
                                                    env)
         logger.info('Evaluation Reward: {} step: {} '.format(

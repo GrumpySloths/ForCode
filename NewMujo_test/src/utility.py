@@ -9,8 +9,8 @@ def saveETGinfo(path, w, b, param):
     np.savez(path, w=w, b=b, param=param)
 
 
-def ETG_trj_plot(w, b, ETG_agent, idx):
-    outdir = "./train_log/exp2/plot_log"
+def ETG_trj_plot(w, b, ETG_agent, idx, outdir="./"):
+    outdir = os.path.join(outdir, "plot_log")
     if not os.path.exists(outdir):
         os.makedirs(outdir)
     outpath = os.path.join(outdir, "ETG_trj_{}.png".format(idx))
