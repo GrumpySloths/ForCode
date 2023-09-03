@@ -20,5 +20,5 @@ class GymEnv(gym.Env):
         terminated = False
         info["curFoot"] = self.agent.getFootWorldPosition()
         info["euler_z"], info["rot_mat"] = self.agent.getEuler_z()
-
+        info["slope_y"]=self.agent.getSlope_y()
         return obs, reward, terminated, False, info

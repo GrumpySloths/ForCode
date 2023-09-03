@@ -333,3 +333,10 @@ class SimModel(object):
         angle_z = math.atan2(-rot[1], rot[0])
 
         return angle_z, rot
+    
+    def getSlope_y(self):
+        id=mujoco.mj_name2id(self.model,mujoco.mjtObj.mjOBJ_GEOM,"slope1")
+        pos_y=self.data.site_xpos[id][1]
+
+        return pos_y
+

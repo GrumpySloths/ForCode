@@ -43,3 +43,6 @@ WARNING: mju_openResource: unknown file '/home/niujh/ForCode/ForSim/New/models/d
 Tue Aug 29 09:17:42 2023
 ERROR: could not initialize GLFW
 
+Sat Sep  2 10:11:28 2023
+ERROR: could not initialize GLFW
+
