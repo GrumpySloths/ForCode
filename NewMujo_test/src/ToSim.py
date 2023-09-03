@@ -336,7 +336,7 @@ class SimModel(object):
     
     def getSlope_y(self):
         id=mujoco.mj_name2id(self.model,mujoco.mjtObj.mjOBJ_GEOM,"slope1")
-        pos_y=self.data.site_xpos[id][1]
+        pos_y=self.data.geom_xpos[id][1]
 
         return pos_y
 

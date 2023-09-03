@@ -22,7 +22,7 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL = False
+EVAL = True
 
 
 def run_EStrain_episode(theMouse, theController, env):
@@ -50,8 +50,8 @@ def run_EStrain_episode(theMouse, theController, env):
             # time.sleep(1)
             if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3):
                 terminated = True
-            # if(abs(endFoot-startFoot)>0.5):
-                logger.info("the y pos of slope:{}".format(slope_y))
+            if(abs(endFoot-startFoot)>0.5):
+                logger.info("the y pos of slope:{},endFoot:{}".format(slope_y,endFoot))
             curFoot = endFoot
     episode_reward = abs(endFoot - startFoot)
     return episode_reward, step
@@ -87,10 +87,11 @@ if __name__ == '__main__':
     # ES_solver.reset()
     if not EVAL:
         #输出配置
-        outdir = "./train_log/exp2"
+        outdir = "./train_log/exp1"
         if not os.path.exists(outdir):
             os.makedirs(outdir)
         logger.set_dir(outdir)
+        logger.info("slope no mass")
         for ei in range(ES_TRAIN_STEPS):
             solutions = ES_solver.ask()
             fitness_list = []
@@ -141,7 +142,7 @@ if __name__ == '__main__':
 
     elif EVAL == True:
         print("start eval")
-        idx = 800
+        idx = 20
         info = np.load("./data/ETG_models/slopeBest_{}.npz".format(idx))
         w = info["w"]
         b = info["b"]
