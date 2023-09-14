@@ -160,11 +160,13 @@ class SimModel(object):
             ctrlData = [0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0]
             self.runStep(ctrlData)
         # print("first stage")
-        curFoot = self.getFootWorldPosition()
+        curFoot = self.getFootWorldPosition_y()
+        curFoot_z = self.getFootWorldPosition_z()
         self.initializing()
         info = {}
         obs = []
         info["curFoot"] = curFoot
+        info["curFoot_z"] = curFoot_z
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
         return obs, info
 
@@ -316,11 +318,17 @@ class SimModel(object):
         angle_AEF = self.LawOfCosines_angle(AE, EF, AF)
         return angle_AEF
 
-    def getFootWorldPosition(self):
+    def getFootWorldPosition_y(self):
         '''
         获取小鼠足末位置的世界坐标
         '''
         return self.legLink_x[0][-1]
+
+    def getFootWorldPosition_z(self):
+        '''
+        获取小鼠足末位置的世界坐标
+        '''
+        return self.legLink_y[0][-1]
 
     def getEuler_z(self):
         '''
@@ -333,10 +341,9 @@ class SimModel(object):
         angle_z = math.atan2(-rot[1], rot[0])
 
         return angle_z, rot
-    
+
     def getSlope_y(self):
-        id=mujoco.mj_name2id(self.model,mujoco.mjtObj.mjOBJ_GEOM,"slope1")
-        pos_y=self.data.geom_xpos[id][1]
+        id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_GEOM, "slope1")
+        pos_y = self.data.geom_xpos[id][1]
 
         return pos_y
-

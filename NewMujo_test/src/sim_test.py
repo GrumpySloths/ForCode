@@ -38,20 +38,25 @@ def run_EStrain_episode(theMouse, theController, env):
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
+        if step % 100 == 0:
+            # print("hello")
+            pass
         if step % 1000 == 0:
             endFoot = info["curFoot"]
             # print("endFoot=", endFoot)
             dist = endFoot - curFoot
             angle_z = info["euler_z"]
-            slope_y=info["slope_y"]
+            slope_y = info["slope_y"]
             # print("the move distance of 1000 step:", dist)
             # print("the euler of z axis:", angle_z)
             # print("rot_mat:", info["rot_mat"])
             # time.sleep(1)
             if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3):
                 terminated = True
-            if(abs(endFoot-startFoot)>0.5):
-                logger.info("the y pos of slope:{},endFoot:{}".format(slope_y,endFoot))
+                # if (abs(endFoot - startFoot) > 0.5):
+                logger.info(
+                    "the y pos of slope:{},endFoot:{},endFoot_z:{}".format(
+                        slope_y, endFoot, info["curFoot_z"]))
             curFoot = endFoot
     episode_reward = abs(endFoot - startFoot)
     return episode_reward, step
@@ -61,7 +66,7 @@ if __name__ == '__main__':
 
     # logger.info('args:{}'.format(args))
     #_______
-    render = False  #控制是否进行画面渲染
+    render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.002
@@ -143,7 +148,9 @@ if __name__ == '__main__':
     elif EVAL == True:
         print("start eval")
         idx = 20
-        info = np.load("./data/ETG_models/slopeBest_{}.npz".format(idx))
+        ETG_Evalpath = os.path.join(
+            script_directory, "data/ETG_models/slopeBest_{}.npz".format(idx))
+        info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]
         print("w.shape:", w.shape)
