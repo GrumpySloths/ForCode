@@ -1,6 +1,7 @@
 import numpy as np
 import math
-
+import sys
+sys.path.append('/mnt/S58Data1/niujh/ForCode/NewMujo_test/src')
 from LegModel.forPath import LegPath
 # -----------------------------------------------------------
 from LegModel.legs import LegModel

@@ -1,0 +1,6 @@
+[32m[09-06 09:54:48 MainThread @parallel_model.py:216][0m slope no mass
+[31m[09-06 09:55:18 Thread-6 (_update_job_status) @client.py:223][0m [4m[5m[31mERR[0m [Client] lost connection with a remote instance. ID: 00001
+[31m[09-06 09:55:18 Thread-6 (_update_job_status) @client.py:223][0m [4m[5m[31mERR[0m [Client] lost connection with a remote instance. ID: 00002
+[31m[09-06 09:55:18 Thread-6 (_update_job_status) @client.py:223][0m [4m[5m[31mERR[0m [Client] lost connection with a remote instance. ID: 00003
+[31m[09-06 09:55:18 Thread-6 (_update_job_status) @client.py:223][0m [4m[5m[31mERR[0m [Client] lost connection with a remote instance. ID: 00004
+[31m[09-06 09:55:18 Thread-6 (_update_job_status) @client.py:223][0m [4m[5m[31mERR[0m [Client] lost connection with a remote instance. ID: 00005
