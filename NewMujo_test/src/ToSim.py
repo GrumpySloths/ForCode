@@ -42,6 +42,7 @@ class SimModel(object):
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
+        self.legLink_z=[[], [], [], []]
         self.movePath = [[], [], []]
         self.angle_AEF = ["leg_link_fl", "knee_down_fl", "ankle_fl"]
         self.angle_AEF_record = []
@@ -53,9 +54,6 @@ class SimModel(object):
 
         self.paused = False
 
-    def key_callback(self, keycode):
-        if chr(keycode) == ' ':
-            self.paused = not self.paused
 
     def initializing(self):
         self.movePath = [[], [], []]
@@ -63,6 +61,7 @@ class SimModel(object):
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
+        self.legLink_z=[[], [], [], []]
         self.angle_AEF_record = []
         self.FlRlLinkDistance_x = []
         self.FlRlLinkDistance_y = []
@@ -137,8 +136,9 @@ class SimModel(object):
                 RlAnkle = currentPoint
             # print(currentPoint)
             # print(originPoint, currentPoint)
-            self.legLink_x[i].append(currentPoint[1])
-            self.legLink_y[i].append(currentPoint[2])
+            self.legLink_x[i].append(currentPoint[0])
+            self.legLink_y[i].append(currentPoint[1])
+            self.legLink_z[i].append(currentPoint[2])
             tX = currentPoint[1] - originPoint[1]
             tY = currentPoint[2] - originPoint[2]
             foot_z_temp += tY
@@ -322,7 +322,8 @@ class SimModel(object):
         '''
         获取小鼠足末位置的世界坐标
         '''
-        return self.legLink_x[0][-1]
+        return (self.legLink_x[0][-1],self.legLink_y[0][-1],self.legLink_z[0][-1])
+    
 
     def getFootWorldPosition_z(self):
         '''

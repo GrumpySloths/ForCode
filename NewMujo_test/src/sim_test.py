@@ -22,12 +22,13 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL = True
+EVAL = False
+EXP_ID = 4
 
 
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
-    curFoot = info["curFoot"]
+    curFoot = info["curFoot"][1]
     endFoot = 0
     startFoot = curFoot
     terminated = False
@@ -39,10 +40,10 @@ def run_EStrain_episode(theMouse, theController, env):
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
         if step % 100 == 0:
-            # print("hello")
-            pass
+            if (abs(info['curFoot'][0]) > 0.2):
+                terminated = True
         if step % 1000 == 0:
-            endFoot = info["curFoot"]
+            endFoot = info["curFoot"][1]
             # print("endFoot=", endFoot)
             dist = endFoot - curFoot
             angle_z = info["euler_z"]
@@ -51,12 +52,14 @@ def run_EStrain_episode(theMouse, theController, env):
             # print("the euler of z axis:", angle_z)
             # print("rot_mat:", info["rot_mat"])
             # time.sleep(1)
+            # logger.info("move of x:{}".format(info['curFoot'][0]))
             if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3):
                 terminated = True
-                # if (abs(endFoot - startFoot) > 0.5):
+            if (abs(endFoot - startFoot) > 0.5):
                 logger.info(
-                    "the y pos of slope:{},endFoot:{},endFoot_z:{}".format(
-                        slope_y, endFoot, info["curFoot_z"]))
+                    "the y pos of slope:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}"
+                    .format(slope_y, info["curFoot"][0], endFoot,
+                            info["curFoot"][2]))
             curFoot = endFoot
     episode_reward = abs(endFoot - startFoot)
     return episode_reward, step
@@ -92,12 +95,13 @@ if __name__ == '__main__':
     # ES_solver.reset()
     if not EVAL:
         #输出配置
-        outdir = "./train_log/exp1"
+        outdir = "./train_log/exp{}".format(EXP_ID)
         if not os.path.exists(outdir):
             os.makedirs(outdir)
         logger.set_dir(outdir)
         logger.info("slope no mass")
         for ei in range(ES_TRAIN_STEPS):
+            start = time.time()
             solutions = ES_solver.ask()
             fitness_list = []
             steps = []
@@ -116,8 +120,11 @@ if __name__ == '__main__':
             sig = np.mean(results[3])
             fitness_list = np.asarray(fitness_list).reshape(-1)
             ES_solver.tell(fitness_list)
-            logger.info('ESSteps: {} Reward: {} step: {}  sigma:{}'.format(
-                ei + 1, np.max(fitness_list), np.mean(steps), sig))
+            end = time.time()
+            logger.info(
+                'ESSteps: {} Reward: {} step: {}  sigma:{},time:{}'.format(
+                    ei + 1, np.max(fitness_list), np.mean(steps), sig,
+                    end - start))
             summary.add_scalar('ES/episode_reward', np.mean(fitness_list),
                                ei + 1)
             summary.add_scalar('ES/episode_minre', np.min(fitness_list),
@@ -133,7 +140,12 @@ if __name__ == '__main__':
                 points_add = best_param.reshape(-1, 2)
                 new_points = prior_points + points_add
                 w_best, b_best = theController.getETGinfo(new_points)
-                path = "./data/ETG_models/slopeBest_{}.npz".format(ei)
+                path = os.path.join(script_directory,
+                                    "data/exp{}_ETG_models".format(EXP_ID))
+                if not os.path.exists(path):
+                    os.makedirs(path)
+                path = os.path.join(path, "slopeBest_{}.npz".format(ei))
+                # path = os.path.join(script_directory,"data/ETG_models/exp3/slopeBest_{}.npz".format(ei))
                 theController.update(w_best, b_best)
                 episode_reward, step = run_EStrain_episode(
                     theMouse, theController, env)
@@ -147,9 +159,10 @@ if __name__ == '__main__':
 
     elif EVAL == True:
         print("start eval")
-        idx = 20
+        idx = 180
         ETG_Evalpath = os.path.join(
-            script_directory, "data/ETG_models/slopeBest_{}.npz".format(idx))
+            script_directory,
+            "data/exp3_ETG_models/slopeBest_{}.npz".format(idx))
         info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]

@@ -28,3 +28,338 @@
 [32m[09-03 11:35:03 MainThread @sim_test.py:113][0m ESSteps: 24 Reward: 0.28748078142791306 step: 1300.0  sigma:0.015872285672873108
 [32m[09-03 11:35:55 MainThread @sim_test.py:113][0m ESSteps: 25 Reward: 0.2253961887795049 step: 1150.0  sigma:0.015713562816144378
 [32m[09-03 11:37:02 MainThread @sim_test.py:113][0m ESSteps: 26 Reward: 0.2564373139467814 step: 1500.0  sigma:0.015556427187982934
+[32m[09-03 11:38:08 MainThread @sim_test.py:113][0m ESSteps: 27 Reward: 0.25142319282283765 step: 1500.0  sigma:0.015400862916103104
+[32m[09-03 11:39:15 MainThread @sim_test.py:113][0m ESSteps: 28 Reward: 0.361505367857865 step: 1500.0  sigma:0.015246854286942073
+[32m[09-03 11:40:30 MainThread @sim_test.py:113][0m ESSteps: 29 Reward: 0.2782170166480262 step: 1700.0  sigma:0.015094385744072653
+[32m[09-03 11:41:46 MainThread @sim_test.py:113][0m ESSteps: 30 Reward: 0.23695041752813004 step: 1725.0  sigma:0.014943441886631926
+[32m[09-03 11:42:51 MainThread @sim_test.py:113][0m ESSteps: 31 Reward: 0.23059326538500663 step: 1450.0  sigma:0.014794007467765607
+[32m[09-03 11:44:02 MainThread @sim_test.py:113][0m ESSteps: 32 Reward: 0.30986817231176894 step: 1625.0  sigma:0.014646067393087952
+[32m[09-03 11:45:23 MainThread @sim_test.py:113][0m ESSteps: 33 Reward: 0.28352982268974486 step: 1825.0  sigma:0.014499606719157072
+[32m[09-03 11:46:58 MainThread @sim_test.py:113][0m ESSteps: 34 Reward: 0.2933220697918905 step: 2150.0  sigma:0.014354610651965501
+[32m[09-03 11:47:56 MainThread @sim_test.py:113][0m ESSteps: 35 Reward: 0.195848153050501 step: 1300.0  sigma:0.014211064545445845
+[32m[09-03 11:49:17 MainThread @sim_test.py:113][0m ESSteps: 36 Reward: 0.262337997526923 step: 1825.0  sigma:0.014068953899991387
+[32m[09-03 11:50:17 MainThread @sim_test.py:113][0m ESSteps: 37 Reward: 0.17260058275340306 step: 1350.0  sigma:0.013928264360991474
+[32m[09-03 11:51:25 MainThread @sim_test.py:113][0m ESSteps: 38 Reward: 0.2900591603061291 step: 1525.0  sigma:0.01378898171738156
+[32m[09-03 11:52:30 MainThread @sim_test.py:113][0m ESSteps: 39 Reward: 0.29347479082478367 step: 1475.0  sigma:0.013651091900207744
+[32m[09-03 11:53:35 MainThread @sim_test.py:113][0m ESSteps: 40 Reward: 0.27128197062405957 step: 1475.0  sigma:0.013514580981205667
+[32m[09-03 11:54:53 MainThread @sim_test.py:113][0m ESSteps: 41 Reward: 0.31465249022099756 step: 1750.0  sigma:0.01337943517139361
+[32m[09-03 11:54:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:54:57 MainThread @sim_test.py:134][0m Evaluation Reward: 0.5857142833823114 step: 3000 
+[32m[09-03 11:56:16 MainThread @sim_test.py:113][0m ESSteps: 42 Reward: 0.24921964116878864 step: 1800.0  sigma:0.013245640819679673
+[32m[09-03 11:56:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:49 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:50 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:51 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:52 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:53 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:56:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 11:57:28 MainThread @sim_test.py:113][0m ESSteps: 43 Reward: 2.0305935519886265 step: 1625.0  sigma:0.013113184411482876
+[32m[09-03 11:59:11 MainThread @sim_test.py:113][0m ESSteps: 44 Reward: 0.2816497288152539 step: 2325.0  sigma:0.012982052567368046
+[32m[09-03 12:00:42 MainThread @sim_test.py:113][0m ESSteps: 45 Reward: 0.2733483694094697 step: 2050.0  sigma:0.012852232041694365
+[32m[09-03 12:02:37 MainThread @sim_test.py:113][0m ESSteps: 46 Reward: 0.21272357095237732 step: 2600.0  sigma:0.012723709721277421
+[32m[09-03 12:04:40 MainThread @sim_test.py:113][0m ESSteps: 47 Reward: 0.2725154350724208 step: 2800.0  sigma:0.012596472624064646
+[32m[09-03 12:06:06 MainThread @sim_test.py:113][0m ESSteps: 48 Reward: 0.2549576354796317 step: 1925.0  sigma:0.012470507897824
+[32m[09-03 12:07:55 MainThread @sim_test.py:113][0m ESSteps: 49 Reward: 0.28105126438497563 step: 2475.0  sigma:0.01234580281884576
+[32m[09-03 12:09:41 MainThread @sim_test.py:113][0m ESSteps: 50 Reward: 0.36319384117329867 step: 2425.0  sigma:0.012222344790657301
+[32m[09-03 12:11:22 MainThread @sim_test.py:113][0m ESSteps: 51 Reward: 0.35422582378158635 step: 2300.0  sigma:0.012100121342750729
+[32m[09-03 12:12:50 MainThread @sim_test.py:113][0m ESSteps: 52 Reward: 0.27680605905414163 step: 2000.0  sigma:0.011979120129323222
+[32m[09-03 12:14:18 MainThread @sim_test.py:113][0m ESSteps: 53 Reward: 0.3765179528644052 step: 1950.0  sigma:0.011859328928029989
+[32m[09-03 12:15:37 MainThread @sim_test.py:113][0m ESSteps: 54 Reward: 0.25433765625957305 step: 1800.0  sigma:0.011740735638749689
+[32m[09-03 12:17:00 MainThread @sim_test.py:113][0m ESSteps: 55 Reward: 0.3308657059892923 step: 1900.0  sigma:0.011623328282362191
+[32m[09-03 12:18:23 MainThread @sim_test.py:113][0m ESSteps: 56 Reward: 0.26917807409829153 step: 1875.0  sigma:0.011507094999538569
+[32m[09-03 12:19:59 MainThread @sim_test.py:113][0m ESSteps: 57 Reward: 0.30430231105773786 step: 2175.0  sigma:0.011392024049543183
+[32m[09-03 12:21:26 MainThread @sim_test.py:113][0m ESSteps: 58 Reward: 0.32790300991227445 step: 1950.0  sigma:0.01127810380904775
+[32m[09-03 12:23:04 MainThread @sim_test.py:113][0m ESSteps: 59 Reward: 0.4268563209258443 step: 2225.0  sigma:0.011165322770957272
+[32m[09-03 12:24:43 MainThread @sim_test.py:113][0m ESSteps: 60 Reward: 0.3356704441459334 step: 2250.0  sigma:0.011053669543247699
+[32m[09-03 12:26:02 MainThread @sim_test.py:113][0m ESSteps: 61 Reward: 0.22812406098427593 step: 1775.0  sigma:0.010943132847815222
+[32m[09-03 12:26:06 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:07 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:08 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:09 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:11 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:12 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:13 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:14 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:26:14 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 12:27:44 MainThread @sim_test.py:113][0m ESSteps: 62 Reward: 0.31833897651445187 step: 2000.0  sigma:0.01083370151933707
+[32m[09-03 12:29:02 MainThread @sim_test.py:113][0m ESSteps: 63 Reward: 0.28460589551516435 step: 1750.0  sigma:0.010725364504143698
+[32m[09-03 12:30:22 MainThread @sim_test.py:113][0m ESSteps: 64 Reward: 0.23831020208017514 step: 1800.0  sigma:0.010618110859102262
+[32m[09-03 12:31:47 MainThread @sim_test.py:113][0m ESSteps: 65 Reward: 0.3948187769771717 step: 1900.0  sigma:0.01051192975051124
+[32m[09-03 12:33:34 MainThread @sim_test.py:113][0m ESSteps: 66 Reward: 0.3266544333363065 step: 2400.0  sigma:0.010406810453006126
+[32m[09-03 12:35:15 MainThread @sim_test.py:113][0m ESSteps: 67 Reward: 0.28913320423295136 step: 2275.0  sigma:0.010302742348476066
+[32m[09-03 12:37:31 MainThread @sim_test.py:113][0m ESSteps: 68 Reward: 0.32084832053567636 step: 3050.0  sigma:0.010199714924991304
+[32m[09-03 12:39:14 MainThread @sim_test.py:113][0m ESSteps: 69 Reward: 0.2906138037731577 step: 2325.0  sigma:0.010097717775741392
+[32m[09-03 12:41:09 MainThread @sim_test.py:113][0m ESSteps: 70 Reward: 0.2685747144928044 step: 2600.0  sigma:0.009996740597983979
+[32m[09-03 12:42:56 MainThread @sim_test.py:113][0m ESSteps: 71 Reward: 0.2980532675291646 step: 2425.0  sigma:0.00989677319200414
+[32m[09-03 12:44:44 MainThread @sim_test.py:113][0m ESSteps: 72 Reward: 0.32298646283979315 step: 2425.0  sigma:0.009797805460084097
+[32m[09-03 12:46:46 MainThread @sim_test.py:113][0m ESSteps: 73 Reward: 0.28145832366815665 step: 2750.0  sigma:0.009699827405483256
+[32m[09-03 12:48:52 MainThread @sim_test.py:113][0m ESSteps: 74 Reward: 0.3596570061754348 step: 2825.0  sigma:0.009602829131428424
+[32m[09-03 12:49:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:49:58 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:49:59 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 12:50:54 MainThread @sim_test.py:113][0m ESSteps: 75 Reward: 0.6023298914352523 step: 2775.0  sigma:0.009506800840114139
+[32m[09-03 12:53:01 MainThread @sim_test.py:113][0m ESSteps: 76 Reward: 0.3849711076623463 step: 2825.0  sigma:0.009411732831712998
+[32m[09-03 12:54:52 MainThread @sim_test.py:113][0m ESSteps: 77 Reward: 0.38135359490155174 step: 2500.0  sigma:0.009317615503395868
+[32m[09-03 12:57:01 MainThread @sim_test.py:113][0m ESSteps: 78 Reward: 0.2929800189801868 step: 2900.0  sigma:0.00922443934836191
+[32m[09-03 12:59:02 MainThread @sim_test.py:113][0m ESSteps: 79 Reward: 0.3753278760620537 step: 2725.0  sigma:0.00913219495487829
+[32m[09-03 13:01:06 MainThread @sim_test.py:113][0m ESSteps: 80 Reward: 0.28114767567092513 step: 2825.0  sigma:0.009040873005329507
+[32m[09-03 13:02:49 MainThread @sim_test.py:113][0m ESSteps: 81 Reward: 0.2915056472518288 step: 2300.0  sigma:0.008950464275276212
+[32m[09-03 13:02:53 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:02:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:02:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:02:56 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:02:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:02:59 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:03:00 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:03:01 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:03:01 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 13:05:52 MainThread @sim_test.py:113][0m ESSteps: 82 Reward: 0.3250484069775993 step: 3825.0  sigma:0.00886095963252345
+[32m[09-03 13:07:26 MainThread @sim_test.py:113][0m ESSteps: 83 Reward: 0.26973441072899995 step: 2125.0  sigma:0.008772350036198216
+[32m[09-03 13:09:21 MainThread @sim_test.py:113][0m ESSteps: 84 Reward: 0.2871904074310109 step: 2600.0  sigma:0.008684626535836234
+[32m[09-03 13:11:09 MainThread @sim_test.py:113][0m ESSteps: 85 Reward: 0.2751093699833965 step: 2425.0  sigma:0.008597780270477872
+[32m[09-03 13:11:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:12:47 MainThread @sim_test.py:113][0m ESSteps: 86 Reward: 1.100329309779217 step: 2225.0  sigma:0.008511802467773093
+[32m[09-03 13:14:47 MainThread @sim_test.py:113][0m ESSteps: 87 Reward: 0.2549441116912463 step: 2700.0  sigma:0.008426684443095363
+[32m[09-03 13:16:53 MainThread @sim_test.py:113][0m ESSteps: 88 Reward: 0.2633860972321661 step: 2850.0  sigma:0.00834241759866441
+[32m[09-03 13:20:02 MainThread @sim_test.py:113][0m ESSteps: 89 Reward: 0.3013182025847459 step: 4300.0  sigma:0.008258993422677765
+[32m[09-03 13:20:04 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:22:06 MainThread @sim_test.py:113][0m ESSteps: 90 Reward: 0.683820115842126 step: 2800.0  sigma:0.008176403488450987
+[32m[09-03 13:23:36 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:23:37 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:26:30 MainThread @sim_test.py:113][0m ESSteps: 91 Reward: 0.6179342507800939 step: 5925.0  sigma:0.008094639453566477
+[32m[09-03 13:28:34 MainThread @sim_test.py:113][0m ESSteps: 92 Reward: 0.316042307979309 step: 2800.0  sigma:0.008013693059030812
+[32m[09-03 13:31:00 MainThread @sim_test.py:113][0m ESSteps: 93 Reward: 0.2959012679189118 step: 3300.0  sigma:0.007933556128440504
+[32m[09-03 13:33:12 MainThread @sim_test.py:113][0m ESSteps: 94 Reward: 0.36666269365284376 step: 2950.0  sigma:0.007854220567156098
+[32m[09-03 13:35:29 MainThread @sim_test.py:113][0m ESSteps: 95 Reward: 0.3041814982102895 step: 3100.0  sigma:0.007775678361484537
+[32m[09-03 13:38:01 MainThread @sim_test.py:113][0m ESSteps: 96 Reward: 0.3030214283076013 step: 3400.0  sigma:0.007697921577869691
+[32m[09-03 13:40:10 MainThread @sim_test.py:113][0m ESSteps: 97 Reward: 0.46142296830685975 step: 2925.0  sigma:0.007620942362090995
+[32m[09-03 13:42:27 MainThread @sim_test.py:113][0m ESSteps: 98 Reward: 0.47721677636157034 step: 3075.0  sigma:0.007544732938470085
+[32m[09-03 13:45:13 MainThread @sim_test.py:113][0m ESSteps: 99 Reward: 0.2879664271561184 step: 3750.0  sigma:0.007469285609085384
+[32m[09-03 13:49:29 MainThread @sim_test.py:113][0m ESSteps: 100 Reward: 0.3722087293187961 step: 5750.0  sigma:0.00739459275299453
+[32m[09-03 13:54:58 MainThread @sim_test.py:113][0m ESSteps: 101 Reward: 0.4128787610224321 step: 7375.0  sigma:0.007320646825464585
+[32m[09-03 13:55:03 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:04 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:05 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:06 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:07 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:08 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:09 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:10 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:55:10 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 13:57:11 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:57:12 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:57:12 MainThread @sim_test.py:113][0m ESSteps: 102 Reward: 0.5879470482672197 step: 2725.0  sigma:0.007247440357209939
+[32m[09-03 13:57:15 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 13:59:24 MainThread @sim_test.py:113][0m ESSteps: 103 Reward: 0.5330149670837613 step: 2950.0  sigma:0.007174965953637839
+[32m[09-03 14:01:22 MainThread @sim_test.py:113][0m ESSteps: 104 Reward: 0.2728767525914312 step: 2650.0  sigma:0.007103216294101461
+[32m[09-03 14:03:23 MainThread @sim_test.py:113][0m ESSteps: 105 Reward: 0.33678380732023244 step: 2725.0  sigma:0.007032184131160447
+[32m[09-03 14:05:23 MainThread @sim_test.py:113][0m ESSteps: 106 Reward: 0.34822646472366436 step: 2700.0  sigma:0.006961862289848842
+[32m[09-03 14:05:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:05:56 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:05:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:05:58 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:05:59 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:07:14 MainThread @sim_test.py:113][0m ESSteps: 107 Reward: 1.0387900125661984 step: 2500.0  sigma:0.006892243666950354
+[32m[09-03 14:09:03 MainThread @sim_test.py:113][0m ESSteps: 108 Reward: 0.47673084887086764 step: 2450.0  sigma:0.00682332123028085
+[32m[09-03 14:11:19 MainThread @sim_test.py:113][0m ESSteps: 109 Reward: 0.2813463892745064 step: 3050.0  sigma:0.006755088017978042
+[32m[09-03 14:15:10 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:15:20 MainThread @sim_test.py:113][0m ESSteps: 110 Reward: 0.5217801209042061 step: 5375.0  sigma:0.006687537137798262
+[32m[09-03 14:17:14 MainThread @sim_test.py:113][0m ESSteps: 111 Reward: 0.3125629767018233 step: 2575.0  sigma:0.00662066176642028
+[32m[09-03 14:19:23 MainThread @sim_test.py:113][0m ESSteps: 112 Reward: 0.27768642841204466 step: 2900.0  sigma:0.006554455148756077
+[32m[09-03 14:20:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:21:27 MainThread @sim_test.py:113][0m ESSteps: 113 Reward: 0.6004848973395511 step: 2800.0  sigma:0.0064889105972685155
+[32m[09-03 14:22:38 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:22:40 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:22:41 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:22:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:23 MainThread @sim_test.py:113][0m ESSteps: 114 Reward: 0.5625599652427558 step: 2625.0  sigma:0.006424021491295831
+[32m[09-03 14:23:37 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:38 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:39 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:40 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:41 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:23:43 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:25:27 MainThread @sim_test.py:113][0m ESSteps: 115 Reward: 1.0832808529767737 step: 2800.0  sigma:0.006359781276382872
+[32m[09-03 14:27:21 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:27:25 MainThread @sim_test.py:113][0m ESSteps: 116 Reward: 0.718983262730879 step: 2650.0  sigma:0.006296183463619044
+[32m[09-03 14:29:16 MainThread @sim_test.py:113][0m ESSteps: 117 Reward: 0.26595102525031844 step: 2525.0  sigma:0.006233221628982853
+[32m[09-03 14:31:18 MainThread @sim_test.py:113][0m ESSteps: 118 Reward: 0.28058652304974074 step: 2750.0  sigma:0.0061708894126930244
+[32m[09-03 14:33:50 MainThread @sim_test.py:113][0m ESSteps: 119 Reward: 0.2918024093866022 step: 3425.0  sigma:0.006109180518566094
+[32m[09-03 14:36:30 MainThread @sim_test.py:113][0m ESSteps: 120 Reward: 0.330579934017332 step: 3600.0  sigma:0.006048088713380433
+[32m[09-03 14:38:37 MainThread @sim_test.py:113][0m ESSteps: 121 Reward: 0.46294226574125336 step: 2850.0  sigma:0.005987607826246628
+[32m[09-03 14:38:41 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:43 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:44 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:46 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:47 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:49 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:38:49 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 14:40:58 MainThread @sim_test.py:113][0m ESSteps: 122 Reward: 0.4300168473395852 step: 2900.0  sigma:0.005927731747984162
+[32m[09-03 14:42:51 MainThread @sim_test.py:113][0m ESSteps: 123 Reward: 0.3059658591600045 step: 2550.0  sigma:0.00586845443050432
+[32m[09-03 14:47:17 MainThread @sim_test.py:113][0m ESSteps: 124 Reward: 0.3057308270611111 step: 5975.0  sigma:0.0058097698861992765
+[32m[09-03 14:49:11 MainThread @sim_test.py:113][0m ESSteps: 125 Reward: 0.2843990748919035 step: 2575.0  sigma:0.005751672187337284
+[32m[09-03 14:49:50 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:51:19 MainThread @sim_test.py:113][0m ESSteps: 126 Reward: 0.6208307386324605 step: 2875.0  sigma:0.005694155465463911
+[32m[09-03 14:54:37 MainThread @sim_test.py:113][0m ESSteps: 127 Reward: 0.33758921450849183 step: 4425.0  sigma:0.005637213910809271
+[32m[09-03 14:56:52 MainThread @sim_test.py:113][0m ESSteps: 128 Reward: 0.36007725748064967 step: 3025.0  sigma:0.005580841771701178
+[32m[09-03 14:57:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 14:59:03 MainThread @sim_test.py:113][0m ESSteps: 129 Reward: 0.7281392909032123 step: 2950.0  sigma:0.005525033353984166
+[32m[09-03 15:01:09 MainThread @sim_test.py:113][0m ESSteps: 130 Reward: 0.2954239678111777 step: 2825.0  sigma:0.005469783020444325
+[32m[09-03 15:01:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:02:35 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:03:02 MainThread @sim_test.py:113][0m ESSteps: 131 Reward: 0.8314912103481179 step: 2575.0  sigma:0.005415085190239881
+[32m[09-03 15:04:58 MainThread @sim_test.py:113][0m ESSteps: 132 Reward: 0.3336154771651485 step: 2625.0  sigma:0.0053609343383374825
+[32m[09-03 15:06:06 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:07:06 MainThread @sim_test.py:113][0m ESSteps: 133 Reward: 0.5334842324956741 step: 2900.0  sigma:0.005307324994954107
+[32m[09-03 15:07:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:08:53 MainThread @sim_test.py:113][0m ESSteps: 134 Reward: 0.7223822616656879 step: 2400.0  sigma:0.005254251745004566
+[32m[09-03 15:11:01 MainThread @sim_test.py:113][0m ESSteps: 135 Reward: 0.3782069857732881 step: 2875.0  sigma:0.005201709227554521
+[32m[09-03 15:14:21 MainThread @sim_test.py:113][0m ESSteps: 136 Reward: 0.37554812468566834 step: 4475.0  sigma:0.0051496921352789755
+[32m[09-03 15:14:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:15:47 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:16:18 MainThread @sim_test.py:113][0m ESSteps: 137 Reward: 0.7080202825405033 step: 2650.0  sigma:0.005098195213926186
+[32m[09-03 15:18:14 MainThread @sim_test.py:113][0m ESSteps: 138 Reward: 0.28300590942640935 step: 2625.0  sigma:0.005047213261786924
+[32m[09-03 15:20:13 MainThread @sim_test.py:113][0m ESSteps: 139 Reward: 0.297061529426699 step: 2675.0  sigma:0.004996741129169055
+[32m[09-03 15:22:09 MainThread @sim_test.py:113][0m ESSteps: 140 Reward: 0.4253908621289018 step: 2625.0  sigma:0.004996741129169055
+[32m[09-03 15:26:39 MainThread @sim_test.py:113][0m ESSteps: 141 Reward: 0.4344032411788007 step: 6025.0  sigma:0.004996741129169055
+[32m[09-03 15:26:43 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:44 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:46 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:47 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:49 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:50 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:51 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:26:51 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 15:29:33 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:30:29 MainThread @sim_test.py:113][0m ESSteps: 142 Reward: 0.7037411162721504 step: 4850.0  sigma:0.004996741129169055
+[32m[09-03 15:31:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:32:15 MainThread @sim_test.py:113][0m ESSteps: 143 Reward: 0.7292397806829694 step: 2375.0  sigma:0.004996741129169055
+[32m[09-03 15:32:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:34:04 MainThread @sim_test.py:113][0m ESSteps: 144 Reward: 0.5275794881770479 step: 2450.0  sigma:0.004996741129169055
+[32m[09-03 15:36:12 MainThread @sim_test.py:113][0m ESSteps: 145 Reward: 0.2561321492644487 step: 2900.0  sigma:0.004996741129169055
+[32m[09-03 15:37:33 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:37:35 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:38:19 MainThread @sim_test.py:113][0m ESSteps: 146 Reward: 0.45645105102629213 step: 2850.0  sigma:0.004996741129169055
+[32m[09-03 15:39:24 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:40:33 MainThread @sim_test.py:113][0m ESSteps: 147 Reward: 0.8095705577817276 step: 3025.0  sigma:0.004996741129169055
+[32m[09-03 15:42:45 MainThread @sim_test.py:113][0m ESSteps: 148 Reward: 0.47192712413112703 step: 3000.0  sigma:0.004996741129169055
+[32m[09-03 15:44:41 MainThread @sim_test.py:113][0m ESSteps: 149 Reward: 0.3575581822884771 step: 2650.0  sigma:0.004996741129169055
+[32m[09-03 15:46:21 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:46:27 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:46:56 MainThread @sim_test.py:113][0m ESSteps: 150 Reward: 0.7125480952564667 step: 3075.0  sigma:0.004996741129169055
+[32m[09-03 15:47:13 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:48:37 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:49:06 MainThread @sim_test.py:113][0m ESSteps: 151 Reward: 0.7175629102629313 step: 2950.0  sigma:0.004996741129169055
+[32m[09-03 15:50:58 MainThread @sim_test.py:113][0m ESSteps: 152 Reward: 0.45617163487335544 step: 2525.0  sigma:0.004996741129169055
+[32m[09-03 15:53:11 MainThread @sim_test.py:113][0m ESSteps: 153 Reward: 0.30047321626546875 step: 3000.0  sigma:0.004996741129169055
+[32m[09-03 15:55:15 MainThread @sim_test.py:113][0m ESSteps: 154 Reward: 0.2942323421900625 step: 2800.0  sigma:0.004996741129169055
+[32m[09-03 15:57:02 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:03 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:04 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:05 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:06 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:07 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 15:57:20 MainThread @sim_test.py:113][0m ESSteps: 155 Reward: 0.5617089258970045 step: 2825.0  sigma:0.004996741129169055
+[32m[09-03 15:59:27 MainThread @sim_test.py:113][0m ESSteps: 156 Reward: 0.32294684114232286 step: 2875.0  sigma:0.004996741129169055
+[32m[09-03 16:02:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:03:12 MainThread @sim_test.py:113][0m ESSteps: 157 Reward: 0.6645813953715836 step: 5025.0  sigma:0.004996741129169055
+[32m[09-03 16:04:25 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:04:59 MainThread @sim_test.py:113][0m ESSteps: 158 Reward: 0.5190123909947892 step: 2400.0  sigma:0.004996741129169055
+[32m[09-03 16:06:53 MainThread @sim_test.py:113][0m ESSteps: 159 Reward: 0.3351411525251877 step: 2575.0  sigma:0.004996741129169055
+[32m[09-03 16:09:55 MainThread @sim_test.py:113][0m ESSteps: 160 Reward: 0.29448920585863675 step: 4125.0  sigma:0.004996741129169055
+[32m[09-03 16:11:46 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:47 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:48 MainThread @sim_test.py:113][0m ESSteps: 161 Reward: 0.5803195391286743 step: 2550.0  sigma:0.004996741129169055
+[32m[09-03 16:11:52 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:53 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:56 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:11:59 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:12:00 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:12:00 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 16:12:52 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:14:05 MainThread @sim_test.py:113][0m ESSteps: 162 Reward: 0.6035578645172199 step: 2800.0  sigma:0.004996741129169055
+[32m[09-03 16:16:18 MainThread @sim_test.py:113][0m ESSteps: 163 Reward: 0.38235287014054653 step: 3000.0  sigma:0.004996741129169055
+[32m[09-03 16:19:33 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:19:34 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:19:40 MainThread @sim_test.py:113][0m ESSteps: 164 Reward: 0.7491402557342917 step: 4500.0  sigma:0.004996741129169055
+[32m[09-03 16:20:30 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:20:31 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:20:32 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:20:33 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:21:46 MainThread @sim_test.py:113][0m ESSteps: 165 Reward: 0.8098080629349598 step: 2850.0  sigma:0.004996741129169055
+[32m[09-03 16:23:42 MainThread @sim_test.py:113][0m ESSteps: 166 Reward: 0.2943691723012173 step: 2600.0  sigma:0.004996741129169055
+[32m[09-03 16:25:32 MainThread @sim_test.py:113][0m ESSteps: 167 Reward: 0.27896953931635593 step: 2475.0  sigma:0.004996741129169055
+[32m[09-03 16:28:29 MainThread @sim_test.py:113][0m ESSteps: 168 Reward: 0.4509496816371793 step: 3975.0  sigma:0.004996741129169055
+[32m[09-03 16:30:18 MainThread @sim_test.py:113][0m ESSteps: 169 Reward: 0.28724834571832586 step: 2475.0  sigma:0.004996741129169055
+[32m[09-03 16:32:14 MainThread @sim_test.py:113][0m ESSteps: 170 Reward: 0.3180148493021092 step: 2600.0  sigma:0.004996741129169055
+[32m[09-03 16:34:00 MainThread @sim_test.py:113][0m ESSteps: 171 Reward: 0.31730497040272404 step: 2375.0  sigma:0.004996741129169055
+[32m[09-03 16:34:12 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:34:13 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:36:58 MainThread @sim_test.py:113][0m ESSteps: 172 Reward: 0.5541882414034117 step: 4000.0  sigma:0.004996741129169055
+[32m[09-03 16:39:03 MainThread @sim_test.py:113][0m ESSteps: 173 Reward: 0.2888995144168611 step: 2825.0  sigma:0.004996741129169055
+[32m[09-03 16:40:49 MainThread @sim_test.py:113][0m ESSteps: 174 Reward: 0.2950618749338908 step: 2400.0  sigma:0.004996741129169055
+[32m[09-03 16:45:33 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:45:48 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:46:29 MainThread @sim_test.py:113][0m ESSteps: 175 Reward: 0.7295226051553587 step: 7675.0  sigma:0.004996741129169055
+[32m[09-03 16:48:22 MainThread @sim_test.py:113][0m ESSteps: 176 Reward: 0.3564152865395241 step: 2550.0  sigma:0.004996741129169055
+[32m[09-03 16:49:03 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 16:50:20 MainThread @sim_test.py:113][0m ESSteps: 177 Reward: 0.6100705899498904 step: 2650.0  sigma:0.004996741129169055
+[32m[09-03 16:53:21 MainThread @sim_test.py:113][0m ESSteps: 178 Reward: 0.34113183109212264 step: 4100.0  sigma:0.004996741129169055
+[32m[09-03 16:58:08 MainThread @sim_test.py:113][0m ESSteps: 179 Reward: 0.3000299256247202 step: 6400.0  sigma:0.004996741129169055
+[32m[09-03 16:58:19 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:00:01 MainThread @sim_test.py:113][0m ESSteps: 180 Reward: 1.276033774766126 step: 2550.0  sigma:0.004996741129169055
+[32m[09-03 17:02:27 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:32 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:48 MainThread @sim_test.py:113][0m ESSteps: 181 Reward: 0.5766494196524794 step: 3750.0  sigma:0.004996741129169055
+[32m[09-03 17:02:52 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:54 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:55 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:56 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:57 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:58 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:02:59 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:03:00 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:03:00 MainThread @sim_test.py:134][0m Evaluation Reward: 2.0305935519886265 step: 11000 
+[32m[09-03 17:03:20 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:04:53 MainThread @sim_test.py:113][0m ESSteps: 182 Reward: 0.5802047972515462 step: 2575.0  sigma:0.004996741129169055
+[32m[09-03 17:05:15 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:05:16 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:05:17 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:06:18 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:06:19 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:07:00 MainThread @sim_test.py:113][0m ESSteps: 183 Reward: 0.5392386805479475 step: 2900.0  sigma:0.004996741129169055
+[32m[09-03 17:08:49 MainThread @sim_test.py:113][0m ESSteps: 184 Reward: 0.33579479821580016 step: 2475.0  sigma:0.004996741129169055
+[32m[09-03 17:11:13 MainThread @sim_test.py:113][0m ESSteps: 185 Reward: 0.4245730617558104 step: 3275.0  sigma:0.004996741129169055
+[32m[09-03 17:12:20 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:13:32 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:13:46 MainThread @sim_test.py:113][0m ESSteps: 186 Reward: 0.6919856337448997 step: 3475.0  sigma:0.004996741129169055
+[32m[09-03 17:15:23 MainThread @sim_test.py:113][0m ESSteps: 187 Reward: 0.32008162607991875 step: 2200.0  sigma:0.004996741129169055
+[32m[09-03 17:15:31 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:17:31 MainThread @sim_test.py:113][0m ESSteps: 188 Reward: 0.6196974690612822 step: 2875.0  sigma:0.004996741129169055
+[32m[09-03 17:19:27 MainThread @sim_test.py:113][0m ESSteps: 189 Reward: 0.332193422206463 step: 2600.0  sigma:0.004996741129169055
+[32m[09-03 17:21:23 MainThread @sim_test.py:113][0m ESSteps: 190 Reward: 0.29369292932528 step: 2575.0  sigma:0.004996741129169055
+[32m[09-03 17:21:44 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:23:35 MainThread @sim_test.py:113][0m ESSteps: 191 Reward: 0.5962958647327525 step: 2950.0  sigma:0.004996741129169055
+[32m[09-03 17:25:20 MainThread @sim_test.py:113][0m ESSteps: 192 Reward: 0.37780539869751745 step: 2350.0  sigma:0.004996741129169055
+[32m[09-03 17:26:16 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:26:42 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:27:12 MainThread @sim_test.py:113][0m ESSteps: 193 Reward: 1.2224111610937654 step: 2525.0  sigma:0.004996741129169055
+[32m[09-03 17:28:48 MainThread @sim_test.py:113][0m ESSteps: 194 Reward: 0.42009405128918287 step: 2150.0  sigma:0.004996741129169055
+[32m[09-03 17:30:25 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:30:35 MainThread @sim_test.py:113][0m ESSteps: 195 Reward: 0.6362777061871581 step: 2400.0  sigma:0.004996741129169055
+[32m[09-03 17:32:19 MainThread @sim_test.py:113][0m ESSteps: 196 Reward: 0.4778409198216901 step: 2350.0  sigma:0.004996741129169055
+[32m[09-03 17:34:40 MainThread @sim_test.py:113][0m ESSteps: 197 Reward: 0.4547878055896995 step: 3150.0  sigma:0.004996741129169055
+[32m[09-03 17:36:37 MainThread @sim_test.py:113][0m ESSteps: 198 Reward: 0.4040514873484054 step: 2625.0  sigma:0.004996741129169055
+[32m[09-03 17:37:13 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:38:00 MainThread @sim_test.py:54][0m the y pos of slope:0.0
+[32m[09-03 17:38:23 MainThread @sim_test.py:113][0m ESSteps: 199 Reward: 0.7749764118592928 step: 2375.0  sigma:0.004996741129169055
+[32m[09-03 17:40:34 MainThread @sim_test.py:113][0m ESSteps: 200 Reward: 0.39612684251880487 step: 2950.0  sigma:0.004996741129169055
