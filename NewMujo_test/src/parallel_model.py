@@ -24,7 +24,7 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = False
-EXP_ID=4
+EXP_ID=6
 K=2
 THREAD=20
 
@@ -52,6 +52,7 @@ class RemoteESAgent(object):
             ctrlData = tCtrlData
             obs, reward, terminated, _, info = self.env.step(ctrlData)
             if step%100==0:
+                #防止小鼠偏移既定方向过远
                 if(abs(info['curFoot'][0])>0.2):
                     terminated=True
             if step % 1000 == 0:
