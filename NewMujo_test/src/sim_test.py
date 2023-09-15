@@ -22,7 +22,7 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL = False
+EVAL = True
 EXP_ID = 4
 
 
@@ -53,6 +53,7 @@ def run_EStrain_episode(theMouse, theController, env):
             # print("rot_mat:", info["rot_mat"])
             # time.sleep(1)
             # logger.info("move of x:{}".format(info['curFoot'][0]))
+            #防止小鼠停滞不前或其朝向偏离设定方向过远
             if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3):
                 terminated = True
             if (abs(endFoot - startFoot) > 0.5):
@@ -162,7 +163,7 @@ if __name__ == '__main__':
         idx = 180
         ETG_Evalpath = os.path.join(
             script_directory,
-            "data/exp3_ETG_models/slopeBest_{}.npz".format(idx))
+            "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
         info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]
