@@ -26,6 +26,9 @@ ES_TRAIN_STEPS = 200
 EVAL = True
 EXP_ID=4
 
+def debug(info):
+    if DEBUG:
+        print(info)
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
     curFoot = info["curFoot"][1]
