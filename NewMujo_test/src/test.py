@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import parl
 import time
 
 
-@parl.remote_class(wait=False)
+# @parl.remote_class(wait=False)
 class A(object):
 
     def run(self):
@@ -13,17 +12,13 @@ class A(object):
         return ans
 
 
-parl.connect("localhost:6111")
 start = time.time()
 
 actors = [A() for _ in range(5)]
-jobs = [actor.run() for actor in actors]
-returns = [job.get() for job in jobs]
+returns = [actor.run() for actor in actors]
+# returns = [job.get() for job in jobs]
 true_result = sum([i for i in range(100000000)])
 for result in returns:
     assert result == true_result
 end = time.time()
 print("time:", end - start)
-
-=======
->>>>>>> ca03d5fbd71e0fc841fb6e54c82a7a882100c15d

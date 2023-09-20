@@ -26,10 +26,6 @@ ES_TRAIN_STEPS = 200
 EVAL = True
 EXP_ID=4
 
-def debug(info):
-    if DEBUG:
-        print(info)
-    
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
     curFoot = info["curFoot"][1]
@@ -43,10 +39,9 @@ def run_EStrain_episode(theMouse, theController, env):
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
-        if step % 100 == 0:
-            if (abs(info['curFoot'][0]) > 0.2):
-                print("x方向移动过远")
-                terminated = True
+        if step%100==0:
+            if(abs(info['curFoot'][0])>0.2):
+                terminated=True
         if step % 1000 == 0:
             endFoot = info["curFoot"][1]
             # print("endFoot=", endFoot)
@@ -80,7 +75,7 @@ if __name__ == '__main__':
     
     # logger.info('args:{}'.format(args))
     #_______
-    render = False  #控制是否进行画面渲染
+    render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.002
@@ -112,7 +107,7 @@ if __name__ == '__main__':
         logger.set_dir(outdir)
         logger.info("slope no mass")
         for ei in range(ES_TRAIN_STEPS):
-            start=time.time()
+            start = time.time()
             solutions = ES_solver.ask()
             fitness_list = []
             steps = []
@@ -131,9 +126,11 @@ if __name__ == '__main__':
             sig = np.mean(results[3])
             fitness_list = np.asarray(fitness_list).reshape(-1)
             ES_solver.tell(fitness_list)
-            end=time.time()
-            logger.info('ESSteps: {} Reward: {} step: {}  sigma:{},time:{}'.format(
-                ei + 1, np.max(fitness_list), np.mean(steps), sig,end-start))
+            end = time.time()
+            logger.info(
+                'ESSteps: {} Reward: {} step: {}  sigma:{},time:{}'.format(
+                    ei + 1, np.max(fitness_list), np.mean(steps), sig,
+                    end - start))
             summary.add_scalar('ES/episode_reward', np.mean(fitness_list),
                                ei + 1)
             summary.add_scalar('ES/episode_minre', np.min(fitness_list),
@@ -149,11 +146,11 @@ if __name__ == '__main__':
                 points_add = best_param.reshape(-1, 2)
                 new_points = prior_points + points_add
                 w_best, b_best = theController.getETGinfo(new_points)
-                path=os.path.join(
-                    script_directory, "data/exp{}_ETG_models".format(EXP_ID))
+                path = os.path.join(script_directory,
+                                    "data/exp{}_ETG_models".format(EXP_ID))
                 if not os.path.exists(path):
                     os.makedirs(path)
-                path=os.path.join(path,"slopeBest_{}.npz".format(ei))
+                path = os.path.join(path, "slopeBest_{}.npz".format(ei))
                 # path = os.path.join(script_directory,"data/ETG_models/exp3/slopeBest_{}.npz".format(ei))
                 theController.update(w_best, b_best)
                 episode_reward, step = run_EStrain_episode(
@@ -170,7 +167,8 @@ if __name__ == '__main__':
         print("start eval")
         idx = 180
         ETG_Evalpath = os.path.join(
-            script_directory, "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
+            script_directory,
+            "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
         info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]
