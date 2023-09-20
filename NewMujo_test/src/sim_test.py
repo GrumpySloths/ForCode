@@ -15,6 +15,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
+DEBUG=True #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
 RUN_TIME_LENGTH = 8
@@ -25,6 +26,10 @@ ES_TRAIN_STEPS = 200
 EVAL = True
 EXP_ID=4
 
+def debug(info):
+    if DEBUG:
+        print(info)
+    
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
     curFoot = info["curFoot"][1]
@@ -38,32 +43,41 @@ def run_EStrain_episode(theMouse, theController, env):
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
-        if step%100==0:
-            if(abs(info['curFoot'][0])>0.2):
-                terminated=True
+        if step % 100 == 0:
+            if (abs(info['curFoot'][0]) > 0.2):
+                print("x方向移动过远")
+                terminated = True
         if step % 1000 == 0:
             endFoot = info["curFoot"][1]
             # print("endFoot=", endFoot)
             dist = endFoot - curFoot
             angle_z = info["euler_z"]
-            slope_y=info["slope_y"]
-            # print("the move distance of 1000 step:", dist)
-            # print("the euler of z axis:", angle_z)
-            # print("rot_mat:", info["rot_mat"])
-            # time.sleep(1)
-            # logger.info("move of x:{}".format(info['curFoot'][0]))
+            slope_y = info["slope_y"]
+            euler=info["euler"]
+            # debug("the move distance of 1000 step:{}".format(dist))
+            debug("angle_x:{},angle_y:{},angle_z:{}".format(euler[0],euler[1],euler[2]))
             #防止小鼠停滞不前或其朝向偏离设定方向过远
-            if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3 ):
+            if (abs(angle_z) > 0.3):
+                #小鼠朝向偏离既定方向过远
+                debug("小鼠朝向偏离既定方向过远")
                 terminated = True
-            if(abs(endFoot-startFoot)>0.5):
-                logger.info("the y pos of slope:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}".format(slope_y,info["curFoot"][0],endFoot,info["curFoot"][2]))
+            if (abs(dist) < 1e-2):
+                debug("小鼠停滞不前")
+                #小鼠停滞目前处理
+                terminated = True
+            if (abs(endFoot - startFoot) > 0.5):
+                logger.info(
+                    "the y pos of slope:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}"
+                    .format(slope_y, info["curFoot"][0], endFoot,
+                            info["curFoot"][2]))
             curFoot = endFoot
+
     episode_reward = abs(endFoot - startFoot)
     return episode_reward, step
 
 
 if __name__ == '__main__':
-
+    
     # logger.info('args:{}'.format(args))
     #_______
     render = False  #控制是否进行画面渲染

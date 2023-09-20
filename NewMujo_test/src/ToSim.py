@@ -166,6 +166,7 @@ class SimModel(object):
         obs = []
         info["curFoot"] = curFoot
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
+        info["euler"]=self.getEuler()
         return obs, info
 
     def getTime(self):
@@ -335,6 +336,18 @@ class SimModel(object):
 
         return angle_z, rot
     
+    def getEuler(self):
+        '''
+        获取XYZ欧拉变换后沿各轴所转过的角度
+        '''
+        euler=np.zeros(3)
+        id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
+        rot = self.data.site_xmat[id]
+        euler[0]=math.atan2(-rot[5],rot[8])
+        euler[1]=math.atan2(rot[2],math.sqrt(rot[1]**2+rot[0]**2))
+        euler[2] = math.atan2(-rot[1], rot[0])
+
+        return euler
     def getSlope_y(self):
         id=mujoco.mj_name2id(self.model,mujoco.mjtObj.mjOBJ_GEOM,"slope1")
         pos_y=self.data.geom_xpos[id][1]
