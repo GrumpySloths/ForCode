@@ -23,7 +23,7 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
-EXP_ID = 4
+EXP_ID = 6
 
 
 def run_EStrain_episode(theMouse, theController, env):
@@ -41,6 +41,7 @@ def run_EStrain_episode(theMouse, theController, env):
         obs, reward, terminated, _, info = env.step(ctrlData)
         if step % 100 == 0:
             if (abs(info['curFoot'][0]) > 0.2):
+                print("x方向移动过远")
                 terminated = True
         if step % 1000 == 0:
             endFoot = info["curFoot"][1]
@@ -48,13 +49,19 @@ def run_EStrain_episode(theMouse, theController, env):
             dist = endFoot - curFoot
             angle_z = info["euler_z"]
             slope_y = info["slope_y"]
-            # print("the move distance of 1000 step:", dist)
+            print("the move distance of 1000 step:", dist)
             # print("the euler of z axis:", angle_z)
             # print("rot_mat:", info["rot_mat"])
             # time.sleep(1)
             # logger.info("move of x:{}".format(info['curFoot'][0]))
             #防止小鼠停滞不前或其朝向偏离设定方向过远
-            if (abs(dist) < 5e-4 or dist >= 0.01 or abs(angle_z) > 0.3):
+            if (abs(angle_z) > 0.3):
+                #小鼠朝向偏离既定方向过远
+                print("小鼠朝向偏离既定方向过远")
+                terminated = True
+            if (abs(dist) < 1e-2):
+                print("小鼠停滞不前")
+                #小鼠停滞目前处理
                 terminated = True
             if (abs(endFoot - startFoot) > 0.5):
                 logger.info(
