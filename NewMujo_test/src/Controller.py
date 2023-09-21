@@ -1,6 +1,7 @@
 import numpy as np
 import math
 import sys
+
 sys.path.append('/mnt/S58Data1/niujh/ForCode/NewMujo_test/src')
 from LegModel.forPath import LegPath
 # -----------------------------------------------------------
@@ -24,8 +25,10 @@ class MouseController(object):
         super(MouseController, self).__init__()
         PI = np.pi
         self.curStep = 0  # Spine
-        self.ETG_agent = ETG_layer(ETG_T, ETG_DT, ETG_H, 0.04, PHASE, ETG_AMP,
-                                   ETG_T2)
+        self.ETG_T = 1 / fre
+        self.ETG_DT = time_step
+        self.ETG_agent = ETG_layer(self.ETG_T, self.ETG_DT, ETG_H, 0.04, PHASE,
+                                   ETG_AMP, ETG_T2)
         self.ETG_model = ETG_model(ETG_path, self.ETG_agent)
         # Spine A = 0
         #self.turn_F = 0*PI/180
@@ -79,7 +82,7 @@ class MouseController(object):
 		'''
 
         def getETGPathPoint(curStep, leg_flag):
-            t = curStep / self.SteNum * ETG_T
+            t = curStep / self.SteNum * self.ETG_T
             # obs = self.ETG_agent.update(t)
             # pos = self.ETG_model.forward(obs)
             pos = self.ETG_model.forward2(t)
@@ -161,7 +164,7 @@ class MouseController(object):
 
         obs = []
         # ts=radSample/(2*np.pi)*ETG_T
-        ts = np.linspace(0, ETG_T, points.shape[0])
+        ts = np.linspace(0, self.ETG_T, points.shape[0])
         for t in ts:
             v = self.ETG_agent.update(t)
             obs.append(v)

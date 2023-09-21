@@ -15,7 +15,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
-DEBUG=True #用于debug打印信息
+DEBUG = True  #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
 RUN_TIME_LENGTH = 8
@@ -24,70 +24,42 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
-EXP_ID=4
+EXP_ID = 4
+
 
 def debug(info):
     if DEBUG:
         print(info)
+
+
 def run_EStrain_episode(theMouse, theController, env):
     obs, info = theMouse.reset()
-    curFoot = info["curFoot"][1]
-    endFoot = 0
-    startFoot = curFoot
+
     terminated = False
-    step = 0
     while not terminated:
         tCtrlData = theController.runStep()  # No Spine
-        step += 1
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
-        if step%100==0:
-            if(abs(info['curFoot'][0])>0.2):
-                terminated=True
-        if step % 1000 == 0:
-            endFoot = info["curFoot"][1]
-            # print("endFoot=", endFoot)
-            dist = endFoot - curFoot
-            angle_z = info["euler_z"]
-            slope_y = info["slope_y"]
-            euler=info["euler"]
-            # debug("the move distance of 1000 step:{}".format(dist))
-            debug("angle_x:{},angle_y:{},angle_z:{}".format(euler[0],euler[1],euler[2]))
-            #防止小鼠停滞不前或其朝向偏离设定方向过远
-            if (abs(angle_z) > 0.3):
-                #小鼠朝向偏离既定方向过远
-                debug("小鼠朝向偏离既定方向过远")
-                terminated = True
-            if (abs(dist) < 1e-2):
-                debug("小鼠停滞不前")
-                #小鼠停滞目前处理
-                terminated = True
-            if (abs(endFoot - startFoot) > 0.5):
-                logger.info(
-                    "the y pos of slope:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}"
-                    .format(slope_y, info["curFoot"][0], endFoot,
-                            info["curFoot"][2]))
-            curFoot = endFoot
 
-    episode_reward = abs(endFoot - startFoot)
-    return episode_reward, step
+    episode_reward = abs(env.endFoot - env.startFoot)
+    return episode_reward, env.steps
 
 
 if __name__ == '__main__':
-    
+
     # logger.info('args:{}'.format(args))
     #_______
     render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
-    time_step = 0.002
+    time_step = 0.005
     spine_angle = 0  #20
     run_steps_num = int(RUN_TIME_LENGTH / time_step)
 
     theMouse = SimModel(ROBOT_PATH, time_step, fre_frame, render=render)
     theController = MouseController(fre, time_step, spine_angle, ETG_PATH)
-    env = GymEnv(theMouse)
+    env = GymEnv(theMouse, debug_stat=DEBUG)
     info = np.load(ETG_PATH)
     prior_points = info["param"]
     ETG_param_init = prior_points.reshape(-1)
@@ -169,9 +141,11 @@ if __name__ == '__main__':
     elif EVAL == True:
         print("start eval")
         idx = 180
-        ETG_Evalpath = os.path.join(
-            script_directory,
-            "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
+        # ETG_Evalpath = os.path.join(
+        #     script_directory,
+        #     "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
+        ETG_Evalpath = os.path.join(script_directory,
+                                    "data/ETG_models/Slope_ETG.npz")
         info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]
