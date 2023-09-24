@@ -1,11 +1,12 @@
 import gymnasium as gym
-
+import numpy as np
 
 class GymEnv(gym.Env):
 
     def __init__(self, agent):
         self.agent = agent
-
+        self.observation_space=gym.spaces.Box(low=-1,high=1,shape=(11,),dtypd=np.float32)
+        self.action_space=gym.spaces.Box(low=-1,high=1,shape=(8,),dtype=np.float32)
     def reset(self, **kwargs):
 
         obs, info = self.agent.reset()

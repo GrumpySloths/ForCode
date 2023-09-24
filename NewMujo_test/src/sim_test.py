@@ -7,7 +7,10 @@ import numpy as np
 import utility
 from alg.ETG_alg import SimpleGA
 import os
-from parl.utils import logger, summary
+from parl.utils import logger, summary,ReplayMemory
+from model.mujoco_agent import MujocoAgent
+from model.mujoco_model import MujocoModel
+from alg.sac import SAC
 # --------------------
 # 获取当前脚本文件的绝对路径
 script_path = os.path.abspath(__file__)
@@ -25,22 +28,39 @@ POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
 EXP_ID=4
-
+MEMORY_SIZE = int(1e7)
+MAX_STEPS=int(1e8) #训练的总步数
+GAMMA = 0.99
+TAU = 0.005
+ALPHA = 0.2  # determines the relative importance of entropy term against the reward
+ACTOR_LR = 3e-4
+CRITIC_LR = 3e-4
+ACT_BOUND_NOW=0.3   #determine the ratio of rl action
+WARMUP_STEPS = 1e5
 def debug(info):
     if DEBUG:
         print(info)
-def run_EStrain_episode(theMouse, theController, env):
+def run_EStrain_episode(theMouse, theController, env,rpm,action_bound):
     obs, info = theMouse.reset()
     curFoot = info["curFoot"][1]
     endFoot = 0
     startFoot = curFoot
     terminated = False
     step = 0
+    critic_loss_list = []
+    actor_loss_list = []
     while not terminated:
-        tCtrlData = theController.runStep()  # No Spine
+        action_ETG = theController.runStep()  # No Spine
+        if rpm.size() < WARMUP_STEPS:
+            action_rl = np.random.uniform(-1, 1, size=action_dim)
+        else:
+            action_rl = agent.sample(obs)
         step += 1
         #tCtrlData = theController.runStep_spine()		# With Spine
-        ctrlData = tCtrlData
+        ctrlData = action_ETG+action_rl
+        '''
+        这里要思考下reward该如何设置了
+        '''
         obs, reward, terminated, _, info = env.step(ctrlData)
         if step%100==0:
             if(abs(info['curFoot'][0])>0.2):
@@ -78,7 +98,7 @@ if __name__ == '__main__':
     
     # logger.info('args:{}'.format(args))
     #_______
-    render = True  #控制是否进行画面渲染
+    render = False  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.002
@@ -88,6 +108,21 @@ if __name__ == '__main__':
     theMouse = SimModel(ROBOT_PATH, time_step, fre_frame, render=render)
     theController = MouseController(fre, time_step, spine_angle, ETG_PATH)
     env = GymEnv(theMouse)
+    obs_dim=env.observation_space.shape[0]
+    action_dim=env.action_space.shape[0]
+    # Initialize model, algorithm, agent, replay_memory
+    model = MujocoModel(obs_dim, action_dim)
+    rpm = ReplayMemory(max_size=MEMORY_SIZE,
+                       obs_dim=obs_dim,
+                       act_dim=action_dim)
+    #这个SAC算法不是很好理解,需要花时间进一步了解下
+    algorithm = SAC(model,
+                    gamma=GAMMA,
+                    tau=TAU,
+                    alpha=ALPHA,
+                    actor_lr=ACTOR_LR,
+                    critic_lr=CRITIC_LR)
+    agent = MujocoAgent(algorithm)
     info = np.load(ETG_PATH)
     prior_points = info["param"]
     ETG_param_init = prior_points.reshape(-1)
@@ -101,6 +136,8 @@ if __name__ == '__main__':
         weight_decay=0.005,
         popsize=POP_SIZE,
     )
+
+    act_bound = np.array([ACT_BOUND_NOW, ACT_BOUND_NOW] * 4)
     # ES_solver.reset()
     if not EVAL:
         #输出配置
