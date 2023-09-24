@@ -33,7 +33,7 @@ def debug(info):
 
 
 def run_EStrain_episode(theMouse, theController, env):
-    obs, info = theMouse.reset()
+    obs, info = env.reset()
 
     terminated = False
     while not terminated:

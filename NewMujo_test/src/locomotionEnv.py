@@ -20,6 +20,7 @@ class GymEnv(gym.Env):
         obs, info = self.agent.reset()
         self.steps = 0
         self.curFoot = info["curFoot"][1]
+        self.debug("startFoot={}".format(self.curFoot))
         self.endFoot = 0
         self.startFoot = self.curFoot
         self.last_base10 = np.zeros((10, 3))
@@ -58,7 +59,6 @@ class GymEnv(gym.Env):
                 return True
         if self.steps % 1000 == 0:
             self.endFoot = info["curFoot"][1]
-            # print("endFoot=", endFoot)
             self.dist = self.endFoot - self.curFoot
             angle_z = info["euler_z"]
             slope_y = info["slope_y"]
