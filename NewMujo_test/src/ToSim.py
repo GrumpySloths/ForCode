@@ -164,11 +164,16 @@ class SimModel(object):
         curFoot_z = self.getFootWorldPosition_z()
         self.initializing()
         info = {}
-        obs = []
         info["curFoot"] = curFoot
         info["curFoot_z"] = curFoot_z
+        info["curBody"]=self.getBodyPosition()
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
         info["euler"]=self.getEuler()
+
+        obs = np.zeros(11)
+        obs[:8]=ctrlData[:8]
+        obs[8:]=info["euler"]
+        
         return obs, info
 
     def getTime(self):
@@ -332,6 +337,13 @@ class SimModel(object):
         '''
         return self.legLink_y[0][-1]
 
+    def getBodyPosition(self):
+        '''获取小鼠body_ss的世界坐标'''
+        id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
+        pos = self.data.site_xpos[id]
+
+        return pos
+    
     def getEuler_z(self):
         '''
         获取XYZ欧拉变换后沿Z方向转过的角度
