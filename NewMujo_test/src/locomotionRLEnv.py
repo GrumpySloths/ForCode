@@ -19,7 +19,7 @@ class GymEnv_RL(gym.Env):
         self.action_space=gym.spaces.Box(-1,1,shape=(8,))
         self.observation_space=gym.spaces.Box(-1,1,shape=(11,))
         self.steps_rl=0
-        self.last_ETG_act=np.zeros(11)
+        self.last_ETG_act=np.zeros(8)
 
     def reset(self, **kwargs):
         if "ETG_w" in kwargs and "ETG_b" in kwargs:
@@ -32,7 +32,7 @@ class GymEnv_RL(gym.Env):
         self.endFoot = 0
         self.startFoot = self.curFoot
         self.last_base10 = np.zeros((10, 3))
-        self.last_base10=self.ETG_controller.runStep()
+        self.last_ETG_act=self.ETG_controller.runStep()
 
         return obs, info
 
@@ -121,7 +121,7 @@ class GymEnv_RL(gym.Env):
                             info["curFoot"][2]))
             self.curFoot = self.endFoot
 
-            return False
+        return False
 
     def debug(self, info):
         if self.debug_stat:

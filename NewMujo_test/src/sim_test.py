@@ -8,6 +8,7 @@ import numpy as np
 import utility
 from alg.ETG_alg import SimpleGA
 import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import sys
 sys.path.append("..")
 from parl.utils import logger, summary,ReplayMemory
@@ -15,6 +16,8 @@ from model.mujoco_agent import MujocoAgent
 from model.mujoco_model import MujocoModel
 from alg.sac import SAC
 from copy import copy
+import torch
+
 # --------------------
 # 获取当前脚本文件的绝对路径
 script_path = os.path.abspath(__file__)
@@ -22,7 +25,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
-RL_TRAIN=False  #是否进行ETG_RL训练
+RL_TRAIN=True  #是否进行ETG_RL训练
 DEBUG = False  #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
@@ -32,7 +35,7 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = False
-EXP_ID = 4
+EXP_ID = 7
 #___________RL_ETG配置_____________
 GAMMA = 0.99
 TAU = 0.005
@@ -98,6 +101,7 @@ def run_Evaluate_episode(agent,env,max_step,action_bound,w=None,b=None):
     obs, info = env.reset(ETG_w=w,ETG_b=b)
     episode_reward, episode_steps = 0, 0
     infos={}
+    terminated=False
     while not terminated:
         episode_steps+=1
         action = agent.predict(obs)
@@ -156,6 +160,8 @@ if __name__ == '__main__':
     )
 
     if not EVAL and RL_TRAIN:
+        if torch.cuda.is_available():
+            logger.info("cuda is avaiable")
         #输出配置
         outdir = "./train_log/exp{}".format(EXP_ID)
         if not os.path.exists(outdir):
@@ -233,8 +239,8 @@ if __name__ == '__main__':
                 utility.saveETGinfo(path_ETG,
                         w_best, b_best, new_points)
             #_______________ETG evolution Process__________
-            if (total_steps + 1) // ES_EVERY_STEPS >= ES_test_flag and total_steps >= WARMUP_STEPS:
-                while (total_steps + 1) // ES_EVERY_STEPS >= ES_test_flag:
+            if (total_steps + 1) // ES_EVERY_STEPS > ES_test_flag and total_steps >= WARMUP_STEPS:
+                while (total_steps + 1) // ES_EVERY_STEPS > ES_test_flag:
                     ES_test_flag += 1
 
                     for ei in range(ETG_TRAIN_STPES):
