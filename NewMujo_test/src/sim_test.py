@@ -44,10 +44,10 @@ def run_EStrain_episode(theController, env):
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
-        # if step % 20 == 0:
-        #     endfoot = info["curBody"][1]
-        #     debug("reward={}".format(curfoot - endfoot))
-        #     curfoot = endfoot
+        if step % 20 == 0:
+            endfoot = info["curBody"][1]
+            debug("reward={}".format(curfoot - endfoot))
+            curfoot = endfoot
     episode_reward = abs(env.endFoot - env.startFoot)
     return episode_reward, env.steps
 
