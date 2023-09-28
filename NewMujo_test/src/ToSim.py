@@ -42,7 +42,7 @@ class SimModel(object):
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
-        self.legLink_z=[[], [], [], []]
+        self.legLink_z = [[], [], [], []]
         self.movePath = [[], [], []]
         self.angle_AEF = ["leg_link_fl", "knee_down_fl", "ankle_fl"]
         self.angle_AEF_record = []
@@ -54,14 +54,13 @@ class SimModel(object):
 
         self.paused = False
 
-
     def initializing(self):
         self.movePath = [[], [], []]
         self.legRealPoint_x = [[], [], [], []]
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
-        self.legLink_z=[[], [], [], []]
+        self.legLink_z = [[], [], [], []]
         self.angle_AEF_record = []
         self.FlRlLinkDistance_x = []
         self.FlRlLinkDistance_y = []
@@ -86,6 +85,7 @@ class SimModel(object):
         # ------------------------------------------ #
         # step_num = int(cur_time_step / self.model.opt.timestep)
         # ctrlData确定不是设定为想要转过的角度值吗?
+        # print(ctrlData)
         self.data.ctrl[:] = ctrlData
         # print("self.data.ctrl:", self.data.ctrl)
         # print("self.data.qacc:", self.data.qacc)
@@ -167,8 +167,9 @@ class SimModel(object):
         obs = []
         info["curFoot"] = curFoot
         info["curFoot_z"] = curFoot_z
+        info["curBody"]=self.getBodyPosition()
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
-        info["euler"]=self.getEuler()
+        info["euler"] = self.getEuler()
         return obs, info
 
     def getTime(self):
@@ -323,14 +324,21 @@ class SimModel(object):
         '''
         获取小鼠足末位置的世界坐标
         '''
-        return (self.legLink_x[0][-1],self.legLink_y[0][-1],self.legLink_z[0][-1])
-    
+        return (self.legLink_x[0][-1], self.legLink_y[0][-1],
+                self.legLink_z[0][-1])
 
     def getFootWorldPosition_z(self):
         '''
         获取小鼠足末位置的世界坐标
         '''
         return self.legLink_y[0][-1]
+
+    def getBodyPosition(self):
+        '''获取小鼠body_ss的世界坐标'''
+        id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
+        pos = self.data.site_xpos[id]
+
+        return pos
 
     def getEuler_z(self):
         '''
@@ -343,19 +351,20 @@ class SimModel(object):
         angle_z = math.atan2(-rot[1], rot[0])
 
         return angle_z, rot
-    
+
     def getEuler(self):
         '''
         获取XYZ欧拉变换后沿各轴所转过的角度
         '''
-        euler=np.zeros(3)
+        euler = np.zeros(3)
         id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
         rot = self.data.site_xmat[id]
-        euler[0]=math.atan2(-rot[5],rot[8])
-        euler[1]=math.atan2(rot[2],math.sqrt(rot[1]**2+rot[0]**2))
+        euler[0] = math.atan2(-rot[5], rot[8])
+        euler[1] = math.atan2(rot[2], math.sqrt(rot[1]**2 + rot[0]**2))
         euler[2] = math.atan2(-rot[1], rot[0])
 
         return euler
+
     def getSlope_y(self):
         id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_GEOM, "slope1")
         pos_y = self.data.geom_xpos[id][1]

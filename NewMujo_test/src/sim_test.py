@@ -32,16 +32,22 @@ def debug(info):
         print(info)
 
 
-def run_EStrain_episode(theMouse, theController, env):
-    obs, info = env.reset()
-
+def run_EStrain_episode(theController, env):
+    _, info = env.reset()
+    step = 0
+    curfoot = info["curBody"][1]
+    endfoot = info["curBody"][1]
     terminated = False
     while not terminated:
+        step += 1
         tCtrlData = theController.runStep()  # No Spine
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
         obs, reward, terminated, _, info = env.step(ctrlData)
-
+        # if step % 20 == 0:
+        #     endfoot = info["curBody"][1]
+        #     debug("reward={}".format(curfoot - endfoot))
+        #     curfoot = endfoot
     episode_reward = abs(env.endFoot - env.startFoot)
     return episode_reward, env.steps
 
@@ -140,12 +146,12 @@ if __name__ == '__main__':
 
     elif EVAL == True:
         print("start eval")
-        idx = 180
-        # ETG_Evalpath = os.path.join(
-        #     script_directory,
-        #     "data/exp6_ETG_models/slopeBest_{}.npz".format(idx))
-        ETG_Evalpath = os.path.join(script_directory,
-                                    "data/ETG_models/Slope_ETG.npz")
+        idx = 80
+        ETG_Evalpath = os.path.join(
+            script_directory,
+            "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID, idx))
+        # ETG_Evalpath = os.path.join(script_directory,
+        #                             "data/ETG_models/Slope_ETG.npz")
         info = np.load(ETG_Evalpath)
         w = info["w"]
         b = info["b"]
@@ -154,8 +160,7 @@ if __name__ == '__main__':
         # points = info["param"]
         theController.update(w, b)
         utility.ETG_trj_plot(w, b, theController.ETG_agent, idx)
-        episode_reward, step = run_EStrain_episode(theMouse, theController,
-                                                   env)
+        episode_reward, step = run_EStrain_episode(theController, env)
         logger.info('Evaluation Reward: {} step: {} '.format(
             episode_reward, step))
 

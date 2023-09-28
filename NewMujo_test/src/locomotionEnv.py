@@ -28,6 +28,8 @@ class GymEnv(gym.Env):
         return obs, info
 
     def step(self, action):
+        # if self.steps == 0:
+        #     print("action=", action)
         self.steps += 1
         self.agent.runStep(action)
         obs = []
@@ -38,7 +40,7 @@ class GymEnv(gym.Env):
         info["euler_z"], info["rot_mat"] = self.agent.getEuler_z()
         info["euler"] = self.agent.getEuler()
         info["slope_y"] = self.agent.getSlope_y()
-
+        info["curBody"] = self.agent.getBodyPosition()
         # self.dist = self.endFoot - self.curFoot
         terminated = self.terminated(info)
 
@@ -57,9 +59,12 @@ class GymEnv(gym.Env):
             if (abs(info['curFoot'][0]) > 0.2):
                 self.debug("小鼠沿x方向移动过远")
                 return True
+            if (info['curFoot'][1] > 0.6):
+                self.debug("小鼠沿反方向运动")
+                return True
         if self.steps % 1000 == 0:
             self.endFoot = info["curFoot"][1]
-            self.dist = self.endFoot - self.curFoot
+            self.dist = self.curFoot - self.endFoot
             angle_z = info["euler_z"]
             slope_y = info["slope_y"]
             euler = info["euler"]
