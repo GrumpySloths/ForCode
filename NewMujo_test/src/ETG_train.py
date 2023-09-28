@@ -7,11 +7,12 @@ import numpy as np
 import utility
 from alg.ETG_alg import SimpleGA
 import os
+
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import sys
+
 sys.path.append("..")
 from parl.utils import logger, summary
-
 
 # --------------------
 # 获取当前脚本文件的绝对路径
@@ -20,7 +21,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
-RL_TRAIN=True  #是否进行ETG_RL训练
+RL_TRAIN = True  #是否进行ETG_RL训练
 DEBUG = False  #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
@@ -30,19 +31,22 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = False
-EXP_ID = 7
+EXP_ID = 4
+
+
 #______________________________
 def debug(info):
     if DEBUG:
         print(info)
 
-def run_EStrain_episode(theController, env,max_step):
+
+def run_EStrain_episode(theController, env, max_step):
     _, _ = env.reset()
 
     terminated = False
-    episode_steps=0
+    episode_steps = 0
     while not terminated:
-        episode_steps+=1
+        episode_steps += 1
         tCtrlData = theController.runStep()  # No Spine
         #tCtrlData = theController.runStep_spine()		# With Spine
         ctrlData = tCtrlData
@@ -81,7 +85,7 @@ if __name__ == '__main__':
     )
     env = GymEnv(theMouse, debug_stat=DEBUG)
 
-    if not EVAL :
+    if not EVAL:
         #____________ETG配置_______________
 
         #输出配置
@@ -101,7 +105,7 @@ if __name__ == '__main__':
                 w, b = theController.getETGinfo(new_points)
                 theController.update(w, b)
                 episode_reward, step = run_EStrain_episode(
-                    theController, env,8000)
+                    theController, env, 8000)
                 theController.reset()
                 steps.append(step)
                 # logger.info("%d th ES_train,%d solution :episode reward:%f" %
@@ -139,7 +143,7 @@ if __name__ == '__main__':
                 # path = os.path.join(script_directory,"data/ETG_models/exp3/slopeBest_{}.npz".format(ei))
                 theController.update(w_best, b_best)
                 episode_reward, step = run_EStrain_episode(
-                    theController, env,8000)
+                    theController, env, 8000)
                 theController.reset()
                 logger.info('Evaluation Reward: {} step: {} '.format(
                     episode_reward, step))
@@ -154,7 +158,7 @@ if __name__ == '__main__':
         idx = 0
         ETG_Evalpath = os.path.join(
             script_directory,
-            "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID,idx))
+            "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID, idx))
         # ETG_Evalpath = os.path.join(script_directory,
         #                             "data/ETG_models/Slope_ETG.npz")
         info = np.load(ETG_Evalpath)
@@ -165,8 +169,7 @@ if __name__ == '__main__':
         # points = info["param"]
         theController.update(w, b)
         utility.ETG_trj_plot(w, b, theController.ETG_agent, idx)
-        episode_reward, step = run_EStrain_episode(theController,
-                                                   env,8000)
+        episode_reward, step = run_EStrain_episode(theController, env, 8000)
         logger.info('Evaluation Reward: {} step: {} '.format(
             episode_reward, step))
 

@@ -27,8 +27,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
-RL_TRAIN = True  #是否进行ETG_RL训练
-DEBUG = False  #用于debug打印信息
+DEBUG = True  #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
 RUN_TIME_LENGTH = 8
@@ -36,7 +35,7 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL = False
+EVAL = True
 EXP_ID = 7
 #___________RL_ETG配置_____________
 GAMMA = 0.99
@@ -118,6 +117,7 @@ def run_Evaluate_episode(agent, env, max_step, action_bound, w=None, b=None):
         action = agent.predict(obs)
         # Perform action
         next_obs, reward, terminated, _, info = env.step(action * action_bound)
+        debug("cur step:{},reward={}".format(episode_steps, reward))
         obs = next_obs
         episode_reward += reward
         if episode_steps > max_step:
@@ -132,7 +132,7 @@ if __name__ == '__main__':
         logger.info("cuda is avaiable")
     # logger.info('args:{}'.format(args))
     #_______
-    render = False  #控制是否进行画面渲染
+    render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.005
@@ -280,7 +280,7 @@ if __name__ == '__main__':
 
     if EVAL == True:
         logger.info("ES_rl eval start:")
-        id = 0
+        id = 50
         path = os.path.join(script_directory,
                             "data/exp{}_ETG_RL_models".format(EXP_ID))
         path_rl = os.path.join(path, "itr_{}.pt".format(id))
