@@ -126,25 +126,10 @@ def run_Evaluate_episode(agent, env, max_step, action_bound, w=None, b=None):
     return episode_reward, episode_steps, infos
 
 
-def run_EStrain_episode(theController, env, max_step):
-    _, _ = env.reset()
-
-    terminated = False
-    episode_steps = 0
-    while not terminated:
-        episode_steps += 1
-        tCtrlData = theController.runStep()  # No Spine
-        #tCtrlData = theController.runStep_spine()		# With Spine
-        ctrlData = tCtrlData
-        obs, reward, terminated, _, info = env.step(ctrlData)
-        if episode_steps > max_step:
-            break
-    episode_reward = abs(env.endFoot - env.startFoot)
-    return episode_reward, episode_steps
-
-
 if __name__ == '__main__':
 
+    if torch.cuda.is_available():
+        logger.info("cuda is avaiable")
     # logger.info('args:{}'.format(args))
     #_______
     render = False  #控制是否进行画面渲染
@@ -169,35 +154,32 @@ if __name__ == '__main__':
         weight_decay=0.005,
         popsize=POP_SIZE,
     )
+    #___________RL_ETG配置_____________
+    act_bound = np.array([ACT_BOUND_NOW, ACT_BOUND_NOW] * 4)
+    # Initialize model, algorithm, agent, replay_memory
+    env = GymEnv_RL(theMouse, theController, debug_stat=DEBUG)
+    obs_dim = env.observation_space.shape[0]
+    action_dim = env.action_space.shape[0]
+    model = MujocoModel(obs_dim, action_dim)
+    rpm = ReplayMemory(max_size=MEMORY_SIZE,
+                       obs_dim=obs_dim,
+                       act_dim=action_dim)
+    #这个SAC算法不是很好理解,需要花时间进一步了解下
+    algorithm = SAC(model,
+                    gamma=GAMMA,
+                    tau=TAU,
+                    alpha=ALPHA,
+                    actor_lr=ACTOR_LR,
+                    critic_lr=CRITIC_LR)
+    agent = MujocoAgent(algorithm)
 
-    if not EVAL and RL_TRAIN:
-        if torch.cuda.is_available():
-            logger.info("cuda is avaiable")
+    if not EVAL:
         #输出配置
         outdir = "./train_log/exp{}".format(EXP_ID)
         if not os.path.exists(outdir):
             os.makedirs(outdir)
         logger.set_dir(outdir)
         logger.info("ETG_RL train start:")
-
-        #___________RL_ETG配置_____________
-        act_bound = np.array([ACT_BOUND_NOW, ACT_BOUND_NOW] * 4)
-        # Initialize model, algorithm, agent, replay_memory
-        env = GymEnv_RL(theMouse, theController, debug_stat=DEBUG)
-        obs_dim = env.observation_space.shape[0]
-        action_dim = env.action_space.shape[0]
-        model = MujocoModel(obs_dim, action_dim)
-        rpm = ReplayMemory(max_size=MEMORY_SIZE,
-                           obs_dim=obs_dim,
-                           act_dim=action_dim)
-        #这个SAC算法不是很好理解,需要花时间进一步了解下
-        algorithm = SAC(model,
-                        gamma=GAMMA,
-                        tau=TAU,
-                        alpha=ALPHA,
-                        actor_lr=ACTOR_LR,
-                        critic_lr=CRITIC_LR)
-        agent = MujocoAgent(algorithm)
         #_______________训练过程________________
         total_steps = 0
         test_flag = 0
@@ -296,94 +278,21 @@ if __name__ == '__main__':
                 w_best, b_best = theController.getETGinfo(new_points)
                 ES_solver.reset(ETG_best_param)
 
-    if not EVAL and not RL_TRAIN:
-        #____________ETG配置_______________
-        env = GymEnv(theMouse, debug_stat=DEBUG)
-
-        #输出配置
-        outdir = "./train_log/exp{}".format(EXP_ID)
-        if not os.path.exists(outdir):
-            os.makedirs(outdir)
-        logger.set_dir(outdir)
-        logger.info("ETG train start:")
-        for ei in range(ES_TRAIN_STEPS):
-            start = time.time()
-            solutions = ES_solver.ask()
-            fitness_list = []
-            steps = []
-            for id, solution in enumerate(solutions):
-                points_add = solution.reshape(-1, 2)
-                new_points = prior_points + points_add
-                w, b = theController.getETGinfo(new_points)
-                theController.update(w, b)
-                episode_reward, step = run_EStrain_episode(
-                    theController, env, 8000)
-                theController.reset()
-                steps.append(step)
-                # logger.info("%d th ES_train,%d solution :episode reward:%f" %
-                #             (ei, id, episode_reward))
-                fitness_list.append(episode_reward)
-            results = ES_solver.result()
-            sig = np.mean(results[3])
-            fitness_list = np.asarray(fitness_list).reshape(-1)
-            ES_solver.tell(fitness_list)
-            end = time.time()
-            logger.info(
-                'ESSteps: {} Reward: {} step: {}  sigma:{},time:{}'.format(
-                    ei + 1, np.max(fitness_list), np.mean(steps), sig,
-                    end - start))
-            summary.add_scalar('ES/episode_reward', np.mean(fitness_list),
-                               ei + 1)
-            summary.add_scalar('ES/episode_minre', np.min(fitness_list),
-                               ei + 1)
-            summary.add_scalar('ES/episode_maxre', np.max(fitness_list),
-                               ei + 1)
-            summary.add_scalar('ES/episode_restd', np.std(fitness_list),
-                               ei + 1)
-            summary.add_scalar('ES/episode_length', np.mean(steps), ei + 1)
-            summary.add_scalar('ES/sigma', sig, ei + 1)
-            if ei % 20 == 0:
-                best_param = ES_solver.get_best_param()
-                points_add = best_param.reshape(-1, 2)
-                new_points = prior_points + points_add
-                w_best, b_best = theController.getETGinfo(new_points)
-                path = os.path.join(script_directory,
-                                    "data/exp{}_ETG_models".format(EXP_ID))
-                if not os.path.exists(path):
-                    os.makedirs(path)
-                path = os.path.join(path, "slopeBest_{}.npz".format(ei))
-                # path = os.path.join(script_directory,"data/ETG_models/exp3/slopeBest_{}.npz".format(ei))
-                theController.update(w_best, b_best)
-                episode_reward, step = run_EStrain_episode(
-                    theController, env, 8000)
-                theController.reset()
-                logger.info('Evaluation Reward: {} step: {} '.format(
-                    episode_reward, step))
-                summary.add_scalar('EVAL/episode_reward', episode_reward,
-                                   ei + 1)
-                utility.saveETGinfo(path, w_best, b_best, new_points)
-                utility.ETG_trj_plot(w_best, b_best, theController.ETG_agent,
-                                     ei, outdir)
-
-    elif EVAL == True:
-        print("start eval")
-        idx = 0
-        ETG_Evalpath = os.path.join(
-            script_directory,
-            "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID, idx))
-        # ETG_Evalpath = os.path.join(script_directory,
-        #                             "data/ETG_models/Slope_ETG.npz")
-        info = np.load(ETG_Evalpath)
+    if EVAL == True:
+        logger.info("ES_rl eval start:")
+        id = 0
+        path = os.path.join(script_directory,
+                            "data/exp{}_ETG_RL_models".format(EXP_ID))
+        path_rl = os.path.join(path, "itr_{}.pt".format(id))
+        path_ETG = os.path.join(path, "itr_{}.npz".format(id))
+        agent.restore(path_rl)
+        info = np.load(path_ETG)
         w = info["w"]
         b = info["b"]
-        print("w.shape:", w.shape)
-        print("b.shape:", b.shape)
-        # points = info["param"]
-        theController.update(w, b)
-        utility.ETG_trj_plot(w, b, theController.ETG_agent, idx)
-        episode_reward, step = run_EStrain_episode(theController, env, 8000)
-        logger.info('Evaluation Reward: {} step: {} '.format(
-            episode_reward, step))
+        avg_reward, avg_step, info = run_Evaluate_episode(
+            agent, env, 600, act_bound, w, b)
+        logger.info('Evaluation Process, Reward: {} Steps: {} '.format(
+            avg_reward, avg_step))
 
     # 安全关闭模拟器
     if theMouse.render:
