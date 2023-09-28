@@ -86,8 +86,11 @@ class SimModel(object):
         # ------------------------------------------ #
         # step_num = int(cur_time_step / self.model.opt.timestep)
         # ctrlData确定不是设定为想要转过的角度值吗?
-        self.data.ctrl[:] = ctrlData
-        # print("self.data.ctrl:", self.data.ctrl)
+        if ctrlData.shape[0]==12:
+            self.data.ctrl[:] = ctrlData
+        else:
+            self.data.ctrl[:8]=ctrlData
+
         # print("self.data.qacc:", self.data.qacc)
         # for i in range(step_num):
         if self.render:
@@ -157,7 +160,7 @@ class SimModel(object):
         for i in range(100):
             #ctrlData = 0
             # 应该是用于设置actuator的相位信息
-            ctrlData = [0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0]
+            ctrlData = np.array([0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0])
             self.runStep(ctrlData)
         # print("first stage")
         curFoot = self.getFootWorldPosition_y()
