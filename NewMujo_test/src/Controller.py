@@ -73,6 +73,13 @@ class MouseController(object):
         #记录front leg的ctrlData
         self.ctrlDatas_fl = [[], []]
 
+    def reset(self):
+        self.curStep = 0 
+        self.trgXList = [[], [], [], []]
+        self.trgYList = [[], [], [], []]
+        #记录front leg的ctrlData
+        self.ctrlDatas_fl = [[], []]
+
     def update(self, w, b):
         self.ETG_model.update(w, b)
 
@@ -151,10 +158,9 @@ class MouseController(object):
         ctrlData.extend(hindLeg_right_q)
         self.ctrlDatas_fl[0].append(foreLeg_left_q[0] * 180 / np.pi)
         self.ctrlDatas_fl[1].append(foreLeg_left_q[1] * 180 / np.pi)
-        for i in range(3):
-            ctrlData.append(0)
-        ctrlData.append(spine)
-
+        # for i in range(3):
+        #     ctrlData.append(0)
+        # ctrlData.append(spine)
         # print(ctrlData)
         return ctrlData
 
