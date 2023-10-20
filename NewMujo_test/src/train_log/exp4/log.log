@@ -1,3 +1,0 @@
-[32m[09-27 09:09:23 MainThread @sim_test.py:290][0m ETG train start:
-[32m[09-27 09:10:23 MainThread @sim_test.py:313][0m ESSteps: 1 Reward: 0.2877233591713311 step: 1292.5  sigma:0.02,time:60.66341519355774
-[32m[09-27 09:10:26 MainThread @sim_test.py:342][0m Evaluation Reward: 0.2877233591713311 step: 2000 
