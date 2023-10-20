@@ -1,5 +1,5 @@
 import numpy as np
-import copy
+from copy import copy
 
 def compute_weight_decay(weight_decay, model_param_list):
     model_param_grid = np.array(model_param_list)

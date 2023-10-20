@@ -42,7 +42,7 @@ class SimModel(object):
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
-        self.legLink_z=[[], [], [], []]
+        self.legLink_z = [[], [], [], []]
         self.movePath = [[], [], []]
         self.angle_AEF = ["leg_link_fl", "knee_down_fl", "ankle_fl"]
         self.angle_AEF_record = []
@@ -54,14 +54,13 @@ class SimModel(object):
 
         self.paused = False
 
-
     def initializing(self):
         self.movePath = [[], [], []]
         self.legRealPoint_x = [[], [], [], []]
         self.legRealPoint_y = [[], [], [], []]
         self.legLink_x = [[], [], [], []]
         self.legLink_y = [[], [], [], []]
-        self.legLink_z=[[], [], [], []]
+        self.legLink_z = [[], [], [], []]
         self.angle_AEF_record = []
         self.FlRlLinkDistance_x = []
         self.FlRlLinkDistance_y = []
@@ -86,10 +85,10 @@ class SimModel(object):
         # ------------------------------------------ #
         # step_num = int(cur_time_step / self.model.opt.timestep)
         # ctrlData确定不是设定为想要转过的角度值吗?
-        if ctrlData.shape[0]==12:
+        if ctrlData.shape[0] == 12:
             self.data.ctrl[:] = ctrlData
         else:
-            self.data.ctrl[:8]=ctrlData
+            self.data.ctrl[:8] = ctrlData
 
         # print("self.data.qacc:", self.data.qacc)
         # for i in range(step_num):
@@ -154,7 +153,7 @@ class SimModel(object):
         # self.FlRlLinkDistance_y.append(FlLink[2] - RlLink[2])
         # self.FlRlAnkleDistance_x.append(FlAnkle[1] - FlAnkle[1])
         # self.FlRlAnkleDistance_y.append(FlAnkle[2] - RlAnkle[2])
-    def reset(self):
+    def reset(self, **kwargs):
         mujoco.mj_resetData(self.model, self.data)
         # 该循环的作用是什么呢?是防止起步摔倒一直在做准备吗?
         for i in range(100):
@@ -165,18 +164,28 @@ class SimModel(object):
         # print("first stage")
         curFoot = self.getFootWorldPosition_y()
         curFoot_z = self.getFootWorldPosition_z()
+        foot_positions = self.getFootWorldPositions()
         self.initializing()
         info = {}
         info["curFoot"] = curFoot
         info["curFoot_z"] = curFoot_z
-        info["curBody"]=self.getBodyPosition()
+        info["curBody"] = self.getBodyPosition()
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
-        info["euler"]=self.getEuler()
+        info["euler"] = self.getEuler()
+        info["curFoot_z_mean"] = self.getFootPosition_z()
+        info["footPositions"] = foot_positions
 
-        obs = np.zeros(11)
-        obs[:8]=ctrlData[:8]
-        obs[8:]=info["euler"]
-        
+        if kwargs["obs_velocity"]:
+            obs_shape=12
+        else:
+            obs_shape=11
+        obs = np.zeros(obs_shape)
+        if "next_ETG_act" in kwargs:
+            obs[:8] = kwargs["next_ETG_act"]
+        else:
+            obs[:8] = ctrlData[:8]
+        obs[8:11] = info["euler"]
+
         return obs, info
 
     def getTime(self):
@@ -327,12 +336,22 @@ class SimModel(object):
         angle_AEF = self.LawOfCosines_angle(AE, EF, AF)
         return angle_AEF
 
+    def getFootWorldPositions(self):
+        '''获取小鼠四足的足末位置世界坐标'''
+        footPositions = np.zeros((4, 3))
+        for i in range(4):
+            footPositions[i, 0] = self.legLink_x[i][-1]
+            footPositions[i, 1] = self.legLink_y[i][-1]
+            footPositions[i, 2] = self.legLink_z[i][-1]
+
+        return footPositions
+
     def getFootWorldPosition_y(self):
         '''
         获取小鼠足末位置的世界坐标
         '''
-        return (self.legLink_x[0][-1],self.legLink_y[0][-1],self.legLink_z[0][-1])
-    
+        return (self.legLink_x[0][-1], self.legLink_y[0][-1],
+                self.legLink_z[0][-1])
 
     def getFootWorldPosition_z(self):
         '''
@@ -340,13 +359,26 @@ class SimModel(object):
         '''
         return self.legLink_y[0][-1]
 
+    def getFootPosition_z(self):
+        '''获取小鼠足末的相对位置平均高度'''
+
+        body_z = self.getBodyPosition()[2]
+        foot_zs = np.zeros(4)
+        for i in range(4):
+            legPosName2id = mujoco.mj_name2id(self.model,
+                                              mujoco.mjtObj.mjOBJ_SITE,
+                                              self.legPosName[i][1])
+            foot_zs[i] = self.data.site_xpos[legPosName2id][2] - body_z
+
+        return foot_zs.mean()
+
     def getBodyPosition(self):
         '''获取小鼠body_ss的世界坐标'''
         id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
         pos = self.data.site_xpos[id]
 
         return pos
-    
+
     def getEuler_z(self):
         '''
         获取XYZ欧拉变换后沿Z方向转过的角度
@@ -358,19 +390,20 @@ class SimModel(object):
         angle_z = math.atan2(-rot[1], rot[0])
 
         return angle_z, rot
-    
+
     def getEuler(self):
         '''
         获取XYZ欧拉变换后沿各轴所转过的角度
         '''
-        euler=np.zeros(3)
+        euler = np.zeros(3)
         id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, "body_ss")
         rot = self.data.site_xmat[id]
-        euler[0]=math.atan2(-rot[5],rot[8])
-        euler[1]=math.atan2(rot[2],math.sqrt(rot[1]**2+rot[0]**2))
+        euler[0] = math.atan2(-rot[5], rot[8])
+        euler[1] = math.atan2(rot[2], math.sqrt(rot[1]**2 + rot[0]**2))
         euler[2] = math.atan2(-rot[1], rot[0])
 
         return euler
+
     def getSlope_y(self):
         id = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_GEOM, "slope1")
         pos_y = self.data.geom_xpos[id][1]

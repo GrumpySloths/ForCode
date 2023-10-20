@@ -90,3 +90,21 @@ def infoRecord(theMouse, theController):
     plt.plot(theMouse.FlRlLinkDistance_x, theMouse.FlRlLinkDistance_y)
     plt.title("FlRl Link relative distance")
     plt.savefig("FlRlLinkDistance")
+
+
+def updateFolder(model_folder,num_models_to_keep):
+    '''用于保持保存训练模型的文件夹中存放的模型不超过num_models_to_keep个
+    
+    @model_folder: 模型存放的路径
+    @num_models_to_keep:最多保存的模型数量
+    '''
+
+    model_files = os.listdir(model_folder)
+
+    model_files.sort(key=lambda x: os.path.getmtime(os.path.join(model_folder, x)), reverse=True)
+
+    if len(model_files)>num_models_to_keep:
+        models_to_delete = model_files[num_models_to_keep:]
+
+        for model_file in models_to_delete:
+            os.remove(os.path.join(model_folder, model_file))

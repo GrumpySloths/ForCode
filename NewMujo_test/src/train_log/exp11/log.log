@@ -1,0 +1,1190 @@
+[32m[10-20 10:17:38 MainThread @ES_train.py:197][0m ETG_RL train start:
+[32m[10-20 10:17:38 MainThread @ES_train.py:200][0m args:Namespace(exp_id=11, foot_gain=1.0, body_gain=0.2)
+[32m[10-20 10:17:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:40 MainThread @ES_train.py:227][0m Total Steps: 50 Reward: 19.91787827302057
+[32m[10-20 10:17:43 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:17:43 MainThread @ES_train.py:227][0m Total Steps: 190 Reward: 35.08506051065879
+[32m[10-20 10:17:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:44 MainThread @ES_train.py:227][0m Total Steps: 240 Reward: 9.543429517795527
+[32m[10-20 10:17:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:45 MainThread @ES_train.py:227][0m Total Steps: 290 Reward: 6.976461384581567
+[32m[10-20 10:17:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:46 MainThread @ES_train.py:227][0m Total Steps: 340 Reward: 14.0825175801556
+[32m[10-20 10:17:48 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:48 MainThread @ES_train.py:227][0m Total Steps: 390 Reward: 12.080507947126916
+[32m[10-20 10:17:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:49 MainThread @ES_train.py:227][0m Total Steps: 440 Reward: 10.907218695802262
+[32m[10-20 10:17:50 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:17:50 MainThread @ES_train.py:227][0m Total Steps: 515 Reward: 20.538472712508494
+[32m[10-20 10:17:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:52 MainThread @ES_train.py:227][0m Total Steps: 565 Reward: 14.010870909246814
+[32m[10-20 10:17:54 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:17:54 MainThread @ES_train.py:227][0m Total Steps: 665 Reward: 17.766209400727625
+[32m[10-20 10:17:55 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:55 MainThread @ES_train.py:227][0m Total Steps: 715 Reward: 7.27004539727003
+[32m[10-20 10:17:57 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:17:57 MainThread @ES_train.py:227][0m Total Steps: 815 Reward: 15.661023615774521
+[32m[10-20 10:17:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:17:59 MainThread @ES_train.py:227][0m Total Steps: 865 Reward: 6.088264486968937
+[32m[10-20 10:18:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:00 MainThread @ES_train.py:227][0m Total Steps: 915 Reward: 5.007467610498576
+[32m[10-20 10:18:01 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:01 MainThread @ES_train.py:227][0m Total Steps: 965 Reward: 3.8632556948318264
+[32m[10-20 10:18:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:02 MainThread @ES_train.py:227][0m Total Steps: 1015 Reward: 11.82285077789398
+[32m[10-20 10:18:03 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:03 MainThread @ES_train.py:227][0m Total Steps: 1065 Reward: 19.106938875278907
+[32m[10-20 10:18:04 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:04 MainThread @ES_train.py:227][0m Total Steps: 1115 Reward: 3.268201674565376
+[32m[10-20 10:18:07 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:07 MainThread @ES_train.py:227][0m Total Steps: 1215 Reward: 36.8223439308077
+[32m[10-20 10:18:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:10 MainThread @ES_train.py:227][0m Total Steps: 1355 Reward: 32.231022643288185
+[32m[10-20 10:18:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:11 MainThread @ES_train.py:227][0m Total Steps: 1405 Reward: 13.559662910843352
+[32m[10-20 10:18:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:13 MainThread @ES_train.py:227][0m Total Steps: 1455 Reward: 8.997814443239642
+[32m[10-20 10:18:13 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:13 MainThread @ES_train.py:227][0m Total Steps: 1490 Reward: 10.226918810857743
+[32m[10-20 10:18:15 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:15 MainThread @ES_train.py:227][0m Total Steps: 1540 Reward: 9.44245083343635
+[32m[10-20 10:18:16 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:16 MainThread @ES_train.py:227][0m Total Steps: 1610 Reward: 17.96264842674003
+[32m[10-20 10:18:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:17 MainThread @ES_train.py:227][0m Total Steps: 1660 Reward: 8.570106856765225
+[32m[10-20 10:18:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:20 MainThread @ES_train.py:227][0m Total Steps: 1760 Reward: 16.302835852699
+[32m[10-20 10:18:22 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:18:22 MainThread @ES_train.py:227][0m Total Steps: 1860 Reward: 11.751617150474587
+[32m[10-20 10:18:23 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:23 MainThread @ES_train.py:227][0m Total Steps: 1910 Reward: 9.834493948358347
+[32m[10-20 10:18:25 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:25 MainThread @ES_train.py:227][0m Total Steps: 1990 Reward: 15.469378495557926
+[32m[10-20 10:18:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:28 MainThread @ES_train.py:227][0m Total Steps: 2090 Reward: 28.330075598177384
+[32m[10-20 10:18:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:28 MainThread @ES_train.py:227][0m Total Steps: 2110 Reward: 3.890384007761558
+[32m[10-20 10:18:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:31 MainThread @ES_train.py:227][0m Total Steps: 2210 Reward: 17.96393068058244
+[32m[10-20 10:18:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:32 MainThread @ES_train.py:227][0m Total Steps: 2260 Reward: 10.085661498520388
+[32m[10-20 10:18:33 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:33 MainThread @ES_train.py:227][0m Total Steps: 2310 Reward: 6.935036785024925
+[32m[10-20 10:18:37 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:37 MainThread @ES_train.py:227][0m Total Steps: 2460 Reward: 38.79755297747484
+[32m[10-20 10:18:39 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:39 MainThread @ES_train.py:227][0m Total Steps: 2560 Reward: 26.789423940308048
+[32m[10-20 10:18:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:40 MainThread @ES_train.py:227][0m Total Steps: 2610 Reward: 22.425305517459474
+[32m[10-20 10:18:41 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:41 MainThread @ES_train.py:227][0m Total Steps: 2660 Reward: 4.7419333974804445
+[32m[10-20 10:18:43 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:43 MainThread @ES_train.py:227][0m Total Steps: 2710 Reward: 7.931041438517155
+[32m[10-20 10:18:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:45 MainThread @ES_train.py:227][0m Total Steps: 2810 Reward: 29.526744195935635
+[32m[10-20 10:18:46 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:46 MainThread @ES_train.py:227][0m Total Steps: 2840 Reward: 6.511045410300978
+[32m[10-20 10:18:49 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:49 MainThread @ES_train.py:227][0m Total Steps: 2970 Reward: 26.284388473372115
+[32m[10-20 10:18:50 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:50 MainThread @ES_train.py:227][0m Total Steps: 3005 Reward: 3.2024458013924963
+[32m[10-20 10:18:51 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:51 MainThread @ES_train.py:227][0m Total Steps: 3055 Reward: 8.650863402507996
+[32m[10-20 10:18:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:52 MainThread @ES_train.py:227][0m Total Steps: 3105 Reward: 11.967292136697461
+[32m[10-20 10:18:54 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:54 MainThread @ES_train.py:227][0m Total Steps: 3205 Reward: 9.91398251665754
+[32m[10-20 10:18:55 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:18:55 MainThread @ES_train.py:227][0m Total Steps: 3255 Reward: 9.981526243320431
+[32m[10-20 10:18:58 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:18:58 MainThread @ES_train.py:227][0m Total Steps: 3375 Reward: 32.37015714966788
+[32m[10-20 10:18:59 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:18:59 MainThread @ES_train.py:227][0m Total Steps: 3405 Reward: 2.71657695028129
+[32m[10-20 10:19:01 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:01 MainThread @ES_train.py:227][0m Total Steps: 3495 Reward: 22.92263815834242
+[32m[10-20 10:19:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:04 MainThread @ES_train.py:227][0m Total Steps: 3610 Reward: 28.25567977324486
+[32m[10-20 10:19:05 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:05 MainThread @ES_train.py:227][0m Total Steps: 3645 Reward: 5.990488051687815
+[32m[10-20 10:19:06 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:06 MainThread @ES_train.py:227][0m Total Steps: 3695 Reward: 17.98834135089408
+[32m[10-20 10:19:08 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:08 MainThread @ES_train.py:227][0m Total Steps: 3795 Reward: 26.09347559457547
+[32m[10-20 10:19:09 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:09 MainThread @ES_train.py:227][0m Total Steps: 3845 Reward: 8.481209245868625
+[32m[10-20 10:19:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:10 MainThread @ES_train.py:227][0m Total Steps: 3895 Reward: 7.273368129395908
+[32m[10-20 10:19:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:13 MainThread @ES_train.py:227][0m Total Steps: 3995 Reward: 12.615643779455848
+[32m[10-20 10:19:16 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:16 MainThread @ES_train.py:227][0m Total Steps: 4145 Reward: 37.95173400343835
+[32m[10-20 10:19:17 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:17 MainThread @ES_train.py:227][0m Total Steps: 4195 Reward: 17.945579597681245
+[32m[10-20 10:19:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:18 MainThread @ES_train.py:227][0m Total Steps: 4245 Reward: 9.032041606839236
+[32m[10-20 10:19:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:20 MainThread @ES_train.py:227][0m Total Steps: 4295 Reward: 9.847956454294918
+[32m[10-20 10:19:21 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:21 MainThread @ES_train.py:227][0m Total Steps: 4345 Reward: 3.956573070252391
+[32m[10-20 10:19:24 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:24 MainThread @ES_train.py:227][0m Total Steps: 4480 Reward: 22.325774172710933
+[32m[10-20 10:19:25 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:25 MainThread @ES_train.py:227][0m Total Steps: 4530 Reward: 3.5553241468791104
+[32m[10-20 10:19:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:26 MainThread @ES_train.py:227][0m Total Steps: 4580 Reward: 12.22231130144443
+[32m[10-20 10:19:27 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:27 MainThread @ES_train.py:227][0m Total Steps: 4610 Reward: 5.29703122711524
+[32m[10-20 10:19:28 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:28 MainThread @ES_train.py:227][0m Total Steps: 4660 Reward: 1.4763921614321776
+[32m[10-20 10:19:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:31 MainThread @ES_train.py:227][0m Total Steps: 4760 Reward: 29.73413368423943
+[32m[10-20 10:19:31 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:31 MainThread @ES_train.py:227][0m Total Steps: 4775 Reward: 3.223573119013303
+[32m[10-20 10:19:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:32 MainThread @ES_train.py:227][0m Total Steps: 4825 Reward: 4.777205965517384
+[32m[10-20 10:19:33 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:33 MainThread @ES_train.py:227][0m Total Steps: 4875 Reward: 6.597726259237364
+[32m[10-20 10:19:34 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:34 MainThread @ES_train.py:227][0m Total Steps: 4915 Reward: 3.413155428677306
+[32m[10-20 10:19:37 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:37 MainThread @ES_train.py:227][0m Total Steps: 5015 Reward: 21.450856247154334
+[32m[10-20 10:19:39 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:39 MainThread @ES_train.py:227][0m Total Steps: 5100 Reward: 21.211417440402844
+[32m[10-20 10:19:42 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:19:42 MainThread @ES_train.py:227][0m Total Steps: 5250 Reward: 48.108040563876486
+[32m[10-20 10:19:44 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:44 MainThread @ES_train.py:227][0m Total Steps: 5335 Reward: 24.98283598291639
+[32m[10-20 10:19:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:45 MainThread @ES_train.py:227][0m Total Steps: 5385 Reward: 1.5711074700354832
+[32m[10-20 10:19:47 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:47 MainThread @ES_train.py:227][0m Total Steps: 5435 Reward: 18.486336278215795
+[32m[10-20 10:19:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:49 MainThread @ES_train.py:227][0m Total Steps: 5535 Reward: 16.336610514861125
+[32m[10-20 10:19:50 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:50 MainThread @ES_train.py:227][0m Total Steps: 5595 Reward: 15.54813548088486
+[32m[10-20 10:19:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:19:52 MainThread @ES_train.py:227][0m Total Steps: 5660 Reward: 15.722550122329148
+[32m[10-20 10:19:53 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:53 MainThread @ES_train.py:227][0m Total Steps: 5705 Reward: 3.2225650008960764
+[32m[10-20 10:19:54 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:54 MainThread @ES_train.py:227][0m Total Steps: 5750 Reward: 3.3327903221118063
+[32m[10-20 10:19:55 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:55 MainThread @ES_train.py:227][0m Total Steps: 5800 Reward: 12.094525542583352
+[32m[10-20 10:19:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:56 MainThread @ES_train.py:227][0m Total Steps: 5850 Reward: 12.411806125904295
+[32m[10-20 10:19:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:19:57 MainThread @ES_train.py:227][0m Total Steps: 5900 Reward: 7.253363268503581
+[32m[10-20 10:19:59 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:19:59 MainThread @ES_train.py:227][0m Total Steps: 5980 Reward: 16.20484228950939
+[32m[10-20 10:20:00 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:00 MainThread @ES_train.py:227][0m Total Steps: 6025 Reward: 2.7818655176533365
+[32m[10-20 10:20:01 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:01 MainThread @ES_train.py:227][0m Total Steps: 6075 Reward: 9.018653801001031
+[32m[10-20 10:20:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:04 MainThread @ES_train.py:227][0m Total Steps: 6195 Reward: 31.98155618399776
+[32m[10-20 10:20:05 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:05 MainThread @ES_train.py:227][0m Total Steps: 6245 Reward: 15.573678197267585
+[32m[10-20 10:20:06 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:06 MainThread @ES_train.py:227][0m Total Steps: 6295 Reward: 16.223109570298686
+[32m[10-20 10:20:07 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:07 MainThread @ES_train.py:227][0m Total Steps: 6325 Reward: 2.9432769623969417
+[32m[10-20 10:20:10 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:10 MainThread @ES_train.py:227][0m Total Steps: 6425 Reward: 11.748273061989773
+[32m[10-20 10:20:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:11 MainThread @ES_train.py:227][0m Total Steps: 6475 Reward: 13.440165235359526
+[32m[10-20 10:20:12 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:12 MainThread @ES_train.py:227][0m Total Steps: 6525 Reward: 16.299839682325306
+[32m[10-20 10:20:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:13 MainThread @ES_train.py:227][0m Total Steps: 6575 Reward: 3.5476456792462185
+[32m[10-20 10:20:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:14 MainThread @ES_train.py:227][0m Total Steps: 6625 Reward: 11.619781311119388
+[32m[10-20 10:20:15 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:15 MainThread @ES_train.py:227][0m Total Steps: 6675 Reward: 9.38444210689019
+[32m[10-20 10:20:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:17 MainThread @ES_train.py:227][0m Total Steps: 6725 Reward: 14.330332814392984
+[32m[10-20 10:20:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:20 MainThread @ES_train.py:227][0m Total Steps: 6875 Reward: 22.60594493236429
+[32m[10-20 10:20:21 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:21 MainThread @ES_train.py:227][0m Total Steps: 6925 Reward: 18.599020977248
+[32m[10-20 10:20:22 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:22 MainThread @ES_train.py:227][0m Total Steps: 6975 Reward: 5.7396053591611755
+[32m[10-20 10:20:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:24 MainThread @ES_train.py:227][0m Total Steps: 7025 Reward: 4.021031814552529
+[32m[10-20 10:20:25 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:25 MainThread @ES_train.py:227][0m Total Steps: 7075 Reward: 9.465737382398268
+[32m[10-20 10:20:27 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:27 MainThread @ES_train.py:227][0m Total Steps: 7155 Reward: 29.832007218280935
+[32m[10-20 10:20:29 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:29 MainThread @ES_train.py:227][0m Total Steps: 7255 Reward: 21.532018619147706
+[32m[10-20 10:20:30 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:30 MainThread @ES_train.py:227][0m Total Steps: 7305 Reward: 16.885636022218293
+[32m[10-20 10:20:31 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:31 MainThread @ES_train.py:227][0m Total Steps: 7330 Reward: 0.4707727402100527
+[32m[10-20 10:20:33 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:33 MainThread @ES_train.py:227][0m Total Steps: 7455 Reward: 30.050350464925366
+[32m[10-20 10:20:34 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:34 MainThread @ES_train.py:227][0m Total Steps: 7470 Reward: 0.0503787284442809
+[32m[10-20 10:20:36 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:36 MainThread @ES_train.py:227][0m Total Steps: 7565 Reward: 21.088695558276534
+[32m[10-20 10:20:38 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:38 MainThread @ES_train.py:227][0m Total Steps: 7665 Reward: 12.524157528741023
+[32m[10-20 10:20:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:40 MainThread @ES_train.py:227][0m Total Steps: 7715 Reward: 18.926382522250925
+[32m[10-20 10:20:41 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:41 MainThread @ES_train.py:227][0m Total Steps: 7765 Reward: 13.031359304215501
+[32m[10-20 10:20:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:42 MainThread @ES_train.py:227][0m Total Steps: 7815 Reward: 0.3327085025521899
+[32m[10-20 10:20:43 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:43 MainThread @ES_train.py:227][0m Total Steps: 7865 Reward: 8.536487607244087
+[32m[10-20 10:20:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:44 MainThread @ES_train.py:227][0m Total Steps: 7915 Reward: 16.433644671740385
+[32m[10-20 10:20:47 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:47 MainThread @ES_train.py:227][0m Total Steps: 8010 Reward: 11.694752281677577
+[32m[10-20 10:20:48 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:48 MainThread @ES_train.py:227][0m Total Steps: 8060 Reward: 13.403835148149664
+[32m[10-20 10:20:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:49 MainThread @ES_train.py:227][0m Total Steps: 8110 Reward: 8.929265590061279
+[32m[10-20 10:20:50 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:50 MainThread @ES_train.py:227][0m Total Steps: 8165 Reward: 0.05066491357270614
+[32m[10-20 10:20:51 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:51 MainThread @ES_train.py:227][0m Total Steps: 8215 Reward: 17.35983955250263
+[32m[10-20 10:20:53 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:53 MainThread @ES_train.py:227][0m Total Steps: 8265 Reward: 10.165660771963832
+[32m[10-20 10:20:55 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:20:55 MainThread @ES_train.py:227][0m Total Steps: 8360 Reward: 13.354317797304134
+[32m[10-20 10:20:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:56 MainThread @ES_train.py:227][0m Total Steps: 8410 Reward: 11.053331168589848
+[32m[10-20 10:20:58 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:20:58 MainThread @ES_train.py:227][0m Total Steps: 8510 Reward: 25.2947736521224
+[32m[10-20 10:20:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:20:59 MainThread @ES_train.py:227][0m Total Steps: 8560 Reward: 1.4475280769394288
+[32m[10-20 10:21:01 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:21:01 MainThread @ES_train.py:227][0m Total Steps: 8640 Reward: 14.60807305375726
+[32m[10-20 10:21:03 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:03 MainThread @ES_train.py:227][0m Total Steps: 8735 Reward: 30.95943471492959
+[32m[10-20 10:21:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:05 MainThread @ES_train.py:227][0m Total Steps: 8785 Reward: 13.577214747627542
+[32m[10-20 10:21:07 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:21:07 MainThread @ES_train.py:227][0m Total Steps: 8900 Reward: 21.38492555769005
+[32m[10-20 10:21:08 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:08 MainThread @ES_train.py:227][0m Total Steps: 8950 Reward: 3.1910648539304476
+[32m[10-20 10:21:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:10 MainThread @ES_train.py:227][0m Total Steps: 9030 Reward: 18.785982068766454
+[32m[10-20 10:21:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:11 MainThread @ES_train.py:227][0m Total Steps: 9080 Reward: 4.174646813539387
+[32m[10-20 10:21:12 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:12 MainThread @ES_train.py:227][0m Total Steps: 9130 Reward: 14.983926618284059
+[32m[10-20 10:21:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:14 MainThread @ES_train.py:227][0m Total Steps: 9180 Reward: 10.926758223947017
+[32m[10-20 10:21:15 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:15 MainThread @ES_train.py:227][0m Total Steps: 9230 Reward: 16.878956488862254
+[32m[10-20 10:21:16 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:16 MainThread @ES_train.py:227][0m Total Steps: 9280 Reward: 16.605054714115706
+[32m[10-20 10:21:17 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:17 MainThread @ES_train.py:227][0m Total Steps: 9330 Reward: 11.176508339815843
+[32m[10-20 10:21:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:18 MainThread @ES_train.py:227][0m Total Steps: 9380 Reward: 11.594222451142294
+[32m[10-20 10:21:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:20 MainThread @ES_train.py:227][0m Total Steps: 9430 Reward: 4.200430736472223
+[32m[10-20 10:21:22 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:22 MainThread @ES_train.py:227][0m Total Steps: 9530 Reward: 23.984601774580103
+[32m[10-20 10:21:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:24 MainThread @ES_train.py:227][0m Total Steps: 9580 Reward: 15.044326784058068
+[32m[10-20 10:21:25 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:21:25 MainThread @ES_train.py:227][0m Total Steps: 9625 Reward: 6.596943006302707
+[32m[10-20 10:21:27 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:27 MainThread @ES_train.py:227][0m Total Steps: 9710 Reward: 13.719965731925148
+[32m[10-20 10:21:28 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:21:28 MainThread @ES_train.py:227][0m Total Steps: 9750 Reward: 8.564498168150253
+[32m[10-20 10:21:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:31 MainThread @ES_train.py:227][0m Total Steps: 9850 Reward: 29.696359166716107
+[32m[10-20 10:21:33 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:33 MainThread @ES_train.py:227][0m Total Steps: 9950 Reward: 26.45531041176851
+[32m[10-20 10:21:34 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:34 MainThread @ES_train.py:227][0m Total Steps: 9970 Reward: 1.2866573636505556
+[32m[10-20 10:21:36 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:36 MainThread @ES_train.py:227][0m Total Steps: 10020 Reward: 4.010331154284856
+[32m[10-20 10:21:44 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:21:44 MainThread @ES_train.py:235][0m Evaluation Process, Reward: 72.73331850668791 Steps: 300 
+[32m[10-20 10:21:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:46 MainThread @ES_train.py:227][0m Total Steps: 10070 Reward: 17.76313969270125
+[32m[10-20 10:21:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:49 MainThread @ES_train.py:227][0m Total Steps: 10120 Reward: 15.776854064913106
+[32m[10-20 10:21:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:52 MainThread @ES_train.py:227][0m Total Steps: 10170 Reward: 15.9472843563261
+[32m[10-20 10:21:55 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:21:55 MainThread @ES_train.py:227][0m Total Steps: 10210 Reward: 9.411899386867235
+[32m[10-20 10:21:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:21:59 MainThread @ES_train.py:227][0m Total Steps: 10260 Reward: 9.425275081403697
+[32m[10-20 10:22:06 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:06 MainThread @ES_train.py:227][0m Total Steps: 10360 Reward: 24.482099750722455
+[32m[10-20 10:22:09 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:22:09 MainThread @ES_train.py:227][0m Total Steps: 10400 Reward: 6.371035771877144
+[32m[10-20 10:22:16 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:16 MainThread @ES_train.py:227][0m Total Steps: 10500 Reward: 23.576421541277384
+[32m[10-20 10:22:23 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:22:23 MainThread @ES_train.py:227][0m Total Steps: 10590 Reward: 28.992770770862744
+[32m[10-20 10:22:30 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:30 MainThread @ES_train.py:227][0m Total Steps: 10690 Reward: 17.153055533546905
+[32m[10-20 10:22:34 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:34 MainThread @ES_train.py:227][0m Total Steps: 10740 Reward: 10.160647656342443
+[32m[10-20 10:22:41 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:22:41 MainThread @ES_train.py:227][0m Total Steps: 10835 Reward: 17.59479480312343
+[32m[10-20 10:22:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:44 MainThread @ES_train.py:227][0m Total Steps: 10885 Reward: 5.197893232630537
+[32m[10-20 10:22:48 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:48 MainThread @ES_train.py:227][0m Total Steps: 10935 Reward: 10.421573912854297
+[32m[10-20 10:22:51 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:22:51 MainThread @ES_train.py:227][0m Total Steps: 10985 Reward: 8.362797862614118
+[32m[10-20 10:22:59 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:22:59 MainThread @ES_train.py:227][0m Total Steps: 11085 Reward: 20.813916273262183
+[32m[10-20 10:23:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:02 MainThread @ES_train.py:227][0m Total Steps: 11135 Reward: 10.183519632189517
+[32m[10-20 10:23:09 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:23:09 MainThread @ES_train.py:227][0m Total Steps: 11220 Reward: 6.826044315970262
+[32m[10-20 10:23:12 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:23:12 MainThread @ES_train.py:227][0m Total Steps: 11260 Reward: 8.822217448278185
+[32m[10-20 10:23:14 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:23:14 MainThread @ES_train.py:227][0m Total Steps: 11285 Reward: 6.348583745510692
+[32m[10-20 10:23:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:17 MainThread @ES_train.py:227][0m Total Steps: 11335 Reward: 18.545698422785197
+[32m[10-20 10:23:21 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:21 MainThread @ES_train.py:227][0m Total Steps: 11385 Reward: 16.96823218429047
+[32m[10-20 10:23:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:24 MainThread @ES_train.py:227][0m Total Steps: 11435 Reward: 8.47080653370049
+[32m[10-20 10:23:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:31 MainThread @ES_train.py:227][0m Total Steps: 11535 Reward: 30.118152635394917
+[32m[10-20 10:23:34 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:34 MainThread @ES_train.py:227][0m Total Steps: 11585 Reward: 9.941338078484565
+[32m[10-20 10:23:38 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:23:38 MainThread @ES_train.py:227][0m Total Steps: 11630 Reward: 4.271999595429407
+[32m[10-20 10:23:48 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:23:49 MainThread @ES_train.py:227][0m Total Steps: 11780 Reward: 45.47422017101332
+[32m[10-20 10:23:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:52 MainThread @ES_train.py:227][0m Total Steps: 11830 Reward: 12.273126613296965
+[32m[10-20 10:23:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:23:59 MainThread @ES_train.py:227][0m Total Steps: 11930 Reward: 27.26180258746781
+[32m[10-20 10:24:03 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:03 MainThread @ES_train.py:227][0m Total Steps: 11980 Reward: 10.60881232397057
+[32m[10-20 10:24:06 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:24:06 MainThread @ES_train.py:227][0m Total Steps: 12025 Reward: 8.144457800827311
+[32m[10-20 10:24:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:10 MainThread @ES_train.py:227][0m Total Steps: 12075 Reward: 13.103937575789919
+[32m[10-20 10:24:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:17 MainThread @ES_train.py:227][0m Total Steps: 12175 Reward: 30.123929724064308
+[32m[10-20 10:24:25 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:25 MainThread @ES_train.py:227][0m Total Steps: 12275 Reward: 28.98287357040724
+[32m[10-20 10:24:28 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:24:28 MainThread @ES_train.py:227][0m Total Steps: 12320 Reward: 8.282768093774417
+[32m[10-20 10:24:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:32 MainThread @ES_train.py:227][0m Total Steps: 12370 Reward: 3.6718014036513753
+[32m[10-20 10:24:42 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:24:42 MainThread @ES_train.py:227][0m Total Steps: 12515 Reward: 32.59821838712685
+[32m[10-20 10:24:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:46 MainThread @ES_train.py:227][0m Total Steps: 12565 Reward: 8.978241424045848
+[32m[10-20 10:24:50 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:24:50 MainThread @ES_train.py:227][0m Total Steps: 12615 Reward: 9.122319853341569
+[32m[10-20 10:24:51 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:24:51 MainThread @ES_train.py:227][0m Total Steps: 12635 Reward: 4.3527212997288665
+[32m[10-20 10:25:03 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:25:03 MainThread @ES_train.py:227][0m Total Steps: 12795 Reward: 36.21439261098579
+[32m[10-20 10:25:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:10 MainThread @ES_train.py:227][0m Total Steps: 12895 Reward: 27.199001245488784
+[32m[10-20 10:25:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:13 MainThread @ES_train.py:227][0m Total Steps: 12945 Reward: 15.00919714108395
+[32m[10-20 10:25:17 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:25:17 MainThread @ES_train.py:227][0m Total Steps: 12990 Reward: 8.223203148389404
+[32m[10-20 10:25:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:20 MainThread @ES_train.py:227][0m Total Steps: 13040 Reward: 15.93146495328687
+[32m[10-20 10:25:23 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:25:23 MainThread @ES_train.py:227][0m Total Steps: 13080 Reward: 12.345975392233079
+[32m[10-20 10:25:29 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:25:29 MainThread @ES_train.py:227][0m Total Steps: 13160 Reward: 23.58099915392984
+[32m[10-20 10:25:33 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:33 MainThread @ES_train.py:227][0m Total Steps: 13210 Reward: 11.180774104450814
+[32m[10-20 10:25:38 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:25:38 MainThread @ES_train.py:227][0m Total Steps: 13285 Reward: 26.335317222596274
+[32m[10-20 10:25:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:45 MainThread @ES_train.py:227][0m Total Steps: 13385 Reward: 14.649904912574108
+[32m[10-20 10:25:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:25:52 MainThread @ES_train.py:227][0m Total Steps: 13485 Reward: 19.546906969159085
+[32m[10-20 10:26:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:26:00 MainThread @ES_train.py:227][0m Total Steps: 13585 Reward: 21.98560403002242
+[32m[10-20 10:26:07 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:07 MainThread @ES_train.py:227][0m Total Steps: 13675 Reward: 17.883849322863757
+[32m[10-20 10:26:11 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:11 MainThread @ES_train.py:227][0m Total Steps: 13740 Reward: 15.665170299864183
+[32m[10-20 10:26:19 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:19 MainThread @ES_train.py:227][0m Total Steps: 13840 Reward: 17.99948974238998
+[32m[10-20 10:26:21 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:21 MainThread @ES_train.py:227][0m Total Steps: 13860 Reward: 2.31868143092935
+[32m[10-20 10:26:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:26:24 MainThread @ES_train.py:227][0m Total Steps: 13910 Reward: 13.27618364380276
+[32m[10-20 10:26:30 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:30 MainThread @ES_train.py:227][0m Total Steps: 13990 Reward: 17.079330264876493
+[32m[10-20 10:26:43 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:43 MainThread @ES_train.py:227][0m Total Steps: 14170 Reward: 60.353341443296216
+[32m[10-20 10:26:59 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:26:59 MainThread @ES_train.py:227][0m Total Steps: 14400 Reward: 56.86445479422302
+[32m[10-20 10:27:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:02 MainThread @ES_train.py:227][0m Total Steps: 14450 Reward: 16.779883125760332
+[32m[10-20 10:27:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:06 MainThread @ES_train.py:227][0m Total Steps: 14500 Reward: 12.128325380932978
+[32m[10-20 10:27:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:13 MainThread @ES_train.py:227][0m Total Steps: 14600 Reward: 23.710326350912883
+[32m[10-20 10:27:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:20 MainThread @ES_train.py:227][0m Total Steps: 14700 Reward: 22.66156862160408
+[32m[10-20 10:27:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:27:28 MainThread @ES_train.py:227][0m Total Steps: 14805 Reward: 41.03836952204896
+[32m[10-20 10:27:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:32 MainThread @ES_train.py:227][0m Total Steps: 14855 Reward: 11.519867961238317
+[32m[10-20 10:27:33 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:27:33 MainThread @ES_train.py:227][0m Total Steps: 14875 Reward: 3.627634674763675
+[32m[10-20 10:27:35 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:27:35 MainThread @ES_train.py:227][0m Total Steps: 14895 Reward: 6.85813016053473
+[32m[10-20 10:27:39 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:27:39 MainThread @ES_train.py:227][0m Total Steps: 14955 Reward: 11.007768271317506
+[32m[10-20 10:27:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:43 MainThread @ES_train.py:227][0m Total Steps: 15005 Reward: 16.23948239459935
+[32m[10-20 10:27:53 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:53 MainThread @ES_train.py:227][0m Total Steps: 15155 Reward: 30.292236993233864
+[32m[10-20 10:27:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:27:57 MainThread @ES_train.py:227][0m Total Steps: 15205 Reward: 15.63044846555298
+[32m[10-20 10:28:04 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:28:04 MainThread @ES_train.py:227][0m Total Steps: 15305 Reward: 23.285798370808237
+[32m[10-20 10:28:15 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:28:15 MainThread @ES_train.py:227][0m Total Steps: 15455 Reward: 48.24229481058705
+[32m[10-20 10:28:26 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:28:26 MainThread @ES_train.py:227][0m Total Steps: 15605 Reward: 40.42208788707474
+[32m[10-20 10:28:36 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:28:36 MainThread @ES_train.py:227][0m Total Steps: 15735 Reward: 33.30816278872878
+[32m[10-20 10:28:38 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:28:38 MainThread @ES_train.py:227][0m Total Steps: 15785 Reward: 23.107595615425996
+[32m[10-20 10:28:50 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:28:50 MainThread @ES_train.py:227][0m Total Steps: 15955 Reward: 62.32582722624036
+[32m[10-20 10:28:56 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:28:56 MainThread @ES_train.py:227][0m Total Steps: 16035 Reward: 38.750826869372055
+[32m[10-20 10:29:00 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:29:00 MainThread @ES_train.py:227][0m Total Steps: 16095 Reward: 21.13257394462523
+[32m[10-20 10:29:03 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:29:03 MainThread @ES_train.py:227][0m Total Steps: 16130 Reward: 6.6690743595964985
+[32m[10-20 10:29:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:29:10 MainThread @ES_train.py:227][0m Total Steps: 16230 Reward: 21.566319706213807
+[32m[10-20 10:29:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:29:17 MainThread @ES_train.py:227][0m Total Steps: 16330 Reward: 30.47118928410472
+[32m[10-20 10:29:26 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:29:26 MainThread @ES_train.py:227][0m Total Steps: 16445 Reward: 43.286972549681956
+[32m[10-20 10:29:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:29:28 MainThread @ES_train.py:227][0m Total Steps: 16480 Reward: 4.349450270381992
+[32m[10-20 10:29:39 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:29:39 MainThread @ES_train.py:227][0m Total Steps: 16630 Reward: 48.57428709642184
+[32m[10-20 10:29:46 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:29:46 MainThread @ES_train.py:227][0m Total Steps: 16720 Reward: 20.879493828853295
+[32m[10-20 10:29:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:29:49 MainThread @ES_train.py:227][0m Total Steps: 16770 Reward: 8.528116478579246
+[32m[10-20 10:29:53 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:29:53 MainThread @ES_train.py:227][0m Total Steps: 16820 Reward: 10.295735502934559
+[32m[10-20 10:29:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:29:57 MainThread @ES_train.py:227][0m Total Steps: 16870 Reward: 12.51525784443503
+[32m[10-20 10:30:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:30:04 MainThread @ES_train.py:227][0m Total Steps: 16970 Reward: 19.602281993771356
+[32m[10-20 10:30:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:30:10 MainThread @ES_train.py:227][0m Total Steps: 17055 Reward: 19.571952244552286
+[32m[10-20 10:30:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:30:13 MainThread @ES_train.py:227][0m Total Steps: 17105 Reward: 17.360080997607206
+[32m[10-20 10:30:22 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:30:22 MainThread @ES_train.py:227][0m Total Steps: 17225 Reward: 38.57092375870198
+[32m[10-20 10:30:25 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:30:25 MainThread @ES_train.py:227][0m Total Steps: 17275 Reward: 20.88427705662471
+[32m[10-20 10:30:28 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:30:28 MainThread @ES_train.py:227][0m Total Steps: 17325 Reward: 11.411409789627747
+[32m[10-20 10:30:33 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:30:33 MainThread @ES_train.py:227][0m Total Steps: 17385 Reward: 14.519069658036534
+[32m[10-20 10:30:38 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:30:38 MainThread @ES_train.py:227][0m Total Steps: 17465 Reward: 28.515044427358568
+[32m[10-20 10:30:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:30:56 MainThread @ES_train.py:227][0m Total Steps: 17715 Reward: 42.786262407221884
+[32m[10-20 10:31:03 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:03 MainThread @ES_train.py:227][0m Total Steps: 17815 Reward: 25.89212020925787
+[32m[10-20 10:31:12 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:31:13 MainThread @ES_train.py:227][0m Total Steps: 17940 Reward: 38.678650439844695
+[32m[10-20 10:31:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:20 MainThread @ES_train.py:227][0m Total Steps: 18040 Reward: 14.703802626032354
+[32m[10-20 10:31:27 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:27 MainThread @ES_train.py:227][0m Total Steps: 18140 Reward: 28.80626308882329
+[32m[10-20 10:31:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:31 MainThread @ES_train.py:227][0m Total Steps: 18190 Reward: 13.253014296432111
+[32m[10-20 10:31:38 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:31:38 MainThread @ES_train.py:227][0m Total Steps: 18285 Reward: 26.04366036450387
+[32m[10-20 10:31:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:42 MainThread @ES_train.py:227][0m Total Steps: 18335 Reward: 16.80004915534617
+[32m[10-20 10:31:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:31:45 MainThread @ES_train.py:227][0m Total Steps: 18385 Reward: 16.14325877780597
+[32m[10-20 10:31:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:31:54 MainThread @ES_train.py:227][0m Total Steps: 18500 Reward: 49.18092115290005
+[32m[10-20 10:32:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:32:05 MainThread @ES_train.py:227][0m Total Steps: 18650 Reward: 38.394384396477214
+[32m[10-20 10:32:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:32:14 MainThread @ES_train.py:227][0m Total Steps: 18800 Reward: 40.528626355671385
+[32m[10-20 10:32:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:32:18 MainThread @ES_train.py:227][0m Total Steps: 18850 Reward: 21.550991947303505
+[32m[10-20 10:32:25 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:32:25 MainThread @ES_train.py:227][0m Total Steps: 18950 Reward: 31.277528995956995
+[32m[10-20 10:32:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:32:33 MainThread @ES_train.py:227][0m Total Steps: 19050 Reward: 36.58358366798865
+[32m[10-20 10:32:36 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:32:36 MainThread @ES_train.py:227][0m Total Steps: 19100 Reward: 19.574123365259318
+[32m[10-20 10:32:43 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:32:43 MainThread @ES_train.py:227][0m Total Steps: 19200 Reward: 32.9823216123342
+[32m[10-20 10:32:50 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:32:51 MainThread @ES_train.py:227][0m Total Steps: 19300 Reward: 33.829470831223354
+[32m[10-20 10:32:57 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:32:57 MainThread @ES_train.py:227][0m Total Steps: 19390 Reward: 25.765241262969784
+[32m[10-20 10:33:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:33:04 MainThread @ES_train.py:227][0m Total Steps: 19480 Reward: 30.92117462682905
+[32m[10-20 10:33:07 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:33:07 MainThread @ES_train.py:227][0m Total Steps: 19530 Reward: 16.175438461610213
+[32m[10-20 10:33:15 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:33:15 MainThread @ES_train.py:227][0m Total Steps: 19630 Reward: 21.33336607847808
+[32m[10-20 10:33:22 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:33:22 MainThread @ES_train.py:227][0m Total Steps: 19730 Reward: 32.228690639996486
+[32m[10-20 10:33:25 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:33:25 MainThread @ES_train.py:227][0m Total Steps: 19775 Reward: 13.342723842212237
+[32m[10-20 10:33:30 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:33:30 MainThread @ES_train.py:227][0m Total Steps: 19845 Reward: 27.698997509981936
+[32m[10-20 10:33:33 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:33:33 MainThread @ES_train.py:227][0m Total Steps: 19895 Reward: 22.216745457958545
+[32m[10-20 10:33:43 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:33:43 MainThread @ES_train.py:227][0m Total Steps: 20035 Reward: 38.886512044258296
+[32m[10-20 10:33:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:33:46 MainThread @ES_train.py:235][0m Evaluation Process, Reward: 31.190403534272615 Steps: 100 
+[32m[10-20 10:33:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:33:52 MainThread @ES_train.py:227][0m Total Steps: 20115 Reward: 33.062510871063935
+[32m[10-20 10:34:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:02 MainThread @ES_train.py:227][0m Total Steps: 20265 Reward: 49.87828004974894
+[32m[10-20 10:34:09 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:09 MainThread @ES_train.py:227][0m Total Steps: 20365 Reward: 23.01933173990935
+[32m[10-20 10:34:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:20 MainThread @ES_train.py:227][0m Total Steps: 20515 Reward: 55.54673028452089
+[32m[10-20 10:34:23 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:23 MainThread @ES_train.py:227][0m Total Steps: 20565 Reward: 14.468654331737271
+[32m[10-20 10:34:34 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:34:34 MainThread @ES_train.py:227][0m Total Steps: 20715 Reward: 49.85858447061197
+[32m[10-20 10:34:41 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:41 MainThread @ES_train.py:227][0m Total Steps: 20815 Reward: 35.64608636295367
+[32m[10-20 10:34:48 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:34:48 MainThread @ES_train.py:227][0m Total Steps: 20915 Reward: 41.2051408920236
+[32m[10-20 10:34:52 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:52 MainThread @ES_train.py:227][0m Total Steps: 20965 Reward: 15.011699965748095
+[32m[10-20 10:34:55 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:55 MainThread @ES_train.py:227][0m Total Steps: 21015 Reward: 11.979367943795443
+[32m[10-20 10:34:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:34:59 MainThread @ES_train.py:227][0m Total Steps: 21065 Reward: 10.988971795804718
+[32m[10-20 10:35:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:35:10 MainThread @ES_train.py:227][0m Total Steps: 21215 Reward: 40.91892919388583
+[32m[10-20 10:35:21 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:35:21 MainThread @ES_train.py:227][0m Total Steps: 21365 Reward: 37.7274983868296
+[32m[10-20 10:35:29 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:35:29 MainThread @ES_train.py:227][0m Total Steps: 21465 Reward: 28.80746806814777
+[32m[10-20 10:35:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:35:32 MainThread @ES_train.py:227][0m Total Steps: 21515 Reward: 8.246443573439441
+[32m[10-20 10:35:38 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:35:38 MainThread @ES_train.py:227][0m Total Steps: 21605 Reward: 38.58505509450556
+[32m[10-20 10:35:46 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:35:46 MainThread @ES_train.py:227][0m Total Steps: 21725 Reward: 21.941725295862906
+[32m[10-20 10:35:57 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:35:57 MainThread @ES_train.py:227][0m Total Steps: 21875 Reward: 47.66587568380586
+[32m[10-20 10:36:01 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:36:01 MainThread @ES_train.py:227][0m Total Steps: 21925 Reward: 12.62979747114661
+[32m[10-20 10:36:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:36:11 MainThread @ES_train.py:227][0m Total Steps: 22075 Reward: 50.78003258094118
+[32m[10-20 10:36:19 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:36:19 MainThread @ES_train.py:227][0m Total Steps: 22175 Reward: 22.552373034868534
+[32m[10-20 10:36:29 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:36:29 MainThread @ES_train.py:227][0m Total Steps: 22315 Reward: 39.16570827908352
+[32m[10-20 10:36:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:36:40 MainThread @ES_train.py:227][0m Total Steps: 22465 Reward: 38.711489990538915
+[32m[10-20 10:36:46 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:36:46 MainThread @ES_train.py:227][0m Total Steps: 22560 Reward: 14.793133958280816
+[32m[10-20 10:36:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:36:52 MainThread @ES_train.py:227][0m Total Steps: 22640 Reward: 31.422830314985173
+[32m[10-20 10:36:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:36:56 MainThread @ES_train.py:227][0m Total Steps: 22690 Reward: 22.67146265138851
+[32m[10-20 10:37:07 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:37:07 MainThread @ES_train.py:227][0m Total Steps: 22835 Reward: 42.22309194655038
+[32m[10-20 10:37:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:37:18 MainThread @ES_train.py:227][0m Total Steps: 22985 Reward: 33.104000995160206
+[32m[10-20 10:37:31 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:37:31 MainThread @ES_train.py:227][0m Total Steps: 23185 Reward: 59.186851175796065
+[32m[10-20 10:37:38 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:37:38 MainThread @ES_train.py:227][0m Total Steps: 23335 Reward: 34.448461944766265
+[32m[10-20 10:37:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:37:44 MainThread @ES_train.py:227][0m Total Steps: 23485 Reward: 28.60712300034474
+[32m[10-20 10:37:47 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:37:47 MainThread @ES_train.py:227][0m Total Steps: 23550 Reward: 10.319179349276563
+[32m[10-20 10:37:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:37:49 MainThread @ES_train.py:227][0m Total Steps: 23600 Reward: 10.131788091629407
+[32m[10-20 10:37:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:37:52 MainThread @ES_train.py:227][0m Total Steps: 23685 Reward: 27.931997622064497
+[32m[10-20 10:37:55 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:37:55 MainThread @ES_train.py:227][0m Total Steps: 23765 Reward: 21.11907004749397
+[32m[10-20 10:37:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:37:59 MainThread @ES_train.py:227][0m Total Steps: 23865 Reward: 37.49106960841036
+[32m[10-20 10:38:03 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:38:03 MainThread @ES_train.py:227][0m Total Steps: 23945 Reward: 18.276977785026983
+[32m[10-20 10:38:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:38:05 MainThread @ES_train.py:227][0m Total Steps: 23995 Reward: 12.949559628259088
+[32m[10-20 10:38:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:38:10 MainThread @ES_train.py:227][0m Total Steps: 24095 Reward: 41.84392243595347
+[32m[10-20 10:38:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:38:20 MainThread @ES_train.py:227][0m Total Steps: 24245 Reward: 27.63683903184782
+[32m[10-20 10:38:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:38:24 MainThread @ES_train.py:227][0m Total Steps: 24345 Reward: 34.299638065292925
+[32m[10-20 10:38:33 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:38:33 MainThread @ES_train.py:227][0m Total Steps: 24580 Reward: 70.24469668542295
+[32m[10-20 10:38:39 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:38:39 MainThread @ES_train.py:227][0m Total Steps: 24730 Reward: 27.974784178467143
+[32m[10-20 10:38:43 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:38:43 MainThread @ES_train.py:227][0m Total Steps: 24820 Reward: 28.56147855538483
+[32m[10-20 10:38:48 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:38:48 MainThread @ES_train.py:227][0m Total Steps: 24960 Reward: 36.5866774049377
+[32m[10-20 10:38:51 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:38:51 MainThread @ES_train.py:227][0m Total Steps: 25040 Reward: 15.612964318441191
+[32m[10-20 10:38:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:38:57 MainThread @ES_train.py:227][0m Total Steps: 25190 Reward: 51.34439625748152
+[32m[10-20 10:39:00 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:39:00 MainThread @ES_train.py:227][0m Total Steps: 25280 Reward: 29.46165391510633
+[32m[10-20 10:39:03 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:39:03 MainThread @ES_train.py:227][0m Total Steps: 25375 Reward: 21.361235873530187
+[32m[10-20 10:39:07 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:07 MainThread @ES_train.py:227][0m Total Steps: 25475 Reward: 19.245406696217593
+[32m[10-20 10:39:12 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:12 MainThread @ES_train.py:227][0m Total Steps: 25575 Reward: 30.19674144742491
+[32m[10-20 10:39:17 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:39:17 MainThread @ES_train.py:227][0m Total Steps: 25715 Reward: 41.72361994721776
+[32m[10-20 10:39:21 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:21 MainThread @ES_train.py:227][0m Total Steps: 25815 Reward: 27.390814816684934
+[32m[10-20 10:39:28 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:28 MainThread @ES_train.py:227][0m Total Steps: 25965 Reward: 55.35745517430934
+[32m[10-20 10:39:35 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:39:35 MainThread @ES_train.py:227][0m Total Steps: 26145 Reward: 42.47278657270212
+[32m[10-20 10:39:40 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:39:40 MainThread @ES_train.py:227][0m Total Steps: 26295 Reward: 54.72495237132895
+[32m[10-20 10:39:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:44 MainThread @ES_train.py:227][0m Total Steps: 26395 Reward: 22.18613273980443
+[32m[10-20 10:39:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:39:46 MainThread @ES_train.py:227][0m Total Steps: 26445 Reward: 20.075807543628564
+[32m[10-20 10:39:53 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:39:53 MainThread @ES_train.py:227][0m Total Steps: 26610 Reward: 42.80667065197856
+[32m[10-20 10:39:56 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:39:56 MainThread @ES_train.py:227][0m Total Steps: 26690 Reward: 26.06068892553579
+[32m[10-20 10:40:00 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:40:00 MainThread @ES_train.py:227][0m Total Steps: 26810 Reward: 30.75404970568451
+[32m[10-20 10:40:04 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:04 MainThread @ES_train.py:227][0m Total Steps: 26910 Reward: 18.84283742438197
+[32m[10-20 10:40:06 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:06 MainThread @ES_train.py:227][0m Total Steps: 26960 Reward: 27.48666918805362
+[32m[10-20 10:40:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:10 MainThread @ES_train.py:227][0m Total Steps: 27060 Reward: 25.993096722617317
+[32m[10-20 10:40:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:14 MainThread @ES_train.py:227][0m Total Steps: 27160 Reward: 31.540552996863035
+[32m[10-20 10:40:16 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:17 MainThread @ES_train.py:227][0m Total Steps: 27210 Reward: 12.375689272117413
+[32m[10-20 10:40:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:18 MainThread @ES_train.py:227][0m Total Steps: 27260 Reward: 4.370189638712489
+[32m[10-20 10:40:22 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:40:22 MainThread @ES_train.py:227][0m Total Steps: 27360 Reward: 35.637259982939824
+[32m[10-20 10:40:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:26 MainThread @ES_train.py:227][0m Total Steps: 27460 Reward: 40.8582637738053
+[32m[10-20 10:40:30 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:30 MainThread @ES_train.py:227][0m Total Steps: 27560 Reward: 35.937719368392344
+[32m[10-20 10:40:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:32 MainThread @ES_train.py:227][0m Total Steps: 27610 Reward: 9.064072180114522
+[32m[10-20 10:40:36 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:36 MainThread @ES_train.py:227][0m Total Steps: 27710 Reward: 24.633409590675022
+[32m[10-20 10:40:39 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:40:39 MainThread @ES_train.py:227][0m Total Steps: 27805 Reward: 25.575989175552213
+[32m[10-20 10:40:43 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:43 MainThread @ES_train.py:227][0m Total Steps: 27905 Reward: 37.985450507057536
+[32m[10-20 10:40:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:40:45 MainThread @ES_train.py:227][0m Total Steps: 27955 Reward: 13.145749109595066
+[32m[10-20 10:40:58 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:40:58 MainThread @ES_train.py:227][0m Total Steps: 28280 Reward: 101.5200130063673
+[32m[10-20 10:41:04 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:41:04 MainThread @ES_train.py:227][0m Total Steps: 28430 Reward: 40.6671470354673
+[32m[10-20 10:41:10 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:41:10 MainThread @ES_train.py:227][0m Total Steps: 28580 Reward: 36.629579298774665
+[32m[10-20 10:41:18 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:41:18 MainThread @ES_train.py:227][0m Total Steps: 28780 Reward: 57.61548476187822
+[32m[10-20 10:41:24 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:41:24 MainThread @ES_train.py:227][0m Total Steps: 28910 Reward: 39.48136358344698
+[32m[10-20 10:41:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:41:28 MainThread @ES_train.py:227][0m Total Steps: 29015 Reward: 35.86499362708227
+[32m[10-20 10:41:33 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:41:33 MainThread @ES_train.py:227][0m Total Steps: 29155 Reward: 42.673938994326754
+[32m[10-20 10:41:38 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:41:38 MainThread @ES_train.py:227][0m Total Steps: 29265 Reward: 35.41105558585767
+[32m[10-20 10:41:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:41:42 MainThread @ES_train.py:227][0m Total Steps: 29365 Reward: 28.18424100183784
+[32m[10-20 10:41:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:41:45 MainThread @ES_train.py:227][0m Total Steps: 29465 Reward: 33.51882002912573
+[32m[10-20 10:41:47 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:41:47 MainThread @ES_train.py:227][0m Total Steps: 29515 Reward: 12.45055485095655
+[32m[10-20 10:41:55 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:41:55 MainThread @ES_train.py:227][0m Total Steps: 29715 Reward: 32.99133665220062
+[32m[10-20 10:42:00 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:42:00 MainThread @ES_train.py:227][0m Total Steps: 29850 Reward: 41.571971035562775
+[32m[10-20 10:42:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:02 MainThread @ES_train.py:227][0m Total Steps: 29900 Reward: 6.459908368977855
+[32m[10-20 10:42:05 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:42:05 MainThread @ES_train.py:227][0m Total Steps: 29965 Reward: 31.28272769891803
+[32m[10-20 10:42:08 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:42:08 MainThread @ES_train.py:227][0m Total Steps: 30040 Reward: 12.782125419979174
+[32m[10-20 10:42:13 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:42:13 MainThread @ES_train.py:235][0m Evaluation Process, Reward: 79.98851505599723 Steps: 200 
+[32m[10-20 10:42:15 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:42:15 MainThread @ES_train.py:227][0m Total Steps: 30110 Reward: 28.49637377392484
+[32m[10-20 10:42:21 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:21 MainThread @ES_train.py:227][0m Total Steps: 30260 Reward: 47.552671787798175
+[32m[10-20 10:42:27 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:27 MainThread @ES_train.py:227][0m Total Steps: 30410 Reward: 43.77498861036279
+[32m[10-20 10:42:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:31 MainThread @ES_train.py:227][0m Total Steps: 30510 Reward: 32.673665036601044
+[32m[10-20 10:42:38 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:38 MainThread @ES_train.py:227][0m Total Steps: 30710 Reward: 57.90955269959248
+[32m[10-20 10:42:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:42:40 MainThread @ES_train.py:227][0m Total Steps: 30760 Reward: 19.004261741888914
+[32m[10-20 10:42:47 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:42:47 MainThread @ES_train.py:227][0m Total Steps: 30945 Reward: 50.18233196889547
+[32m[10-20 10:42:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:42:54 MainThread @ES_train.py:227][0m Total Steps: 31135 Reward: 47.658927823401115
+[32m[10-20 10:43:07 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:43:07 MainThread @ES_train.py:227][0m Total Steps: 31320 Reward: 73.12590087409615
+[32m[10-20 10:43:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:43:14 MainThread @ES_train.py:227][0m Total Steps: 31420 Reward: 24.546370184836874
+[32m[10-20 10:43:36 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:43:36 MainThread @ES_train.py:227][0m Total Steps: 31720 Reward: 91.36681187675981
+[32m[10-20 10:43:44 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:43:44 MainThread @ES_train.py:227][0m Total Steps: 31820 Reward: 21.866173289212863
+[32m[10-20 10:43:51 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:43:51 MainThread @ES_train.py:227][0m Total Steps: 31920 Reward: 36.086337455583354
+[32m[10-20 10:43:55 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:43:55 MainThread @ES_train.py:227][0m Total Steps: 31970 Reward: 10.652803814486765
+[32m[10-20 10:44:06 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:44:06 MainThread @ES_train.py:227][0m Total Steps: 32120 Reward: 38.82955326766606
+[32m[10-20 10:44:20 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:44:20 MainThread @ES_train.py:227][0m Total Steps: 32320 Reward: 48.18569317893099
+[32m[10-20 10:44:35 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:44:35 MainThread @ES_train.py:227][0m Total Steps: 32520 Reward: 46.906217318792486
+[32m[10-20 10:44:39 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:44:39 MainThread @ES_train.py:227][0m Total Steps: 32570 Reward: 14.006921421275266
+[32m[10-20 10:44:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:44:42 MainThread @ES_train.py:227][0m Total Steps: 32620 Reward: 12.020679773116141
+[32m[10-20 10:44:48 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:44:48 MainThread @ES_train.py:227][0m Total Steps: 32705 Reward: 23.50298827341951
+[32m[10-20 10:44:57 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:44:57 MainThread @ES_train.py:227][0m Total Steps: 32825 Reward: 33.97543870232121
+[32m[10-20 10:45:07 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:45:07 MainThread @ES_train.py:227][0m Total Steps: 32965 Reward: 28.111915452909827
+[32m[10-20 10:45:14 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:45:14 MainThread @ES_train.py:227][0m Total Steps: 33065 Reward: 28.095233845699283
+[32m[10-20 10:45:25 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:45:25 MainThread @ES_train.py:227][0m Total Steps: 33215 Reward: 37.4758132167704
+[32m[10-20 10:45:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:45:32 MainThread @ES_train.py:227][0m Total Steps: 33315 Reward: 44.553460271469675
+[32m[10-20 10:45:46 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:45:46 MainThread @ES_train.py:227][0m Total Steps: 33500 Reward: 45.46311888036993
+[32m[10-20 10:45:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:45:52 MainThread @ES_train.py:227][0m Total Steps: 33590 Reward: 27.527183231565015
+[32m[10-20 10:45:55 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:45:55 MainThread @ES_train.py:227][0m Total Steps: 33630 Reward: 7.308206516894464
+[32m[10-20 10:46:02 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:46:02 MainThread @ES_train.py:227][0m Total Steps: 33725 Reward: 22.169593454350558
+[32m[10-20 10:46:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:46:20 MainThread @ES_train.py:227][0m Total Steps: 33975 Reward: 81.5151658709092
+[32m[10-20 10:46:24 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:46:24 MainThread @ES_train.py:227][0m Total Steps: 34040 Reward: 21.96315728904258
+[32m[10-20 10:46:32 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:46:32 MainThread @ES_train.py:227][0m Total Steps: 34140 Reward: 22.8599179631651
+[32m[10-20 10:46:39 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:46:39 MainThread @ES_train.py:227][0m Total Steps: 34240 Reward: 25.815935005578737
+[32m[10-20 10:46:46 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:46:46 MainThread @ES_train.py:227][0m Total Steps: 34340 Reward: 24.340045267697736
+[32m[10-20 10:46:56 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:46:56 MainThread @ES_train.py:227][0m Total Steps: 34480 Reward: 30.939667762104655
+[32m[10-20 10:47:14 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:47:14 MainThread @ES_train.py:227][0m Total Steps: 34730 Reward: 70.13551737097518
+[32m[10-20 10:47:17 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:47:17 MainThread @ES_train.py:227][0m Total Steps: 34780 Reward: 15.71345096142279
+[32m[10-20 10:47:31 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:47:31 MainThread @ES_train.py:227][0m Total Steps: 34985 Reward: 50.531084051984394
+[32m[10-20 10:47:42 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:47:42 MainThread @ES_train.py:227][0m Total Steps: 35140 Reward: 47.13529809419832
+[32m[10-20 10:47:53 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:47:53 MainThread @ES_train.py:227][0m Total Steps: 35290 Reward: 43.40810124527411
+[32m[10-20 10:47:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:47:57 MainThread @ES_train.py:227][0m Total Steps: 35340 Reward: 10.202626148201704
+[32m[10-20 10:48:09 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:48:09 MainThread @ES_train.py:227][0m Total Steps: 35505 Reward: 48.85078488628529
+[32m[10-20 10:48:16 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:48:16 MainThread @ES_train.py:227][0m Total Steps: 35595 Reward: 31.89724304846527
+[32m[10-20 10:48:26 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:48:26 MainThread @ES_train.py:227][0m Total Steps: 35740 Reward: 40.06084966730832
+[32m[10-20 10:48:34 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:48:34 MainThread @ES_train.py:227][0m Total Steps: 35840 Reward: 20.186960490570755
+[32m[10-20 10:48:41 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:48:41 MainThread @ES_train.py:227][0m Total Steps: 35935 Reward: 21.556554813872236
+[32m[10-20 10:48:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:48:56 MainThread @ES_train.py:227][0m Total Steps: 36135 Reward: 50.55504375359853
+[32m[10-20 10:49:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:49:00 MainThread @ES_train.py:227][0m Total Steps: 36185 Reward: 17.75838626881829
+[32m[10-20 10:49:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:49:11 MainThread @ES_train.py:227][0m Total Steps: 36335 Reward: 39.895118930756844
+[32m[10-20 10:49:22 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:49:22 MainThread @ES_train.py:227][0m Total Steps: 36485 Reward: 32.82247728153836
+[32m[10-20 10:49:29 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:49:29 MainThread @ES_train.py:227][0m Total Steps: 36585 Reward: 28.253074351739773
+[32m[10-20 10:49:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:49:40 MainThread @ES_train.py:227][0m Total Steps: 36735 Reward: 48.59563082484934
+[32m[10-20 10:49:55 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:49:55 MainThread @ES_train.py:227][0m Total Steps: 36935 Reward: 58.61600397677792
+[32m[10-20 10:49:59 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:49:59 MainThread @ES_train.py:227][0m Total Steps: 36985 Reward: 13.737402204301105
+[32m[10-20 10:50:02 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:50:02 MainThread @ES_train.py:227][0m Total Steps: 37035 Reward: 19.247757996753588
+[32m[10-20 10:50:09 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:50:09 MainThread @ES_train.py:227][0m Total Steps: 37135 Reward: 21.275468501055393
+[32m[10-20 10:50:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:50:13 MainThread @ES_train.py:227][0m Total Steps: 37185 Reward: 10.572822303804585
+[32m[10-20 10:50:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:50:31 MainThread @ES_train.py:227][0m Total Steps: 37435 Reward: 67.85996604210213
+[32m[10-20 10:50:46 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:50:46 MainThread @ES_train.py:227][0m Total Steps: 37635 Reward: 59.606444915198196
+[32m[10-20 10:50:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:50:54 MainThread @ES_train.py:227][0m Total Steps: 37750 Reward: 33.69207167818072
+[32m[10-20 10:51:01 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:51:01 MainThread @ES_train.py:227][0m Total Steps: 37850 Reward: 22.92947808408994
+[32m[10-20 10:51:20 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:51:20 MainThread @ES_train.py:227][0m Total Steps: 38095 Reward: 64.95191361724986
+[32m[10-20 10:51:30 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:51:30 MainThread @ES_train.py:227][0m Total Steps: 38245 Reward: 47.38001602812666
+[32m[10-20 10:51:41 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:51:41 MainThread @ES_train.py:227][0m Total Steps: 38395 Reward: 36.612998853540766
+[32m[10-20 10:51:45 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:51:45 MainThread @ES_train.py:227][0m Total Steps: 38445 Reward: 14.983638744763352
+[32m[10-20 10:51:57 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:51:57 MainThread @ES_train.py:227][0m Total Steps: 38610 Reward: 39.85831338034213
+[32m[10-20 10:52:08 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:52:08 MainThread @ES_train.py:227][0m Total Steps: 38760 Reward: 66.73616426447197
+[32m[10-20 10:52:24 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:52:24 MainThread @ES_train.py:227][0m Total Steps: 38985 Reward: 78.21146269797565
+[32m[10-20 10:52:37 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:52:38 MainThread @ES_train.py:227][0m Total Steps: 39185 Reward: 70.22922456171622
+[32m[10-20 10:52:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:52:52 MainThread @ES_train.py:227][0m Total Steps: 39390 Reward: 83.37706329986082
+[32m[10-20 10:52:57 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:52:57 MainThread @ES_train.py:227][0m Total Steps: 39460 Reward: 21.80287922415439
+[32m[10-20 10:53:12 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:53:12 MainThread @ES_train.py:227][0m Total Steps: 39660 Reward: 63.54847932071983
+[32m[10-20 10:53:16 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:53:16 MainThread @ES_train.py:227][0m Total Steps: 39715 Reward: 26.14503483224121
+[32m[10-20 10:53:23 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:53:23 MainThread @ES_train.py:227][0m Total Steps: 39805 Reward: 33.523275673248044
+[32m[10-20 10:53:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:53:26 MainThread @ES_train.py:227][0m Total Steps: 39855 Reward: 19.048946880367275
+[32m[10-20 10:53:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:53:29 MainThread @ES_train.py:227][0m Total Steps: 39885 Reward: 9.935409967057332
+[32m[10-20 10:53:40 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:53:40 MainThread @ES_train.py:227][0m Total Steps: 40055 Reward: 52.237386974029434
+[32m[10-20 10:53:45 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:53:45 MainThread @ES_train.py:235][0m Evaluation Process, Reward: 75.15953928729476 Steps: 150 
+[32m[10-20 10:53:56 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:53:56 MainThread @ES_train.py:227][0m Total Steps: 40200 Reward: 51.95016935848369
+[32m[10-20 10:53:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:53:59 MainThread @ES_train.py:227][0m Total Steps: 40250 Reward: 24.49802724691736
+[32m[10-20 10:54:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:54:04 MainThread @ES_train.py:227][0m Total Steps: 40320 Reward: 19.06596188270884
+[32m[10-20 10:54:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:54:10 MainThread @ES_train.py:227][0m Total Steps: 40410 Reward: 36.2330645924901
+[32m[10-20 10:54:20 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:54:20 MainThread @ES_train.py:227][0m Total Steps: 40545 Reward: 39.56934336476551
+[32m[10-20 10:54:27 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:54:27 MainThread @ES_train.py:227][0m Total Steps: 40645 Reward: 29.994982596541597
+[32m[10-20 10:54:41 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:54:41 MainThread @ES_train.py:227][0m Total Steps: 40845 Reward: 53.16160381147846
+[32m[10-20 10:54:52 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:54:52 MainThread @ES_train.py:227][0m Total Steps: 40985 Reward: 43.60334323813842
+[32m[10-20 10:55:04 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:55:04 MainThread @ES_train.py:227][0m Total Steps: 41155 Reward: 47.104822004321186
+[32m[10-20 10:55:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:55:11 MainThread @ES_train.py:227][0m Total Steps: 41255 Reward: 26.622994512853744
+[32m[10-20 10:55:18 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:55:18 MainThread @ES_train.py:227][0m Total Steps: 41355 Reward: 34.47238658821561
+[32m[10-20 10:55:22 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:55:22 MainThread @ES_train.py:227][0m Total Steps: 41405 Reward: 17.003379934411054
+[32m[10-20 10:55:32 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:55:32 MainThread @ES_train.py:227][0m Total Steps: 41545 Reward: 36.887004484265866
+[32m[10-20 10:55:40 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:55:40 MainThread @ES_train.py:227][0m Total Steps: 41645 Reward: 45.599692959298686
+[32m[10-20 10:55:47 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:55:47 MainThread @ES_train.py:227][0m Total Steps: 41745 Reward: 32.3868784580764
+[32m[10-20 10:55:54 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:55:54 MainThread @ES_train.py:227][0m Total Steps: 41830 Reward: 24.696895505632323
+[32m[10-20 10:56:04 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:56:05 MainThread @ES_train.py:227][0m Total Steps: 41980 Reward: 47.010669870448744
+[32m[10-20 10:56:08 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:08 MainThread @ES_train.py:227][0m Total Steps: 42030 Reward: 12.65093311294583
+[32m[10-20 10:56:12 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:12 MainThread @ES_train.py:227][0m Total Steps: 42080 Reward: 11.716163832243785
+[32m[10-20 10:56:16 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:16 MainThread @ES_train.py:227][0m Total Steps: 42130 Reward: 10.235089694779216
+[32m[10-20 10:56:23 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:23 MainThread @ES_train.py:227][0m Total Steps: 42230 Reward: 38.358264279354174
+[32m[10-20 10:56:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:26 MainThread @ES_train.py:227][0m Total Steps: 42280 Reward: 11.521497209953422
+[32m[10-20 10:56:30 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:30 MainThread @ES_train.py:227][0m Total Steps: 42330 Reward: 13.741357823680719
+[32m[10-20 10:56:42 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:56:42 MainThread @ES_train.py:227][0m Total Steps: 42490 Reward: 65.17776122451703
+[32m[10-20 10:56:53 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:56:53 MainThread @ES_train.py:227][0m Total Steps: 42640 Reward: 36.608877675242134
+[32m[10-20 10:56:57 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:56:57 MainThread @ES_train.py:227][0m Total Steps: 42690 Reward: 15.57159216680702
+[32m[10-20 10:57:07 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:57:07 MainThread @ES_train.py:227][0m Total Steps: 42840 Reward: 26.40010112877262
+[32m[10-20 10:57:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:57:11 MainThread @ES_train.py:227][0m Total Steps: 42890 Reward: 13.13226828122079
+[32m[10-20 10:57:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:57:24 MainThread @ES_train.py:227][0m Total Steps: 43090 Reward: 64.50823802109203
+[32m[10-20 10:57:42 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:57:42 MainThread @ES_train.py:227][0m Total Steps: 43340 Reward: 78.03767586728281
+[32m[10-20 10:57:53 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:57:53 MainThread @ES_train.py:227][0m Total Steps: 43490 Reward: 41.66282483631803
+[32m[10-20 10:58:00 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:58:00 MainThread @ES_train.py:227][0m Total Steps: 43590 Reward: 31.57287126139178
+[32m[10-20 10:58:11 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:58:11 MainThread @ES_train.py:227][0m Total Steps: 43740 Reward: 68.15808280958456
+[32m[10-20 10:58:17 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:58:17 MainThread @ES_train.py:227][0m Total Steps: 43825 Reward: 24.338447613003073
+[32m[10-20 10:58:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:58:24 MainThread @ES_train.py:227][0m Total Steps: 43925 Reward: 27.766805593915247
+[32m[10-20 10:58:36 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:58:36 MainThread @ES_train.py:227][0m Total Steps: 44080 Reward: 58.979924248720394
+[32m[10-20 10:58:46 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:58:46 MainThread @ES_train.py:227][0m Total Steps: 44230 Reward: 54.216558211450376
+[32m[10-20 10:58:58 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:58:58 MainThread @ES_train.py:227][0m Total Steps: 44380 Reward: 49.9352449121968
+[32m[10-20 10:59:09 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:59:09 MainThread @ES_train.py:227][0m Total Steps: 44530 Reward: 56.64961434982673
+[32m[10-20 10:59:20 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 10:59:20 MainThread @ES_train.py:227][0m Total Steps: 44680 Reward: 45.04382771208094
+[32m[10-20 10:59:26 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:59:26 MainThread @ES_train.py:227][0m Total Steps: 44770 Reward: 31.276280245688067
+[32m[10-20 10:59:31 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 10:59:31 MainThread @ES_train.py:227][0m Total Steps: 44840 Reward: 22.236123566899124
+[32m[10-20 10:59:35 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:59:35 MainThread @ES_train.py:227][0m Total Steps: 44890 Reward: 13.229082619476468
+[32m[10-20 10:59:42 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:59:42 MainThread @ES_train.py:227][0m Total Steps: 44990 Reward: 35.50496503213402
+[32m[10-20 10:59:49 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 10:59:49 MainThread @ES_train.py:227][0m Total Steps: 45090 Reward: 45.264271902328424
+[32m[10-20 10:59:55 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 10:59:55 MainThread @ES_train.py:227][0m Total Steps: 45165 Reward: 25.492702101480894
+[32m[10-20 11:00:07 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:00:07 MainThread @ES_train.py:227][0m Total Steps: 45330 Reward: 42.74793657694576
+[32m[10-20 11:00:18 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:00:18 MainThread @ES_train.py:227][0m Total Steps: 45480 Reward: 51.2001602112586
+[32m[10-20 11:00:29 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:00:29 MainThread @ES_train.py:227][0m Total Steps: 45630 Reward: 53.44071718286564
+[32m[10-20 11:00:40 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:00:40 MainThread @ES_train.py:227][0m Total Steps: 45780 Reward: 29.6748743383466
+[32m[10-20 11:00:47 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:00:47 MainThread @ES_train.py:227][0m Total Steps: 45880 Reward: 27.495773620661055
+[32m[10-20 11:00:51 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:00:51 MainThread @ES_train.py:227][0m Total Steps: 45930 Reward: 11.627104499575317
+[32m[10-20 11:01:01 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:01:01 MainThread @ES_train.py:227][0m Total Steps: 46060 Reward: 43.66897792838613
+[32m[10-20 11:01:11 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:01:11 MainThread @ES_train.py:227][0m Total Steps: 46210 Reward: 47.08034904954893
+[32m[10-20 11:01:20 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:01:20 MainThread @ES_train.py:227][0m Total Steps: 46340 Reward: 52.471000591481356
+[32m[10-20 11:01:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:01:24 MainThread @ES_train.py:227][0m Total Steps: 46390 Reward: 10.192793915432382
+[32m[10-20 11:01:31 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:01:31 MainThread @ES_train.py:227][0m Total Steps: 46490 Reward: 36.79583264257019
+[32m[10-20 11:01:34 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:01:34 MainThread @ES_train.py:227][0m Total Steps: 46530 Reward: 7.258826861633297
+[32m[10-20 11:01:38 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:01:38 MainThread @ES_train.py:227][0m Total Steps: 46580 Reward: 21.679701019851667
+[32m[10-20 11:01:53 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:01:53 MainThread @ES_train.py:227][0m Total Steps: 46780 Reward: 58.637176295122686
+[32m[10-20 11:02:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:00 MainThread @ES_train.py:227][0m Total Steps: 46880 Reward: 23.657545733300463
+[32m[10-20 11:02:07 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:07 MainThread @ES_train.py:227][0m Total Steps: 46980 Reward: 25.340484841400823
+[32m[10-20 11:02:16 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:02:16 MainThread @ES_train.py:227][0m Total Steps: 47105 Reward: 35.37380099351107
+[32m[10-20 11:02:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:26 MainThread @ES_train.py:227][0m Total Steps: 47255 Reward: 48.986969287073556
+[32m[10-20 11:02:31 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:02:31 MainThread @ES_train.py:227][0m Total Steps: 47330 Reward: 14.502572796710831
+[32m[10-20 11:02:39 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:39 MainThread @ES_train.py:227][0m Total Steps: 47430 Reward: 26.11948094003567
+[32m[10-20 11:02:53 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:53 MainThread @ES_train.py:227][0m Total Steps: 47630 Reward: 52.907635166482514
+[32m[10-20 11:02:56 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:02:57 MainThread @ES_train.py:227][0m Total Steps: 47680 Reward: 12.702119644600229
+[32m[10-20 11:03:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:03:00 MainThread @ES_train.py:227][0m Total Steps: 47730 Reward: 17.818441507342758
+[32m[10-20 11:03:18 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:03:18 MainThread @ES_train.py:227][0m Total Steps: 47980 Reward: 92.668344924475
+[32m[10-20 11:03:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:03:26 MainThread @ES_train.py:227][0m Total Steps: 48080 Reward: 38.26272260079174
+[32m[10-20 11:03:36 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:03:36 MainThread @ES_train.py:227][0m Total Steps: 48215 Reward: 33.93363580393546
+[32m[10-20 11:03:43 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:03:43 MainThread @ES_train.py:227][0m Total Steps: 48310 Reward: 34.786236054232845
+[32m[10-20 11:03:50 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:03:50 MainThread @ES_train.py:227][0m Total Steps: 48410 Reward: 38.04412669918436
+[32m[10-20 11:04:01 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:04:01 MainThread @ES_train.py:227][0m Total Steps: 48560 Reward: 28.484081928641334
+[32m[10-20 11:04:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:04:05 MainThread @ES_train.py:227][0m Total Steps: 48610 Reward: 10.724103164822083
+[32m[10-20 11:04:12 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:04:12 MainThread @ES_train.py:227][0m Total Steps: 48710 Reward: 18.46216000976424
+[32m[10-20 11:04:19 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:04:19 MainThread @ES_train.py:227][0m Total Steps: 48815 Reward: 42.34631652815347
+[32m[10-20 11:04:27 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:04:27 MainThread @ES_train.py:227][0m Total Steps: 48915 Reward: 32.550557691214344
+[32m[10-20 11:04:32 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:04:32 MainThread @ES_train.py:227][0m Total Steps: 48980 Reward: 22.30201778586368
+[32m[10-20 11:04:48 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:04:48 MainThread @ES_train.py:227][0m Total Steps: 49195 Reward: 63.4610800780155
+[32m[10-20 11:04:51 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:04:51 MainThread @ES_train.py:227][0m Total Steps: 49240 Reward: 10.034777460254238
+[32m[10-20 11:04:58 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:04:59 MainThread @ES_train.py:227][0m Total Steps: 49340 Reward: 32.79053885984459
+[32m[10-20 11:05:09 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:05:09 MainThread @ES_train.py:227][0m Total Steps: 49485 Reward: 31.952642152392425
+[32m[10-20 11:05:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:05:20 MainThread @ES_train.py:227][0m Total Steps: 49635 Reward: 39.92747301827963
+[32m[10-20 11:05:28 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:05:28 MainThread @ES_train.py:227][0m Total Steps: 49735 Reward: 30.869559876457654
+[32m[10-20 11:05:35 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:05:35 MainThread @ES_train.py:227][0m Total Steps: 49835 Reward: 28.71400530135712
+[32m[10-20 11:05:42 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:05:42 MainThread @ES_train.py:227][0m Total Steps: 49930 Reward: 29.178451402473513
+[32m[10-20 11:05:48 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:05:48 MainThread @ES_train.py:227][0m Total Steps: 50010 Reward: 12.68914351799881
+[32m[10-20 11:05:55 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:05:55 MainThread @ES_train.py:235][0m Evaluation Process, Reward: 102.32304875709345 Steps: 250 
+[32m[10-20 11:06:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:06:13 MainThread @ES_train.py:227][0m Total Steps: 50260 Reward: 70.73459756350262
+[32m[10-20 11:06:24 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:06:24 MainThread @ES_train.py:227][0m Total Steps: 50410 Reward: 44.50279421475661
+[32m[10-20 11:06:42 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:06:42 MainThread @ES_train.py:227][0m Total Steps: 50660 Reward: 86.28800710448787
+[32m[10-20 11:06:50 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:06:50 MainThread @ES_train.py:227][0m Total Steps: 50760 Reward: 36.83745140209633
+[32m[10-20 11:07:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:07:00 MainThread @ES_train.py:227][0m Total Steps: 50910 Reward: 39.04529315973922
+[32m[10-20 11:07:07 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:07:07 MainThread @ES_train.py:227][0m Total Steps: 51005 Reward: 36.9674689787721
+[32m[10-20 11:07:13 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:07:13 MainThread @ES_train.py:227][0m Total Steps: 51080 Reward: 20.80029272853903
+[32m[10-20 11:07:23 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:07:23 MainThread @ES_train.py:227][0m Total Steps: 51230 Reward: 47.545543255004915
+[32m[10-20 11:07:30 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:07:30 MainThread @ES_train.py:227][0m Total Steps: 51330 Reward: 21.67781382219781
+[32m[10-20 11:07:41 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:07:41 MainThread @ES_train.py:227][0m Total Steps: 51480 Reward: 55.47353748900508
+[32m[10-20 11:07:52 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:07:52 MainThread @ES_train.py:227][0m Total Steps: 51630 Reward: 51.967293283811784
+[32m[10-20 11:07:59 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:07:59 MainThread @ES_train.py:227][0m Total Steps: 51730 Reward: 19.245624338090394
+[32m[10-20 11:08:10 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:08:10 MainThread @ES_train.py:227][0m Total Steps: 51880 Reward: 46.79742882015619
+[32m[10-20 11:08:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:08:18 MainThread @ES_train.py:227][0m Total Steps: 51980 Reward: 33.315261290530486
+[32m[10-20 11:08:24 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:08:24 MainThread @ES_train.py:227][0m Total Steps: 52070 Reward: 24.01521712824734
+[32m[10-20 11:08:35 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:08:35 MainThread @ES_train.py:227][0m Total Steps: 52220 Reward: 54.04359736955333
+[32m[10-20 11:08:46 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:08:46 MainThread @ES_train.py:227][0m Total Steps: 52370 Reward: 44.81761973227438
+[32m[10-20 11:08:52 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:08:52 MainThread @ES_train.py:227][0m Total Steps: 52445 Reward: 22.792327250816697
+[32m[10-20 11:08:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:08:54 MainThread @ES_train.py:227][0m Total Steps: 52465 Reward: 1.946398156116228
+[32m[10-20 11:09:00 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:09:01 MainThread @ES_train.py:227][0m Total Steps: 52565 Reward: 21.96050606310832
+[32m[10-20 11:09:11 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:09:11 MainThread @ES_train.py:227][0m Total Steps: 52715 Reward: 32.56020275555692
+[32m[10-20 11:09:22 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:09:22 MainThread @ES_train.py:227][0m Total Steps: 52865 Reward: 54.15611487806749
+[32m[10-20 11:09:47 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:09:48 MainThread @ES_train.py:227][0m Total Steps: 53215 Reward: 106.5543384334971
+[32m[10-20 11:10:05 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:10:05 MainThread @ES_train.py:227][0m Total Steps: 53465 Reward: 59.35596442556998
+[32m[10-20 11:10:13 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:10:13 MainThread @ES_train.py:227][0m Total Steps: 53570 Reward: 25.768418282647108
+[32m[10-20 11:10:20 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:10:20 MainThread @ES_train.py:227][0m Total Steps: 53670 Reward: 25.946754226186243
+[32m[10-20 11:10:29 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:10:29 MainThread @ES_train.py:227][0m Total Steps: 53800 Reward: 37.060823418339275
+[32m[10-20 11:10:37 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:10:37 MainThread @ES_train.py:227][0m Total Steps: 53900 Reward: 34.812695914744594
+[32m[10-20 11:10:48 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:10:48 MainThread @ES_train.py:227][0m Total Steps: 54050 Reward: 45.1814973793479
+[32m[10-20 11:11:02 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:11:02 MainThread @ES_train.py:227][0m Total Steps: 54240 Reward: 41.67078067840977
+[32m[10-20 11:11:13 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:11:13 MainThread @ES_train.py:227][0m Total Steps: 54390 Reward: 55.46869647607132
+[32m[10-20 11:11:28 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:11:28 MainThread @ES_train.py:227][0m Total Steps: 54590 Reward: 60.100908105692874
+[32m[10-20 11:11:34 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:11:34 MainThread @ES_train.py:227][0m Total Steps: 54670 Reward: 23.048858713172578
+[32m[10-20 11:11:45 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:11:45 MainThread @ES_train.py:227][0m Total Steps: 54820 Reward: 47.261772351236274
+[32m[10-20 11:11:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:11:54 MainThread @ES_train.py:227][0m Total Steps: 54945 Reward: 45.44990035689161
+[32m[10-20 11:12:06 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:12:06 MainThread @ES_train.py:227][0m Total Steps: 55110 Reward: 56.346837379067004
+[32m[10-20 11:12:17 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:12:17 MainThread @ES_train.py:227][0m Total Steps: 55260 Reward: 46.45058568171577
+[32m[10-20 11:12:24 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:12:24 MainThread @ES_train.py:227][0m Total Steps: 55350 Reward: 26.881190141693704
+[32m[10-20 11:12:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:12:26 MainThread @ES_train.py:227][0m Total Steps: 55400 Reward: 8.25715800910874
+[32m[10-20 11:12:35 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:12:35 MainThread @ES_train.py:227][0m Total Steps: 55530 Reward: 48.75630920102543
+[32m[10-20 11:12:43 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:12:43 MainThread @ES_train.py:227][0m Total Steps: 55630 Reward: 39.18403299035943
+[32m[10-20 11:12:54 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:12:54 MainThread @ES_train.py:227][0m Total Steps: 55785 Reward: 52.33718321112833
+[32m[10-20 11:13:02 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:13:02 MainThread @ES_train.py:227][0m Total Steps: 55900 Reward: 48.704890865588744
+[32m[10-20 11:13:13 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:13:13 MainThread @ES_train.py:227][0m Total Steps: 56050 Reward: 45.55853744242031
+[32m[10-20 11:13:21 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:13:21 MainThread @ES_train.py:227][0m Total Steps: 56160 Reward: 26.83505439120255
+[32m[10-20 11:13:29 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:13:29 MainThread @ES_train.py:227][0m Total Steps: 56260 Reward: 23.420476313586587
+[32m[10-20 11:13:40 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:13:40 MainThread @ES_train.py:227][0m Total Steps: 56410 Reward: 53.645234362299355
+[32m[10-20 11:13:46 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:13:46 MainThread @ES_train.py:227][0m Total Steps: 56510 Reward: 21.80038512901169
+[32m[10-20 11:13:50 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:13:50 MainThread @ES_train.py:227][0m Total Steps: 56560 Reward: 18.21163852152102
+[32m[10-20 11:14:04 MainThread @locomotionRLEnv.py:155][0m 小鼠沿x方向移动过远
+[32m[10-20 11:14:04 MainThread @ES_train.py:227][0m Total Steps: 56740 Reward: 51.61501128372558
+[32m[10-20 11:14:11 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:14:11 MainThread @ES_train.py:227][0m Total Steps: 56840 Reward: 19.338842040546446
+[32m[10-20 11:14:18 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:14:18 MainThread @ES_train.py:227][0m Total Steps: 56940 Reward: 33.62862600898675
+[32m[10-20 11:14:26 MainThread @locomotionRLEnv.py:179][0m 小鼠朝向偏离既定方向过远
+[32m[10-20 11:14:26 MainThread @ES_train.py:227][0m Total Steps: 57040 Reward: 33.212632757976756
+[32m[10-20 11:14:37 MainThread @locomotionRLEnv.py:182][0m 小鼠停滞不前
+[32m[10-20 11:14:37 MainThread @ES_train.py:227][0m Total Steps: 57190 Reward: 59.088463060129136
+[32m[10-20 11:14:46 MainThread @locomotionRLEnv.py:161][0m 小鼠摔倒了
+[32m[10-20 11:14:46 MainThread @ES_train.py:227][0m Total Steps: 57310 Reward: 29.312721143426153
