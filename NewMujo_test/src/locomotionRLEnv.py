@@ -97,8 +97,8 @@ class GymEnv_RL(gym.Env):
                 if OBS_VELOCITY:
                     obs[11]=info["vel_body"]*10
                 vel_foot = 0
-                for i in range(4):
-                    vel_foot += (start_foot[i] - end_foot[i]) / (
+                for j in range(4):
+                    vel_foot += (start_foot[j] - end_foot[j]) / (
                         (i + 1) * 0.005) * 0.25
                 info["vel_foot"] = vel_foot
             # self.dist = self.endFoot - self.curFoot
@@ -112,8 +112,8 @@ class GymEnv_RL(gym.Env):
                 if OBS_VELOCITY:
                     obs[11]=info["vel_body"]*10
                 vel_foot = 0
-                for i in range(4):
-                    vel_foot += (start_foot[i] - end_foot[i]) / (
+                for j in range(4):
+                    vel_foot += (start_foot[j] - end_foot[j]) / (
                         (i + 1) * 0.005) * 0.25
                 info["vel_foot"] = vel_foot
                 break

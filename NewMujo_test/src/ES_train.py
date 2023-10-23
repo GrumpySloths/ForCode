@@ -99,7 +99,7 @@ def run_ES_RL_train_episode(agent,env,rpm,max_step,action_bound,w=None,b=None):
                     infos[key] = info[key]
                 else:
                     infos[key] += info[key]
-        if info['vel_body']>VEL_D_BODY and abs(info['vel_foot']-VEL_D_FOOT)<0.02:
+        if info['vel_body']>VEL_D_BODY and abs(info['vel_foot']-VEL_D_FOOT)<0.025:
             success_num+=1
         # Train agent after collecting sufficient data
         if rpm.size() >= WARMUP_STEPS:
