@@ -53,6 +53,7 @@ ES_EVERY_STEPS = 5e4
 ETG_TRAIN_STPES=30
 ETG_TRAIN_STPES_LOWBOUND=10 #ETG训练步骤的下限
 #______________________________
+print("hello world")
 def debug(info):
     if DEBUG:
         print(info)
