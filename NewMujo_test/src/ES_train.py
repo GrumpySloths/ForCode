@@ -7,7 +7,7 @@ import numpy as np
 import utility
 from alg.ETG_alg import SimpleGA
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import sys
 sys.path.append("..")
 from parl.utils import logger, summary,ReplayMemory
@@ -23,7 +23,7 @@ script_path = os.path.abspath(__file__)
 # 获取当前脚本文件所在的目录
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
-
+print("hello world")
 RL_TRAIN=True  #是否进行ETG_RL训练
 ES=False #是否中途进行ETG的训练
 DEBUG = False #用于debug打印信息

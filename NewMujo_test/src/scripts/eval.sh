@@ -1,7 +1,7 @@
-exp_id=7
-body_gain=1.0
-foot_gain=1.0
-model_id=670209
+exp_id=11
+body_gain=0.2
+foot_gain=1
+model_id=4750185
 cd ..
 python ES_train.py --exp_id $exp_id --body_gain $body_gain \
  --foot_gain $foot_gain --eval 1 --eval_ModelID $model_id --debug 1
