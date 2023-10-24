@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exp_ids=(11 12 13 14)
+exp_ids=(11 12 13 14 15 16 17 18)
 
 for ((i=0; i<${#exp_ids[@]}; i++)); do
     exp_id=${exp_ids[i]}
