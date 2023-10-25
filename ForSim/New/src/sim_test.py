@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import time
 
 # --------------------
-RUN_TIME_LENGTH = 20
+RUN_TIME_LENGTH = 50
 if __name__ == '__main__':
     fre = 0.5
     time_step = 0.002

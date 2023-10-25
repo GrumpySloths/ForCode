@@ -36,7 +36,9 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
-EXP_ID = 7
+ES = True  #是否对ETG架构进行训练
+EXP_ID = 18
+MODEL_ID = 840079
 #___________RL_ETG配置_____________
 GAMMA = 0.99
 TAU = 0.005
@@ -280,11 +282,14 @@ if __name__ == '__main__':
 
     if EVAL == True:
         logger.info("ES_rl eval start:")
-        id = 50
+        id = MODEL_ID
         path = os.path.join(script_directory,
                             "data/exp{}_ETG_RL_models".format(EXP_ID))
         path_rl = os.path.join(path, "itr_{}.pt".format(id))
-        path_ETG = os.path.join(path, "itr_{}.npz".format(id))
+        if ES:
+            path_ETG = os.path.join(path, "itr_{}.npz".format(id))
+        else:
+            path_ETG = ETG_PATH
         agent.restore(path_rl)
         info = np.load(path_ETG)
         w = info["w"]

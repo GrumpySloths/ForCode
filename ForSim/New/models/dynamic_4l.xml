@@ -17,7 +17,7 @@
         <mesh name="reel_sm" file="stl-meshes/reel_small.stl" scale="0.001 0.001 0.001"/>
         <mesh name="tail" file="stl-meshes/Tail_Unit.stl" scale="0.001 0.001 0.001"/>
 
-        <!-- <hfield name="terrain" file="/home/niujh/ForCode/NewMujo_test/src/terrain/terrain_map_1000.png" size="5 5 0.08 0.1"/> -->
+        <hfield name="terrain" file="/home/niujh/ForCode/NewMujo_test/src/terrain/stairs.bin" size="5 5 0.4 0.01"/>
     </asset>
 
     <worldbody>
@@ -25,6 +25,23 @@
         <geom type="plane" size="0 0 0.03" material="matplane" rgba="1 1 1 1"/>
         <geom name="slope1" type="box" size="0.6 0.2 0.002" pos="0 -0.0 0.055" quat="0.99 -0.14 0 0" rgba="0.9 0.1 0.1 1"/>
         <geom name="slope2" type="box" size="0.6 0.2 0.002" pos="0 -0.384 0.110" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+
+        <body name="downstair" pos="0 -0.6 0">
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.35 0.015" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.25 0.045" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.15 0.075" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.05 0.105" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+        </body>
+
+        <body name="terrain2" pos="0 -1.0 0">
+            <!-- 上楼梯-平面-下坡地形 -->
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.2 0.015" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.3 0.045" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.4 0.075" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.05 0.015" pos="0 -0.5  0.105" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.2 0.002" pos="0 -0.6 0.110" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
+            <geom type="box" size="0.6 0.2 0.002" pos="0 -0.984 0.055" quat="0.99 0.14 0 0" rgba="0.9 0.1 0.1 1"/>
+        </body>
         <!-- <geom type="hfield" hfield="terrain" rgba="1 1 1 1"/> -->
 
         <!-- camera作用是什么呢？感觉没有什么实际效果 -->

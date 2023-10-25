@@ -7,3 +7,9 @@ ERROR: could not initialize GLFW
 Wed Sep 20 08:45:44 2023
 ERROR: could not initialize GLFW
 
+Tue Oct  3 09:22:27 2023
+WARNING: mju_openResource: unknown file '/mnt/S58Data1/niujh/ForCode/ForSim/New/models/dynamic_4l.xml'
+
+Tue Oct  3 09:22:39 2023
+WARNING: mju_openResource: unknown file '/data/niujh/ForCode/ForSim/New/models/dynamic_4l.xml'
+

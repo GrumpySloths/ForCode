@@ -21,8 +21,7 @@ script_path = os.path.abspath(__file__)
 script_directory = os.path.dirname(script_path)
 project_path = "/".join(script_directory.split("/")[:-2])
 
-RL_TRAIN = True  #是否进行ETG_RL训练
-DEBUG = False  #用于debug打印信息
+DEBUG = True  #用于debug打印信息
 ETG_PATH = os.path.join(script_directory, 'data/ETG_models/Slope_ETG.npz')
 ROBOT_PATH = os.path.join(project_path, "ForSim/New/models/dynamic_4l.xml")
 RUN_TIME_LENGTH = 8
@@ -30,8 +29,23 @@ SIGMA = 0.02
 SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
-EVAL = False
+EVAL = True
 EXP_ID = 4
+#_______训练Reward配置_______________
+VEL_D_BODY = 0.075  #理想情况下希望小鼠body所能达到的速度
+VEL_D_FOOT = 0.085  #理想情况下希望小鼠foot所能达到的速度
+REWARD_P = 5  #reward的增益效果，用于扩大或减小reward
+
+Param_Dict = {
+    'torso': 1.0,
+    'up': 0.3,
+    'feet': 0.2,
+    'tau': 0.1,
+    'done': 1,
+    'velx': 0,
+    'badfoot': 0.1,
+    'footcontact': 0.1
+}
 
 
 #______________________________
@@ -40,28 +54,74 @@ def debug(info):
         print(info)
 
 
-def run_EStrain_episode(theController, env, max_step):
-    _, _ = env.reset()
+def Reward(info):
+    '''用于计算小鼠运动的reward
+    '''
 
+    def c_prec(v, t, m):
+        if m < 1e-5:
+            print(m)
+        w = np.arctanh(np.sqrt(0.95)) / m
+        return np.tanh(np.power((v - t) * w, 2))
+
+    re_vel_body = 1 - c_prec(min(info["vel_body"], VEL_D_BODY), VEL_D_BODY,
+                             0.1)  #奖励小鼠body处于想要的速度
+    re_vel_foot = 1 - c_prec(min(info["vel_foot"], VEL_D_FOOT), VEL_D_FOOT,
+                             0.1)  #奖励小鼠foot处于想要的速度
+    re_vel_foot *= Param_Dict["feet"]
+    re_yaw = 1 - c_prec(info["euler_z"], 0, 0.5)  #奖励小鼠处于想要的yaw角度
+    debug("vel_body={},raw={},pitch={},yaw={},vel_foot={}".format(
+        info["vel_body"], info["euler"][0], info["euler"][1], info["euler"][2],
+        info["vel_foot"]))
+    reward = (re_vel_body + re_vel_foot) * re_yaw * REWARD_P
+
+    return reward
+
+
+def run_EStrain_episode(theController, env, maxStep):
+    _, info = env.reset()
+    step = 0
+    curbody = info["curBody"][1]
+    endbody = info["curBody"][1]
+    curFoot = info["footPositions"][:, 1]
+    endFoot = info["footPositions"][:, 1]
+    Reward_rl = 0
     terminated = False
-    episode_steps = 0
     while not terminated:
-        episode_steps += 1
+        step += 1
         tCtrlData = theController.runStep()  # No Spine
         #tCtrlData = theController.runStep_spine()		# With Spine
-        ctrlData = tCtrlData
+        ctrlData = np.asarray(tCtrlData)
         obs, reward, terminated, _, info = env.step(ctrlData)
-        if episode_steps > max_step:
+        # if step % 20 == 0:
+        endbody = info["curBody"][1]
+        endFoot = info["footPositions"][:, 1]
+        info['vel_body'] = (curbody - endbody) / (1 * 0.005)
+        vel_foot = 0
+        for i in range(4):
+            vel_foot += (curFoot[i] - endFoot[i]) / (1 * 0.005) * 0.25
+        info['vel_foot'] = vel_foot
+        curReward = Reward(info)
+        Reward_rl += curReward
+        debug("curReward={},vel_body={},vel_foot={}".format(
+            curReward, info['vel_body'], vel_foot))
+        # debug("foot_z_mean={},angle_x={},angle_y={},angle_z={}".format(
+        #     info["curFoot_z_mean"], info["euler"][0], info["euler"][1],
+        #     info["euler_z"]))
+        curbody = endbody
+        curFoot = endFoot
+        if step > maxStep:
             break
+    logger.info("Final Reward_rl={}".format(Reward_rl))
     episode_reward = abs(env.endFoot - env.startFoot)
-    return episode_reward, episode_steps
+    return episode_reward, env.steps
 
 
 if __name__ == '__main__':
 
     # logger.info('args:{}'.format(args))
     #_______
-    render = False  #控制是否进行画面渲染
+    render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
     time_step = 0.005
@@ -155,7 +215,7 @@ if __name__ == '__main__':
 
     elif EVAL == True:
         print("start eval")
-        idx = 0
+        idx = 60
         ETG_Evalpath = os.path.join(
             script_directory,
             "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID, idx))

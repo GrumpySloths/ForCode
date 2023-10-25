@@ -95,8 +95,8 @@ class SimModel(object):
         if self.render:
             step_start = time.time()
             mujoco.mj_step(self.model, self.data)
-            # mujoco.mj_forward(self.model, self.data)
             self.viewer.sync()
+            # mujoco.mj_forward(self.model, self.data)
             # print("step time:", time.time() - step_start)
             time_until_next_step = (
                 self.model.opt.timestep) / self.freFrame - (time.time() -
@@ -153,7 +153,8 @@ class SimModel(object):
         # self.FlRlLinkDistance_y.append(FlLink[2] - RlLink[2])
         # self.FlRlAnkleDistance_x.append(FlAnkle[1] - FlAnkle[1])
         # self.FlRlAnkleDistance_y.append(FlAnkle[2] - RlAnkle[2])
-    def reset(self):
+
+    def reset(self, **kwargs):
         mujoco.mj_resetData(self.model, self.data)
         # 该循环的作用是什么呢?是防止起步摔倒一直在做准备吗?
         for i in range(100):
@@ -164,6 +165,7 @@ class SimModel(object):
         # print("first stage")
         curFoot = self.getFootWorldPosition_y()
         curFoot_z = self.getFootWorldPosition_z()
+        foot_positions = self.getFootWorldPositions()
         self.initializing()
         info = {}
         info["curFoot"] = curFoot
@@ -171,10 +173,19 @@ class SimModel(object):
         info["curBody"] = self.getBodyPosition()
         info["euler_z"], info["rot_mat"] = self.getEuler_z()
         info["euler"] = self.getEuler()
+        info["curFoot_z_mean"] = self.getFootPosition_z()
+        info["footPositions"] = foot_positions
 
-        obs = np.zeros(11)
-        obs[:8] = ctrlData[:8]
-        obs[8:] = info["euler"]
+        if 'obs_velocity' in kwargs and kwargs["obs_velocity"]:
+            obs_shape = 12
+        else:
+            obs_shape = 11
+        obs = np.zeros(obs_shape)
+        if "next_ETG_act" in kwargs:
+            obs[:8] = kwargs["next_ETG_act"]
+        else:
+            obs[:8] = ctrlData[:8]
+        obs[8:11] = info["euler"]
 
         return obs, info
 
@@ -326,6 +337,16 @@ class SimModel(object):
         angle_AEF = self.LawOfCosines_angle(AE, EF, AF)
         return angle_AEF
 
+    def getFootWorldPositions(self):
+        '''获取小鼠四足的足末位置世界坐标'''
+        footPositions = np.zeros((4, 3))
+        for i in range(4):
+            footPositions[i, 0] = self.legLink_x[i][-1]
+            footPositions[i, 1] = self.legLink_y[i][-1]
+            footPositions[i, 2] = self.legLink_z[i][-1]
+
+        return footPositions
+
     def getFootWorldPosition_y(self):
         '''
         获取小鼠足末位置的世界坐标
@@ -338,6 +359,19 @@ class SimModel(object):
         获取小鼠足末位置的世界坐标
         '''
         return self.legLink_y[0][-1]
+
+    def getFootPosition_z(self):
+        '''获取小鼠足末的相对位置平均高度'''
+
+        body_z = self.getBodyPosition()[2]
+        foot_zs = np.zeros(4)
+        for i in range(4):
+            legPosName2id = mujoco.mj_name2id(self.model,
+                                              mujoco.mjtObj.mjOBJ_SITE,
+                                              self.legPosName[i][1])
+            foot_zs[i] = self.data.site_xpos[legPosName2id][2] - body_z
+
+        return foot_zs.mean()
 
     def getBodyPosition(self):
         '''获取小鼠body_ss的世界坐标'''

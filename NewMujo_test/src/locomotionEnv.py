@@ -41,6 +41,9 @@ class GymEnv(gym.Env):
         info["euler"] = self.agent.getEuler()
         info["slope_y"] = self.agent.getSlope_y()
         info["curBody"] = self.agent.getBodyPosition()
+        info["curFoot_z_mean"] = self.agent.getFootPosition_z()
+        info["footPositions"] = self.agent.getFootWorldPositions()
+
         # self.dist = self.endFoot - self.curFoot
         terminated = self.terminated(info)
 
@@ -49,7 +52,7 @@ class GymEnv(gym.Env):
     def terminated(self, info):
         '''判断episode是否结束
         '''
-        if self.steps % 100 == 0:
+        if self.steps % 40 == 0:
             self.last_base10[1:, :] = self.last_base10[:9, :]
             self.last_base10[0, :] = np.array(info['curFoot']).reshape(1, 3)
             base_std = np.sum(np.std(self.last_base10, axis=0))
@@ -83,9 +86,9 @@ class GymEnv(gym.Env):
 
             if (abs(self.endFoot - self.startFoot) > 0.5):
                 logger.info(
-                    "cur step:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}"
-                    .format(self.steps, info["curFoot"][0], self.endFoot,
-                            info["curFoot"][2]))
+                    "cur step:{},endFoot_x:{},endFoot_y:{},endFoot_z:{}".
+                    format(self.steps, info["curFoot"][0], self.endFoot,
+                           info["curFoot"][2]))
             self.curFoot = self.endFoot
 
         return False
