@@ -51,7 +51,7 @@ class SimModel(object):
         self.FlRlAnkleDistance_x = []
         self.FlRlAnkleDistance_y = []
         self.foot_z = []
-
+        self.footGeomId=[22,30,45,53] # fl,fr,rl,rr
         self.paused = False
 
     def initializing(self):
@@ -174,18 +174,18 @@ class SimModel(object):
         info["euler"] = self.getEuler()
         info["curFoot_z_mean"] = self.getFootPosition_z()
         info["footPositions"] = foot_positions
-
+        info["contact"]=self.getContact()
         if kwargs["obs_velocity"]:
-            obs_shape=12
+            obs_shape=16
         else:
-            obs_shape=11
+            obs_shape=15
         obs = np.zeros(obs_shape)
         if "next_ETG_act" in kwargs:
             obs[:8] = kwargs["next_ETG_act"]
         else:
             obs[:8] = ctrlData[:8]
         obs[8:11] = info["euler"]
-
+        obs[11:15]=info["contact"]
         return obs, info
 
     def getTime(self):
@@ -409,3 +409,13 @@ class SimModel(object):
         pos_y = self.data.geom_xpos[id][1]
 
         return pos_y
+    
+    def getContact(self):
+        '''
+        获取小鼠四足的碰撞检测
+        '''
+        contact=np.zeros(4)
+        for i in range(4):
+            if self.footGeomId[i] in self.data.contact.geom2:
+                contact[i]=1
+        return contact

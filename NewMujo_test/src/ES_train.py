@@ -60,6 +60,7 @@ def debug(info):
 def make_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--eval", type=int, default=0, help="Evaluate or Not")
+    parser.add_argument("--es", type=int, default=0, help="ETG or Not in train phase")
     parser.add_argument("--debug", type=int, default=0, help="debug or Not")
     parser.add_argument("--eval_ModelID", type=int, default=0, help="Evaluate时选取的模型序号")
     parser.add_argument("--exp_id", type=int, default=11, help="用于设置输出文件的id号")
@@ -198,7 +199,7 @@ if __name__ == '__main__':
             os.makedirs(outdir)
         logger.set_dir(outdir)
         logger.info("ETG_RL train start:")
-        if ES:
+        if args.es:
             logger.info("ETG train Included")
         logger.info('args:{}'.format(args))
         #_______________训练过程________________
@@ -256,7 +257,7 @@ if __name__ == '__main__':
                             w_best, b_best, new_points)
                     utility.updateFolder(model_folder=path,num_models_to_keep=6)
             #_______________ETG evolution Process__________
-            if ES and (total_steps + 1) // ES_EVERY_STEPS >= ES_test_flag and total_steps >= WARMUP_STEPS:
+            if args.es and (total_steps + 1) // ES_EVERY_STEPS >= ES_test_flag and total_steps >= WARMUP_STEPS:
                 while (total_steps + 1) // ES_EVERY_STEPS >= ES_test_flag:
                     ES_test_flag += 1
 

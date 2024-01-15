@@ -4,7 +4,8 @@ import numpy as np
 
 Param_Dict = {
     'feet':0.2,
-    'body':1.0
+    'body':1.0,
+    'footcontact':0.1
 }
 VEL_D_BODY = 0.075  #理想情况下希望小鼠body所能达到的速度
 VEL_D_FOOT = 0.085  #理想情况下希望小鼠foot所能达到的速度
@@ -27,11 +28,11 @@ class GymEnv_RL(gym.Env):
         self.body_gain=body_gain
 
         if OBS_VELOCITY:
-            logger.info("With Velocity,obs.shape=12")
-            self.obs_shape=12
+            logger.info("With Velocity,obs.shape=16")
+            self.obs_shape=16
         else:
-            logger.info("No Velocity,obs.shape=11")
-            self.obs_shape=11
+            logger.info("No Velocity,obs.shape=15")
+            self.obs_shape=15
         self.action_space = gym.spaces.Box(-1, 1, shape=(8, ))
         self.observation_space = gym.spaces.Box(-1, 1, shape=(self.obs_shape, ))
         self.steps_rl = 0
@@ -81,7 +82,7 @@ class GymEnv_RL(gym.Env):
             info["curBody"] = self.agent.getBodyPosition()
             info["curFoot_z_mean"] = self.agent.getFootPosition_z()
             info["footPositions"] = self.agent.getFootWorldPositions()
-
+            info["contact"]=self.agent.getContact()
             self.last_ETG_act = self.ETG_controller.runStep()  # No Spine
 
             if i == 0:
@@ -91,11 +92,12 @@ class GymEnv_RL(gym.Env):
                 self.debug("foot_z_mean:{}".format(info["curFoot_z_mean"]))
                 obs[:8] = self.last_ETG_act
                 obs[8:11] = info["euler"]
+                obs[11:15]=info["contact"]
                 end_body = info["curBody"][1]
                 end_foot = info["footPositions"][:, 1]
                 info["vel_body"] = (start_body - end_body) / ((i + 1) * 0.005)
                 if OBS_VELOCITY:
-                    obs[11]=info["vel_body"]*10
+                    obs[15]=info["vel_body"]*10
                 vel_foot = 0
                 for j in range(4):
                     vel_foot += (start_foot[j] - end_foot[j]) / (
@@ -106,11 +108,12 @@ class GymEnv_RL(gym.Env):
             if terminated:
                 obs[:8] = self.last_ETG_act
                 obs[8:11] = info["euler"]
+                obs[11:15]=info["contact"]
                 end_body = info["curBody"][1]
                 end_foot = info["footPositions"][:, 1]
                 info["vel_body"] = (start_body - end_body) / ((i + 1) * 0.005)
                 if OBS_VELOCITY:
-                    obs[11]=info["vel_body"]*10
+                    obs[15]=info["vel_body"]*10
                 vel_foot = 0
                 for j in range(4):
                     vel_foot += (start_foot[j] - end_foot[j]) / (
@@ -132,12 +135,15 @@ class GymEnv_RL(gym.Env):
         re_vel_foot*=self.foot_gain
         re_vel_body*=self.body_gain
         re_yaw = 1 - self.c_prec(info["euler_z"], 0, 0.5)  #奖励小鼠处于想要的yaw角度
+        #contact 奖励计算
+        lose_contact_num = np.sum(1.0 - np.array(info["contact"]))
+        re_contact=-Param_Dict['footcontact'] * max(lose_contact_num - 2, 0)
         self.debug("vel_body={},yaw={},vel_foot={},Reward_body={},Reward_foot={}".format(
             info["vel_body"], info["euler"][2], info["vel_foot"],re_vel_body,re_vel_foot))
         
         info['feet']=re_vel_foot
         info['body']=re_vel_body
-        reward = (re_vel_body + re_vel_foot) * re_yaw * REWARD_P
+        reward = ((re_vel_body + re_vel_foot) * re_yaw -re_contact)* REWARD_P
         
         return reward,info
 
