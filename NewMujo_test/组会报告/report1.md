@@ -60,3 +60,28 @@ $$
 鼓励小鼠尽可能以理想的foot和body速度并按照给定方向进行运动
 
 ## 小鼠足部运动分析
+对小鼠足部运动可达范围和ETG架构理论运动范围进行可视化得到下图结果
+![foot_visualize](assets/ETG_MoveLimit.png)
+蓝色区域是理论上小鼠足部末端可以达到的位置，红色线是ETG架构的理论运动轨迹，可以看到红色线有部分实际位于运动死区，但是这部分区域在进行逆向运动学解算时是合法的，其实际的理论运动范围为:
+![real_ETG](assets/realController_ETG.png)
+通过与仿真结果的分析得到在运动死区部分的轨迹点实际上绝大部分都位于(0,0)(actuator angle)上作为支撑相而存在，这样看来是否要将其足末相对位置约束在可达范围之内并没有那么重要(**当然也是可以探究的点**)
+
+下图是一张小鼠运动死区实例
+![dead_area](assets/exp1.png)
+通过对小鼠的死区运动分析和ETG-rl实际运动的观察，个人认为小鼠实际想要到达运动死区并不是一件容易的事，相反小鼠目前训练出现的问题更多是它的运动过于震荡了，按理说在平地上它不应该过于影响ETG架构，但实际上在平地上其对ETG架构影响很大，而在上坡处奖励节点过于稀疏导致其总是上不去坡，一直处于震荡状态，这是我个人思考应该要着力解决的点，当前实验过将小鼠与地形的接触状态加入到observation空间中以期望其学到(0,pi,pi,0)的平稳架构，但就实际实验结果来看效果并不好
+
+下面几张图是对小鼠实际运动的分析
+<div style="display: flex; justify-content: center;">
+  <div style="flex: 1;">
+    <img src="assets/realFootPath_ETG.png" alt="Image 1" style="width: 100%;">
+    <div style="text-align: center;">ETG_real</div>
+  </div>
+  <div style="flex: 1;">
+    <img src="assets/realFootPath_ETG_RL.png" alt="Image 2" style="width: 100%;">
+    <div style="text-align: center;">ETG_rl_real</div>
+  </div>
+</div>
+<div style="text-align: center;">
+  <img src="assets/eval_analysis.png" alt="Image 3" style="width: 80%;">
+</div>
+    <div style="text-align: center;">ETG_RL_TrainAnalysis</div>
