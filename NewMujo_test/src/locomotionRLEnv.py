@@ -33,10 +33,10 @@ class GymEnv_RL(gym.Env):
 
         if OBS_VELOCITY:
             logger.info("With Velocity,obs.shape=12")
-            self.obs_shape = 12
+            self.obs_shape = 16
         else:
             logger.info("No Velocity,obs.shape=11")
-            self.obs_shape = 11
+            self.obs_shape = 15
         self.action_space = gym.spaces.Box(-1, 1, shape=(8, ))
         self.observation_space = gym.spaces.Box(-1,
                                                 1,
@@ -74,10 +74,12 @@ class GymEnv_RL(gym.Env):
         reward = 0.0
         obs = np.zeros(self.obs_shape)
         info = {}
+        # print("action=",action)
         #20次循环是为了让小鼠的步幅和ETG_RL benchmark保持一致
         for i in range(20):
             self.steps += 1
             action_ETG = self.last_ETG_act
+            # print("action_ETG:",action_ETG)
             ctrlData = action_ETG + action
 
             self.agent.runStep(ctrlData)
@@ -90,6 +92,7 @@ class GymEnv_RL(gym.Env):
             info["curBody"] = self.agent.getBodyPosition()
             info["curFoot_z_mean"] = self.agent.getFootPosition_z()
             info["footPositions"] = self.agent.getFootWorldPositions()
+            info["contact"]=self.agent.getContact()
 
             self.last_ETG_act = self.ETG_controller.runStep()  # No Spine
 
@@ -100,11 +103,12 @@ class GymEnv_RL(gym.Env):
                 self.debug("foot_z_mean:{}".format(info["curFoot_z_mean"]))
                 obs[:8] = self.last_ETG_act
                 obs[8:11] = info["euler"]
+                obs[11:15]=info["contact"]
                 end_body = info["curBody"][1]
                 end_foot = info["footPositions"][:, 1]
                 info["vel_body"] = (start_body - end_body) / ((i + 1) * 0.005)
                 if OBS_VELOCITY:
-                    obs[11] = info["vel_body"] * 10
+                    obs[15] = info["vel_body"] * 10
                 vel_foot = 0
                 for j in range(4):
                     vel_foot += (start_foot[j] - end_foot[j]) / (
@@ -115,11 +119,12 @@ class GymEnv_RL(gym.Env):
             if terminated:
                 obs[:8] = self.last_ETG_act
                 obs[8:11] = info["euler"]
+                obs[11:15]=info["contact"]
                 end_body = info["curBody"][1]
                 end_foot = info["footPositions"][:, 1]
                 info["vel_body"] = (start_body - end_body) / ((i + 1) * 0.005)
                 if OBS_VELOCITY:
-                    obs[11] = info["vel_body"] * 10
+                    obs[15] = info["vel_body"] * 10
                 vel_foot = 0
                 for j in range(4):
                     vel_foot += (start_foot[j] - end_foot[j]) / (

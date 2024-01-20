@@ -22,7 +22,8 @@
 
     <worldbody>
         <light diffuse=".5 .5 .5" pos="0 -1.0 3" dir="0 0 -1"/>
-        <geom type="plane" size="0 0 0.03" material="matplane" rgba="1 1 1 1"/>
+        <geom name="ground" type="plane" size="0 0 0.03" material="matplane" rgba="1 1 1 1"/>
+        <!-- ========地形生成区域开始=========== -->
         <geom name="slope1" type="box" size="0.6 0.2 0.002" pos="0 -0.0 0.055" quat="0.99 -0.14 0 0" rgba="0.9 0.1 0.1 1"/>
         <geom name="slope2" type="box" size="0.6 0.2 0.002" pos="0 -0.384 0.110" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
 
@@ -42,6 +43,8 @@
             <geom type="box" size="0.6 0.2 0.002" pos="0 -0.6 0.110" quat="1 0 0 0" rgba="0.9 0.1 0.1 1"/>
             <geom type="box" size="0.6 0.2 0.002" pos="0 -0.984 0.055" quat="0.99 0.14 0 0" rgba="0.9 0.1 0.1 1"/>
         </body>
+        <!-- ========地形生成区域结束=========== -->
+
         <!-- <geom type="hfield" hfield="terrain" rgba="1 1 1 1"/> -->
 
         <!-- camera作用是什么呢？感觉没有什么实际效果 -->

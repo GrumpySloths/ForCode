@@ -1,5 +1,5 @@
 import math
-
+import sys
 class LegModel(object):
 	"""docstring for ForeLegM"""
 	def __init__(self, leg_params):

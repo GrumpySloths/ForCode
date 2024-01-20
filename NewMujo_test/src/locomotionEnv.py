@@ -43,6 +43,8 @@ class GymEnv(gym.Env):
         info["curBody"] = self.agent.getBodyPosition()
         info["curFoot_z_mean"] = self.agent.getFootPosition_z()
         info["footPositions"] = self.agent.getFootWorldPositions()
+        info["curFoot_z_mean"] = self.agent.getFootPosition_z()
+
 
         # self.dist = self.endFoot - self.curFoot
         terminated = self.terminated(info)
@@ -64,6 +66,9 @@ class GymEnv(gym.Env):
                 return True
             if (info['curFoot'][1] > 0.6):
                 self.debug("小鼠沿反方向运动")
+                return True
+            if (info['curFoot_z_mean'] > 0):
+                self.debug("小鼠摔倒了")
                 return True
         if self.steps % 1000 == 0:
             self.endFoot = info["curFoot"][1]

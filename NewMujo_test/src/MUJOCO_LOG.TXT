@@ -55,3 +55,6 @@ WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Ti
 Mon Oct 23 10:21:04 2023
 ERROR: m->nu changed
 
+Mon Jan  8 20:30:01 2024
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.5000.
+

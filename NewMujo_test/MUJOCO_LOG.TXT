@@ -13,3 +13,6 @@ WARNING: mju_openResource: unknown file '/mnt/S58Data1/niujh/ForCode/ForSim/New/
 Tue Oct  3 09:22:39 2023
 WARNING: mju_openResource: unknown file '/data/niujh/ForCode/ForSim/New/models/dynamic_4l.xml'
 
+Fri Jan  5 20:12:51 2024
+ERROR: m->nu changed
+

@@ -37,8 +37,8 @@ POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
 ES = True  #是否对ETG架构进行训练
-EXP_ID = 18
-MODEL_ID = 840079
+EXP_ID = 11
+MODEL_ID = 1230290
 #___________RL_ETG配置_____________
 GAMMA = 0.99
 TAU = 0.005
@@ -295,11 +295,14 @@ if __name__ == '__main__':
         w = info["w"]
         b = info["b"]
         avg_reward, avg_step, info = run_Evaluate_episode(
-            agent, env, 600, act_bound, w, b)
+            agent, env, 600, act_bound, w, b) #600 default
         logger.info('Evaluation Process, Reward: {} Steps: {} '.format(
             avg_reward, avg_step))
 
     # 安全关闭模拟器
     if theMouse.render:
         theMouse.viewer.close()
+    print("len of leg:",len(theMouse.legRealPoint_x))
+    plt.scatter(theMouse.legRealPoint_x[0],theMouse.legRealPoint_y[0])
+    plt.savefig("realFootPath_ETG_RL.png")
     # utility.infoRecord(theMouse, theController)

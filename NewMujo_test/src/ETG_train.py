@@ -7,6 +7,7 @@ import numpy as np
 import utility
 from alg.ETG_alg import SimpleGA
 import os
+import argparse
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 import sys
@@ -30,7 +31,7 @@ SIGMA_DECAY = 0.99
 POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
-EXP_ID = 4
+EXP_ID = 3
 #_______训练Reward配置_______________
 VEL_D_BODY = 0.075  #理想情况下希望小鼠body所能达到的速度
 VEL_D_FOOT = 0.085  #理想情况下希望小鼠foot所能达到的速度
@@ -53,6 +54,14 @@ def debug(info):
     if DEBUG:
         print(info)
 
+def make_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--eval", type=int, default=0, help="Evaluate or Not")
+    parser.add_argument("--debug", type=int, default=0, help="debug or Not")
+    parser.add_argument("--exp_id", type=int, default=4, help="用于设置输出文件的id号")
+    parser.add_argument("--eval_ModelID", type=int, default=60, help="Evaluate时选取的模型序号")
+
+    return parser
 
 def Reward(info):
     '''用于计算小鼠运动的reward
@@ -121,6 +130,8 @@ if __name__ == '__main__':
 
     # logger.info('args:{}'.format(args))
     #_______
+    parser=make_parser()
+    args = parser.parse_args()
     render = True  #控制是否进行画面渲染
     fre_frame = 5  #画面帧率控制或者说小鼠运动速度控制
     fre = 0.5
@@ -145,7 +156,7 @@ if __name__ == '__main__':
     )
     env = GymEnv(theMouse, debug_stat=DEBUG)
 
-    if not EVAL:
+    if not args.eval:
         #____________ETG配置_______________
 
         #输出配置
@@ -162,6 +173,7 @@ if __name__ == '__main__':
             for id, solution in enumerate(solutions):
                 points_add = solution.reshape(-1, 2)
                 new_points = prior_points + points_add
+                print("new points.shape:",new_points.shape)
                 w, b = theController.getETGinfo(new_points)
                 theController.update(w, b)
                 episode_reward, step = run_EStrain_episode(
@@ -213,12 +225,12 @@ if __name__ == '__main__':
                 utility.ETG_trj_plot(w_best, b_best, theController.ETG_agent,
                                      ei, outdir)
 
-    elif EVAL == True:
+    elif args.eval == True:
         print("start eval")
-        idx = 60
+        # idx = 180
         ETG_Evalpath = os.path.join(
             script_directory,
-            "data/exp{}_ETG_models/slopeBest_{}.npz".format(EXP_ID, idx))
+            "data/exp{}_ETG_models/slopeBest_{}.npz".format(args.exp_id, args.eval_ModelID))
         # ETG_Evalpath = os.path.join(script_directory,
         #                             "data/ETG_models/Slope_ETG.npz")
         info = np.load(ETG_Evalpath)
@@ -228,12 +240,16 @@ if __name__ == '__main__':
         print("b.shape:", b.shape)
         # points = info["param"]
         theController.update(w, b)
-        utility.ETG_trj_plot(w, b, theController.ETG_agent, idx)
-        episode_reward, step = run_EStrain_episode(theController, env, 8000)
+        utility.ETG_trj_plot(w, b, theController.ETG_agent, args.eval_ModelID)
+        episode_reward, step = run_EStrain_episode(theController, env, 8000) #max_step 8000 default
         logger.info('Evaluation Reward: {} step: {} '.format(
             episode_reward, step))
 
     # 安全关闭模拟器
     if theMouse.render:
         theMouse.viewer.close()
+    print("len of leg:",len(theMouse.legRealPoint_x))
+    plt.scatter(theMouse.legRealPoint_x[0],theMouse.legRealPoint_y[0])
+    plt.savefig("realFootPath_ETG.png")
+    # plt.show()
     # utility.infoRecord(theMouse, theController)

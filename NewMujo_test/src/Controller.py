@@ -178,3 +178,12 @@ class MouseController(object):
         w = np.linalg.pinv(obs).dot(points_t)
 
         return w, b
+    def pointsCheck(self,points):
+        '''做一个简单的测试验证points对应的轨迹是否合法'''
+        for point in points:
+            q1,q2=self.fl_left.pos_2_angle(*point)
+            if q1<-0.5*np.pi or q1>0.5*np.pi:
+                return False
+            if q2<-0.5*np.pi or q2>0.5*np.pi:
+                return False
+        return True

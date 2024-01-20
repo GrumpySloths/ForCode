@@ -13,7 +13,8 @@ class SimModel(object):
     def __init__(self, modelPath, timeStep, freFrame, render):
         super(SimModel, self).__init__()
         self.model = mujoco.MjModel.from_xml_path(modelPath)
-        self.model.opt.timestep = timeStep
+        self.model.opt.timestep = 0.005
+        # self.model.opt.timestep = timeStep
         self.time_step = timeStep
         self.freFrame = freFrame
         self.render = render
@@ -51,7 +52,7 @@ class SimModel(object):
         self.FlRlAnkleDistance_x = []
         self.FlRlAnkleDistance_y = []
         self.foot_z = []
-
+        self.footGeomId=[22,30,45,53] # fl,fr,rl,rr
         self.paused = False
 
     def initializing(self):
@@ -149,6 +150,7 @@ class SimModel(object):
             # if i == 0:
             #     print("ty_fl --> ", tY)
         self.foot_z.append(foot_z_temp / 4)
+        # print("contact state:",self.getContact())
         # self.FlRlLinkDistance_x.append(FlLink[1] - RlLink[1])
         # self.FlRlLinkDistance_y.append(FlLink[2] - RlLink[2])
         # self.FlRlAnkleDistance_x.append(FlAnkle[1] - FlAnkle[1])
@@ -160,7 +162,8 @@ class SimModel(object):
         for i in range(100):
             #ctrlData = 0
             # 应该是用于设置actuator的相位信息
-            ctrlData = np.array([0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0])
+            # ctrlData = np.array([0, 1, 0, 1, 0.0, 1, 0.0, 1, 0, 0, 0, 0])
+            ctrlData = np.array([-0.68, -12.3, -0.94, -1.09, -0.94, -1.09, -0.68, -12.3, 0, 0, 0, 0])
             self.runStep(ctrlData)
         # print("first stage")
         curFoot = self.getFootWorldPosition_y()
@@ -175,17 +178,19 @@ class SimModel(object):
         info["euler"] = self.getEuler()
         info["curFoot_z_mean"] = self.getFootPosition_z()
         info["footPositions"] = foot_positions
+        info["contact"]=self.getContact()
 
         if 'obs_velocity' in kwargs and kwargs["obs_velocity"]:
-            obs_shape = 12
+            obs_shape = 16
         else:
-            obs_shape = 11
+            obs_shape = 15
         obs = np.zeros(obs_shape)
         if "next_ETG_act" in kwargs:
             obs[:8] = kwargs["next_ETG_act"]
         else:
             obs[:8] = ctrlData[:8]
         obs[8:11] = info["euler"]
+        obs[11:15]=info["contact"]
 
         return obs, info
 
@@ -410,3 +415,13 @@ class SimModel(object):
         pos_y = self.data.geom_xpos[id][1]
 
         return pos_y
+
+    def getContact(self):
+        '''
+        获取小鼠四足的碰撞检测
+        '''
+        contact=np.zeros(4)
+        for i in range(4):
+            if self.footGeomId[i] in self.data.contact.geom2:
+                contact[i]=1
+        return contact
