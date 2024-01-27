@@ -19,7 +19,7 @@ from model.mujoco_model import MujocoModel
 from alg.sac import SAC
 from copy import copy
 import torch
-
+import argparse
 # --------------------
 # 获取当前脚本文件的绝对路径
 script_path = os.path.abspath(__file__)
@@ -37,8 +37,8 @@ POP_SIZE = 40
 ES_TRAIN_STEPS = 200
 EVAL = True
 ES = True  #是否对ETG架构进行训练
-EXP_ID = 11
-MODEL_ID = 1230290
+EXP_ID = 14
+MODEL_ID = 2440060
 #___________RL_ETG配置_____________
 GAMMA = 0.99
 TAU = 0.005
@@ -57,6 +57,19 @@ ETG_TRAIN_STPES = 10
 
 
 #______________________________
+def make_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--eval", type=int, default=0, help="Evaluate or Not")
+    parser.add_argument("--es", type=int, default=0, help="ETG or Not in train phase")
+    parser.add_argument("--debug", type=int, default=0, help="debug or Not")
+    parser.add_argument("--eval_ModelID", type=int, default=0, help="Evaluate时选取的模型序号")
+    parser.add_argument("--exp_id", type=int, default=11, help="用于设置输出文件的id号")
+    parser.add_argument("--foot_gain", type=float, default=1.0, help="用于设置Reward中foot所占增益比例")
+    parser.add_argument("--body_gain", type=float, default=0.2, help="用于设置Reward中body所占增益比例")
+    parser.add_argument("--terrain",type=str,default="benchmark",help="设置小鼠运动的地形")
+    
+    return parser
+
 def debug(info):
     if DEBUG:
         print(info)
@@ -129,7 +142,8 @@ def run_Evaluate_episode(agent, env, max_step, action_bound, w=None, b=None):
 
 
 if __name__ == '__main__':
-
+    parser=make_parser()
+    args = parser.parse_args()
     if torch.cuda.is_available():
         logger.info("cuda is avaiable")
     # logger.info('args:{}'.format(args))
@@ -175,9 +189,9 @@ if __name__ == '__main__':
                     critic_lr=CRITIC_LR)
     agent = MujocoAgent(algorithm)
 
-    if not EVAL:
+    if not args.eval:
         #输出配置
-        outdir = "./train_log/exp{}".format(EXP_ID)
+        outdir = "./train_log/exp{}".format(args.exp_id)
         if not os.path.exists(outdir):
             os.makedirs(outdir)
         logger.set_dir(outdir)
@@ -225,7 +239,7 @@ if __name__ == '__main__':
                                        total_steps)
 
                 path = os.path.join(script_directory,
-                                    "data/exp{}_ETG_RL_models".format(EXP_ID))
+                                    "data/exp{}_ETG_RL_models".format(args.exp_id))
                 if not os.path.exists(path):
                     os.makedirs(path)
                 path_rl = os.path.join(path, "itr_{}.pt".format(total_steps))
@@ -280,11 +294,11 @@ if __name__ == '__main__':
                 w_best, b_best = theController.getETGinfo(new_points)
                 ES_solver.reset(ETG_best_param)
 
-    if EVAL == True:
+    if args.eval == True:
         logger.info("ES_rl eval start:")
-        id = MODEL_ID
+        id = args.eval_ModelID
         path = os.path.join(script_directory,
-                            "data/exp{}_ETG_RL_models".format(EXP_ID))
+                            "data/exp{}_ETG_RL_models".format(args.exp_id))
         path_rl = os.path.join(path, "itr_{}.pt".format(id))
         if ES:
             path_ETG = os.path.join(path, "itr_{}.npz".format(id))

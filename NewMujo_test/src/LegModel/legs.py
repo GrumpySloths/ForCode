@@ -66,7 +66,7 @@ class LegModel(object):
 			a_ECz = math.acos((Cz-Ez)/CE) * (Ey-Cy)/abs(Ey-Cy)
 		a_ECD = self.LawOfCosines_angle(CE, self.len[3], self.len[4])
 		if a_ECD == -10:
-			return []
+			return [0,0]
 		a_DCz = a_ECD + a_ECz
 
 		'''
@@ -95,10 +95,11 @@ class LegModel(object):
 		PI = math.pi
 		#if a_AEF < PI/6 or a_BCD < PI/6  or a_AEF > PI*5/6  or a_BCD > PI*5/6:
 		if a_AEF < PI/18 or a_BCD < PI/72  or a_AEF > PI*17/18  or a_BCD > PI*71/72:
-			return []
+			return [0,0]
+		return [Fy,Fz]
 
-		return [[0,0], [self.By, self.Bz],[Cy, Cz],
-			[Dy, Dz], [Ey, Ez], [Fy, Fz]]
+		# return [[0,0], [self.By, self.Bz],[Cy, Cz],
+		# 	[Dy, Dz], [Ey, Ez], [Fy, Fz]]
 
 	def LawOfCosines_edge(self, la, lb, angle_ab):
 		lc_2 = la*la + lb*lb - 2*la*lb*math.cos(angle_ab)

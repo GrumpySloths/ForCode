@@ -92,6 +92,7 @@ class ETG_model():
             info = np.load(ETG_path)
             self.ETG_w = info['w']
             self.ETG_b = info['b']
+            self.ETG_param=info["param"]
         else:
             print("ETG_path is not existed")
     
@@ -115,3 +116,6 @@ class ETG_model():
         pos = self.forward(obs)
 
         return pos
+    
+    def getModelInfo(self):
+        return (self.ETG_w,self.ETG_b,self.ETG_param)
