@@ -21,9 +21,9 @@ def ETG_trj_plot(w, b, ETG_agent, idx, outdir="./"):
         obs1.append(v)
     obs1 = np.asarray(obs1).reshape(-1, 20)
     points_new = obs1.dot(w) + b
-    plt.plot(points_new[:, 0], points_new[:, 1])
-    plt.savefig(outpath)
-    plt.close()
+    plt.plot(points_new[:, 0], points_new[:, 1],'r-',label="theory data")
+    # plt.savefig(outpath)
+    # plt.close()
 
 
 def infoRecord(theMouse, theController):

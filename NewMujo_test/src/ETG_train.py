@@ -249,7 +249,9 @@ if __name__ == '__main__':
     if theMouse.render:
         theMouse.viewer.close()
     print("len of leg:",len(theMouse.legRealPoint_x))
-    plt.scatter(theMouse.legRealPoint_x[0],theMouse.legRealPoint_y[0])
+    plt.scatter(theMouse.legRealPoint_x[0],theMouse.legRealPoint_y[0],label="real data")
+    plt.legend()
     plt.savefig("realFootPath_ETG.png")
     # plt.show()
     # utility.infoRecord(theMouse, theController)
+    

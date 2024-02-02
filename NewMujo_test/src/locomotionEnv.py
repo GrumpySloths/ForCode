@@ -58,9 +58,9 @@ class GymEnv(gym.Env):
             self.last_base10[1:, :] = self.last_base10[:9, :]
             self.last_base10[0, :] = np.array(info['curFoot']).reshape(1, 3)
             base_std = np.sum(np.std(self.last_base10, axis=0))
-            if (self.steps >= 1000 and base_std <= 0.02):
-                self.debug("小鼠停滞不前,base_std={}".format(base_std))
-                return True
+            # if (self.steps >= 1000 and base_std <= 0.02):
+            #     self.debug("小鼠停滞不前,base_std={}".format(base_std))
+            #     return True
             if (abs(info['curFoot'][0]) > 0.2):
                 self.debug("小鼠沿x方向移动过远")
                 return True
